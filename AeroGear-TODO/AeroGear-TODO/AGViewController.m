@@ -7,6 +7,7 @@
 //
 
 #import "AGViewController.h"
+#import "AeroGear.h"
 
 @interface AGViewController ()
 
@@ -18,6 +19,22 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    
+    // some SIMPLE loadings.....
+    NSURL* projectsURL = [NSURL URLWithString:@"http://todo-aerogear.rhcloud.com/todo-server/projects/"];
+    AGPipeline* todo = [AGPipeline pipelineWithPipe:@"projects" url:projectsURL type:@"REST"];
+    
+    id<AGPipe> projects = [todo get:@"projects"];
+    
+    [projects read:^(id responseObject) {
+        NSLog(@"We got these projects: %@", [responseObject description]);
+        
+    } failure:^(NSError *error) {
+        
+        NSLog(@"SAVE: An error occured! \n%@", error);
+    }];
+
 }
 
 - (void)viewDidUnload

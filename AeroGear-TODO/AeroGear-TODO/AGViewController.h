@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface AGViewController : UIViewController
+- (IBAction)sendRequest:(id)sender;
 
 @end

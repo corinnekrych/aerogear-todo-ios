@@ -7,12 +7,20 @@
 //
 
 #import "AGAppDelegate.h"
+#import <PonyDebugger/PonyDebugger.h>
 
 @implementation AGAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    PDDebugger *debugger = [PDDebugger defaultInstance];
+    // Enable Network debugging, and automatically track network traffic that comes through any classes that NSURLConnectionDelegate methods.
+    [debugger enableNetworkTrafficDebugging];
+    [debugger forwardAllNetworkTraffic];
+    [debugger connectToURL:[NSURL URLWithString:@"ws://localhost:9000/device"]];
+
     return YES;
 }
 							

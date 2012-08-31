@@ -1,0 +1,6 @@
+xcodeproj 'AeroGear-TODO.xcodeproj'
+
+platform :ios
+
+pod 'AeroGear'
+pod 'AFNetworking', '~> 1.0RC1'

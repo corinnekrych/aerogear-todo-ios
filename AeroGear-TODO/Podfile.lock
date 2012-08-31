@@ -1,0 +1,8 @@
+PODS:
+  - AFNetworking (1.0RC1)
+  - AeroGear (0.0.1):
+    - AFNetworking (~> 1.0RC1)
+
+DEPENDENCIES:
+  - AFNetworking (~> 1.0RC1)
+  - AeroGear

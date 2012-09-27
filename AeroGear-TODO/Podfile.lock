@@ -1,8 +1,15 @@
-PODS:
-  - AFNetworking (1.0RC1)
-  - AeroGear (0.0.1):
-    - AFNetworking (~> 1.0RC1)
 
-DEPENDENCIES:
-  - AFNetworking (~> 1.0RC1)
-  - AeroGear
+PODS: 
+- AFNetworking (1.0RC1)
+- AeroGear (0.0.3): 
+  - AFNetworking (= 1.0RC1)
+
+COCOAPODS: 0.14.0
+
+DEPENDENCIES: 
+- AFNetworking (~> 1.0RC1)
+- AeroGear (= 0.0.3)
+
+SPEC CHECKSUMS: 
+  AeroGear: 4462a48046a9ee2016049ffa4c0307103bd67f17
+  AFNetworking: b21c1252d437fd322e7db1caa93b163d76a362cb

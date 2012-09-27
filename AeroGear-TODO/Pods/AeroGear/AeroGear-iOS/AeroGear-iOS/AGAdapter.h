@@ -18,6 +18,4 @@
 #import <Foundation/Foundation.h>
 
 @protocol AGAdapter <NSObject>
-
-
 @end

@@ -15,15 +15,32 @@
  * limitations under the License.
  */
 
-#import <Foundation/Foundation.h>
-#import "AGPipe.h"
 #import "AGBaseAdapter.h"
 
-@interface AGRestAdapter : AGBaseAdapter <AGPipe>
+@implementation AGBaseAdapter
 
 
-// todo: move to an 'adapter' protocol
--(id) initForURL:(NSURL*) url;
-+(id) pipeForURL:(NSURL*) url;
+// abstract:
+- (id)init
+{
+    if ([self class] == [AGBaseAdapter class]) {
+        @throw [NSException exceptionWithName:NSInternalInconsistencyException
+                            reason:@"Error, attempting to instantiate AGBaseAdapter directly."
+                            userInfo:nil];
+    }
+    
+    self = [super init];
+    if (self) {
+        // Initialization code here.
+    }
+    return self;
+}
+
++(BOOL)accepts:(NSString *)type {
+    @throw [NSException exceptionWithName:NSInternalInconsistencyException
+                        reason:[NSString stringWithFormat:@"You must override %@ in a subclass",
+                                NSStringFromSelector(_cmd)]
+                        userInfo:nil];
+}
 
 @end

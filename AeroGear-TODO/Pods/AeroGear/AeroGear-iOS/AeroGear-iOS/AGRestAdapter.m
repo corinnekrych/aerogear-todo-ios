@@ -104,10 +104,12 @@
         NSLog(@"HTTP PUT to update the given object");
         NSString* updateIdPath = [object objectForKey:@"id"];
         [_restClient putPath:updateIdPath parameters:object success:successCallback failure:failureCallback];
+        return;
     }
     else {
         NSLog(@"HTTP POST to create the given object");
         [_restClient postPath:@"" parameters:object success:successCallback failure:failureCallback];
+        return;
     }
 }
 
@@ -140,6 +142,10 @@
 
 -(NSString *) description {
     return [NSString stringWithFormat: @"%@ [type=%@, url=%@]", self.class, _type, _url];
+}
+
++ (BOOL) accepts:(NSString *) type {
+    return [type isEqualToString:@"REST"];
 }
 
 @end

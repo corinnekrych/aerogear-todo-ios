@@ -16,14 +16,11 @@
  */
 
 #import <Foundation/Foundation.h>
-#import "AGPipe.h"
-#import "AGBaseAdapter.h"
+#import "AGAdapter.h"
 
-@interface AGRestAdapter : AGBaseAdapter <AGPipe>
+@interface AGBaseAdapter : NSObject <AGAdapter>
 
-
-// todo: move to an 'adapter' protocol
--(id) initForURL:(NSURL*) url;
-+(id) pipeForURL:(NSURL*) url;
+// TODO: move out of here, move it into a util class...
++(BOOL) accepts:(NSString*) type;
 
 @end

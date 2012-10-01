@@ -14,9 +14,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 #import "AGTasksViewController.h"
+#import "AGTaskViewController.h"
+
+#import "AGTask.h"
 
 #import "AeroGear.h"
+#import "SVProgressHUD.h"
 
 @implementation AGTasksViewController {
     NSArray *_tasks;
@@ -26,6 +31,8 @@
     DLog(@"AGTasksViewController dealloc");    
 }
 
+#pragma mark - View lifecycle
+
 - (void)viewDidUnload {
     DLog(@"AGTasksViewController viewDidUnLoad");
     
@@ -34,7 +41,6 @@
     [super viewDidUnload];
 }
 
-#pragma mark - View lifecycle
 - (void)viewDidLoad {
     DLog(@"AGTasksViewController viewDidLoad");
     
@@ -77,10 +83,11 @@
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+    return YES;
 }
 
 #pragma mark - Table Data Source Methods
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [_tasks count];
 }
@@ -96,24 +103,51 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:SimpleTableIdentifier];
     }
     
-    NSDictionary *task = [_tasks objectAtIndex:row];
+    AGTask *task = [_tasks objectAtIndex:row];
     
-    cell.textLabel.text = [task valueForKey:@"title"];
-    cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;    
+    cell.textLabel.text = task.title;
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;
 }
 
+#pragma mark - Table Delegate Methods
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSUInteger row = [indexPath row];
+    
+    AGTask *task = [_tasks objectAtIndex:row];
+    
+    AGTaskViewController *newTaskController = [[AGTaskViewController alloc] initWithStyle:UITableViewStyleGrouped];
+    newTaskController.task = task;
+    newTaskController.hidesBottomBarWhenPushed = YES;
+    
+	[self.navigationController pushViewController:newTaskController animated:YES];    
+}
+
 #pragma mark - Action Methods
+
 - (IBAction)refresh {
+    
+    [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeGradient];
+    
     // some SIMPLE loadings.....
     NSURL* projectsURL = [NSURL URLWithString:@"http://todo-aerogear.rhcloud.com/todo-server/"];
-    AGPipeline* todo = [AGPipeline  pipelineWithPipe:@"tasks" baseURL:projectsURL type:@"REST"];
+    AGPipeline* todo = [AGPipeline pipelineWithPipe:@"tasks" baseURL:projectsURL type:@"REST"];
     
     id<AGPipe> projects = [todo get:@"tasks"];
     
     [projects read:^(id responseObject) {
-        _tasks = responseObject;
+        [SVProgressHUD dismiss];
+        
+        NSMutableArray *tasks = [NSMutableArray array];
+        
+        for (id taskDict in responseObject) {
+            AGTask *task = [[AGTask alloc] initWithDictionary:taskDict];
+            
+            [tasks addObject:task];
+        }
+        
+        _tasks = tasks;
         
         [self.tableView reloadData];
         
@@ -124,7 +158,11 @@
 }
 
 - (IBAction)addTask {
-    // TODO
+	AGTaskViewController *newTaskController = [[AGTaskViewController alloc] initWithStyle:UITableViewStyleGrouped];
+    newTaskController.hidesBottomBarWhenPushed = YES;
+
+	[self.navigationController pushViewController:newTaskController animated:YES];
+    
 }
 
 - (IBAction)filterByProject {

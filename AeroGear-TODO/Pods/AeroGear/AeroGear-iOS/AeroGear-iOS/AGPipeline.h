@@ -31,68 +31,204 @@
  * An initializer method to instantiate the AGPipeline, which
  * contains a RESTful pipe.
  *
- * @param name the name of the first AGPipe object
- * @param url the URL of the server
+ * @param name the endpoint name of the first AGPipe object
+ * @param baseURL the URL of the server
  *
  * @return the AGPipeline object
  */
--(id) initWithPipe:(NSString*) name url:(NSURL*)url;
+-(id) initWithPipe:(NSString*) name baseURL:(NSURL*)baseURL;
 
 /**
  * An initializer method to instantiate the AGPipeline, which
  * contains a pipe object. The actual type is determined by the type argument.
  *
- * @param name the name of the first AGPipe object
- * @param url the URL of the server
+ * @param name the endpoint name of the first AGPipe object
+ * @param baseURL the URL of the server
  * @param type the type of the actual pipe/connection
  *
  * @return the AGPipeline object
  */
--(id) initWithPipe:(NSString*) name url:(NSURL*)url type:(NSString*)type;
+-(id) initWithPipe:(NSString*) name baseURL:(NSURL*)baseURL type:(NSString*)type;
+
+/**
+ * An initializer method to instantiate the AGPipeline, which
+ * contains a RESTful pipe. The RESTful endpoint is determined by the endpoint argument.
+ *
+ * @param name the logical name of the first AGPipe object
+ * @param baseURL the URL of the server
+ * @param endpoint the serivce endpoint name
+ *
+ * @return the AGPipeline object
+ */
+-(id) initWithPipe:(NSString*) name baseURL:(NSURL*)baseURL endpoint:(NSString*)endpoint;
+
+/**
+ * An initializer method to instantiate the AGPipeline, which
+ * contains a pipe object. The actual type is determined by the type argument.
+ * The endpoint is determined by the endpoint argument.
+ *
+ * @param name the logical name of the first AGPipe object
+ * @param baseURL the URL of the server
+ * @param endpoint the serivce endpoint name
+ * @param type the type of the actual pipe/connection
+ *
+ * @return the AGPipeline object
+ */
+-(id) initWithPipe:(NSString*) name baseURL:(NSURL*)baseURL endpoint:(NSString*)endpoint type:(NSString*)type;
 
 /**
  * A factory method to instantiate the AGPipeline, which
  * contains a RESTful pipe.
  *
- * @param name the name of the first AGPipe object
- * @param url the URL of the server
+ * @param name the endpoint name of the first AGPipe object
+ * @param baseURL the URL of the server
  *
  * @return the AGPipeline object
  */
-+(id) pipelineWithPipe:(NSString*) name url:(NSURL*)url;
++(id) pipelineWithPipe:(NSString*) name baseURL:(NSURL*)baseURL;
 
 /**
  * A factory method to instantiate the AGPipeline, which
  * contains a pipe object. The actual type is determined by the type argument.
  *
- * @param name the name of the first AGPipe object
- * @param url the URL of the server
+ * @param name the endpoint name of the first AGPipe object
+ * @param baseURL the URL of the server
  * @param type the type of the actual pipe/connection
  *
  * @return the AGPipeline object
  */
-+(id) pipelineWithPipe:(NSString*) name url:(NSURL*)url type:(NSString*)type;
++(id) pipelineWithPipe:(NSString*) name baseURL:(NSURL*)baseURL type:(NSString*)type;
+
+/**
+ * A factory method to instantiate the AGPipeline, which
+ * contains a RESTful pipe. The endpoint is determined by the endpoint argument.
+ *
+ * @param name the logical name of the first AGPipe object
+ * @param baseURL the URL of the server
+ * @param endpoint the serivce endpoint name
+ *
+ * @return the AGPipeline object
+ */
++(id) pipelineWithPipe:(NSString*) name baseURL:(NSURL*)baseURL endpoint:(NSString*)endpoint;
+
+
+/**
+ * A factory method to instantiate the AGPipeline, which
+ * contains a pipe object. The actual type is determined by the type argument.
+ * The endpoint is determined by the endpoint argument.
+ *
+ * @param name the logical name of the first AGPipe object
+ * @param baseURL the URL of the server
+ * @param endpoint the serivce endpoint name
+ * @param type the type of the actual pipe/connection
+ *
+ * @return the AGPipeline object
+ */
++(id) pipelineWithPipe:(NSString*) name baseURL:(NSURL*)baseURL endpoint:(NSString*)endpoint type:(NSString*)type;
+
+
+// =====================================
+// Adds that leverage the given base URL
+// =====================================
+
+
+/**
+ * Adds a new RESTful pipe to the AGPipeline object,
+ * leveraging the given baseURL argument.
+ *
+ * @param name the endpoint name of the actual pipe
+ *
+ * @return the new created AGPipe object
+ */
+-(id<AGPipe>) add:(NSString*) name;
+
+/**
+ * Adds a new RESTful pipe to the AGPipeline object,
+ * leveraging the given baseURL argument.
+ *
+ * @param name the name of the actual pipe
+ * @param endpoint the serivce endpoint, if differs from the pipe name.
+ *
+ * @return the new created AGPipe object
+ */
+-(id<AGPipe>) add:(NSString*) name endpoint:(NSString*)endpoint;
+
+/**
+ * Adds a new pipe (server connection) to the AGPipeline object,
+ * leveraging the given baseURL argument.
+ *
+ * @param name the endpoint name of the actual pipe
+ * @param type the type of the actual pipe/connection
+ *
+ * @return the new created AGPipe object
+ */
+-(id<AGPipe>) add:(NSString*) name type:(NSString*)type;
+
+/**
+ * Adds a new pipe (server connection) to the AGPipeline object,
+ * leveraging the given baseURL argument.
+ *
+ * @param name the logical name of the actual pipe
+ * @param endpoint the serivce endpoint, if differs from the pipe name.
+ * @param type the type of the actual pipe/connection
+ *
+ * @return the new created AGPipe object
+ */
+-(id<AGPipe>) add:(NSString*) name endpoint:(NSString*)endpoint type:(NSString*)type;
+
+
+// =======================================
+// Adds that specify a different base URL
+// =======================================
+
+/**
+ * Adds a new RESTful pipe to the AGPipeline object
+ *
+ * @param name the endpoint name of the actual pipe
+ * @param baseURL the URL of the server
+ *
+ * @return the new created AGPipe object
+ */
+-(id<AGPipe>) add:(NSString*) name baseURL:(NSURL*)baseURL;
 
 /**
  * Adds a new RESTful pipe to the AGPipeline object
  *
  * @param name the name of the actual pipe
- * @param url the URL of the server
+ * @param baseURL the URL of the server
+ * @param endpoint the serivce endpoint, if differs from the pipe name.
  *
  * @return the new created AGPipe object
  */
--(id<AGPipe>) add:(NSString*) name url:(NSURL*)url;
+-(id<AGPipe>) add:(NSString*) name baseURL:(NSURL*)baseURL endpoint:(NSString*)endpoint;
 
 /**
  * Adds a new pipe (server connection) to the AGPipeline object
  *
- * @param name the name of the actual pipe
- * @param url the URL of the server
+ * @param name the endpoint name of the actual pipe
+ * @param baseURL the URL of the server
  * @param type the type of the actual pipe/connection
  *
  * @return the new created AGPipe object
  */
--(id<AGPipe>) add:(NSString*) name url:(NSURL*)url type:(NSString*)type;
+-(id<AGPipe>) add:(NSString*) name baseURL:(NSURL*)baseURL type:(NSString*)type;
+
+/**
+ * Adds a new pipe (server connection) to the AGPipeline object
+ *
+ * @param name the logical name of the actual pipe
+ * @param baseURL the URL of the server
+ * @param endpoint the serivce endpoint, if differs from the pipe name.
+ * @param type the type of the actual pipe/connection
+ *
+ * @return the new created AGPipe object
+ */
+-(id<AGPipe>) add:(NSString*) name baseURL:(NSURL*)baseURL endpoint:(NSString*)endpoint type:(NSString*)type;
+
+
+// ============================
+// remove and get functionality
+// ============================
 
 /**
  * Removes a pipe from the AGPipeline object

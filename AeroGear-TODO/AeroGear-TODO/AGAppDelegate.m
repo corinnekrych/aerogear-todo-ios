@@ -1,21 +1,41 @@
-//
-//  AGAppDelegate.m
-//  AeroGear-TODO
-//
-//  Created by matzew on 31.08.12.
-//  Copyright (c) 2012 JBoss. All rights reserved.
-//
+/*
+ * JBoss, Home of Professional Open Source
+ * Copyright 2012, Red Hat, Inc., and individual contributors
+ * by the @authors tag. See the copyright.txt in the distribution for a
+ * full listing of individual contributors.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 
 #import "AGAppDelegate.h"
+#import "AGTasksViewController.h"
 
 @implementation AGAppDelegate
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-    // Override point for customization after application launch.
+@synthesize window = _window;
+@synthesize navController;
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    AGTasksViewController *tasksViewController = [[AGTasksViewController alloc] initWithStyle:UITableViewStylePlain];
+    self.navController = [[UINavigationController alloc] initWithRootViewController:tasksViewController];
+    self.navController.toolbarHidden = NO;
+    
+    [self.window addSubview:self.navController.view];
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
-							
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

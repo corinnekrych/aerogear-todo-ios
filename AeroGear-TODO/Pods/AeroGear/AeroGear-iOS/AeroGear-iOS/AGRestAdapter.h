@@ -17,8 +17,9 @@
 
 #import <Foundation/Foundation.h>
 #import "AGPipe.h"
+#import "AGBaseAdapter.h"
 
-@interface AGRestAdapter : NSObject <AGPipe>
+@interface AGRestAdapter : AGBaseAdapter <AGPipe>
 
 
 // todo: move to an 'adapter' protocol

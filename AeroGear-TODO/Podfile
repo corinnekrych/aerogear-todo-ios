@@ -2,5 +2,6 @@ xcodeproj 'AeroGear-TODO.xcodeproj'
 
 platform :ios
 
-pod 'AeroGear'
+pod 'AeroGear', '0.0.3'
 pod 'AFNetworking', '~> 1.0RC1'
+pod 'SVProgressHUD'

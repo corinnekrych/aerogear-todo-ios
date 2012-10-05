@@ -17,9 +17,20 @@
 
 #import <UIKit/UIKit.h>
 
+#import "DateSelectionCell.h"
+
+@protocol AGTaskViewControllerDelegate;
+
 @class AGTask;
 
-@interface AGTaskViewController : UITableViewController <UITextFieldDelegate, UITextViewDelegate>
+@interface AGTaskViewController : UITableViewController <UITextFieldDelegate, UITextViewDelegate, DateSelectionCellDelegate>
 
 @property(strong, nonatomic) AGTask *task;
+
+@property (weak, nonatomic) id <AGTaskViewControllerDelegate> delegate;
+
+@end
+
+@protocol AGTaskViewControllerDelegate <NSObject>
+- (void)taskViewControllerDelegateDidFinish:(AGTaskViewController *)controller task:(AGTask *)task;
 @end

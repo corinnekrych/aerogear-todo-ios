@@ -19,16 +19,16 @@
 
 @implementation TextViewCell
 
-@synthesize textView = _textView;
+@synthesize txtView = _txtView;
 
 - (id)initWithCellIdentifier:(NSString *)cellID {
     if ((self = [super initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID])) {
   
-        _textView = [[UITextView alloc] initWithFrame:CGRectZero];
-        _textView.font = [UIFont boldSystemFontOfSize:14.0];
-        _textView.backgroundColor = [UIColor clearColor];
+        _txtView = [[UITextView alloc] initWithFrame:CGRectZero];
+        _txtView.font = [UIFont boldSystemFontOfSize:14.0];
+        _txtView.backgroundColor = [UIColor clearColor];
        
-        [self.contentView addSubview:_textView];
+        [self.contentView addSubview:_txtView];
         
         self.selectionStyle = UITableViewCellSelectionStyleNone;        
     }
@@ -40,7 +40,7 @@
     [super layoutSubviews];
 
 	CGRect r = CGRectInset(self.contentView.bounds, 4, 8);
-	_textView.frame = r;
+	_txtView.frame = r;
 }
 
 @end

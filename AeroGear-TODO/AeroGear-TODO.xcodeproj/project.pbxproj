@@ -20,9 +20,18 @@
 		57F2282115F0C3C5005DAA3C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57F2280215F0C3C5005DAA3C /* Foundation.framework */; };
 		57F2282915F0C3C5005DAA3C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 57F2282715F0C3C5005DAA3C /* InfoPlist.strings */; };
 		57F2282C15F0C3C5005DAA3C /* AeroGear_TODOTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F2282B15F0C3C5005DAA3C /* AeroGear_TODOTests.m */; };
+		6F3BEB9D161C2D390059A45A /* AGTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3BEB9C161C2D390059A45A /* AGTag.m */; };
+		6F3BEBA1161C6B4B0059A45A /* AGTagsSelectionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3BEBA0161C6B4B0059A45A /* AGTagsSelectionListViewController.m */; };
+		6F3BEBA4161CD5880059A45A /* AGMetaEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3BEBA3161CD5880059A45A /* AGMetaEditorViewController.m */; };
 		6F4FD04016175FE900224A28 /* AGTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F4FD03F16175FE800224A28 /* AGTaskViewController.m */; };
 		6F50269216147144003CA352 /* tags.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F50269016147144003CA352 /* tags.png */; };
 		6F502695161471E9003CA352 /* projects.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F502694161471E9003CA352 /* projects.png */; };
+		6F59242E161D734B00E1F357 /* AGProject.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F59242C161D734B00E1F357 /* AGProject.m */; };
+		6F592432161D777A00E1F357 /* AGProjectsSelectionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F592430161D777A00E1F357 /* AGProjectsSelectionListViewController.m */; };
+		6F59243E161DACF600E1F357 /* DateSelectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F59243C161DACF500E1F357 /* DateSelectionCell.m */; };
+		6F70C785161B4D3800F20E39 /* AGToDoAPIService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F70C784161B4D3800F20E39 /* AGToDoAPIService.m */; };
+		6F9F0E00161E180100F145B5 /* UIActionSheet+BlockExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9F0DFD161E180100F145B5 /* UIActionSheet+BlockExtensions.m */; };
+		6F9F0E01161E180100F145B5 /* UIAlertView+BlockExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9F0DFF161E180100F145B5 /* UIAlertView+BlockExtensions.m */; };
 		6FAF7A411618376B00E69ABE /* PRPSmartTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FAF7A3F1618376B00E69ABE /* PRPSmartTableViewCell.m */; };
 		6FAF7A4516183A3900E69ABE /* EditCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FAF7A4416183A3900E69ABE /* EditCell.m */; };
 		6FAF7A481618482700E69ABE /* SelectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FAF7A471618482700E69ABE /* SelectionCell.m */; };
@@ -60,10 +69,28 @@
 		57F2282815F0C3C5005DAA3C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		57F2282A15F0C3C5005DAA3C /* AeroGear_TODOTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AeroGear_TODOTests.h; sourceTree = "<group>"; };
 		57F2282B15F0C3C5005DAA3C /* AeroGear_TODOTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AeroGear_TODOTests.m; sourceTree = "<group>"; };
+		6F3BEB9B161C2D390059A45A /* AGTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTag.h; sourceTree = "<group>"; };
+		6F3BEB9C161C2D390059A45A /* AGTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTag.m; sourceTree = "<group>"; };
+		6F3BEB9F161C6B4B0059A45A /* AGTagsSelectionListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTagsSelectionListViewController.h; sourceTree = "<group>"; };
+		6F3BEBA0161C6B4B0059A45A /* AGTagsSelectionListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTagsSelectionListViewController.m; sourceTree = "<group>"; };
+		6F3BEBA2161CD5880059A45A /* AGMetaEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMetaEditorViewController.h; sourceTree = "<group>"; };
+		6F3BEBA3161CD5880059A45A /* AGMetaEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMetaEditorViewController.m; sourceTree = "<group>"; };
 		6F4FD03E16175FE800224A28 /* AGTaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTaskViewController.h; sourceTree = "<group>"; };
 		6F4FD03F16175FE800224A28 /* AGTaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTaskViewController.m; sourceTree = "<group>"; };
 		6F50269016147144003CA352 /* tags.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tags.png; sourceTree = "<group>"; };
 		6F502694161471E9003CA352 /* projects.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = projects.png; sourceTree = "<group>"; };
+		6F59242C161D734B00E1F357 /* AGProject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGProject.m; sourceTree = "<group>"; };
+		6F59242D161D734B00E1F357 /* AGProject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGProject.h; sourceTree = "<group>"; };
+		6F592430161D777A00E1F357 /* AGProjectsSelectionListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGProjectsSelectionListViewController.m; sourceTree = "<group>"; };
+		6F592431161D777A00E1F357 /* AGProjectsSelectionListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGProjectsSelectionListViewController.h; sourceTree = "<group>"; };
+		6F59243C161DACF500E1F357 /* DateSelectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateSelectionCell.m; sourceTree = "<group>"; };
+		6F59243D161DACF600E1F357 /* DateSelectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateSelectionCell.h; sourceTree = "<group>"; };
+		6F70C783161B4D3800F20E39 /* AGToDoAPIService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AGToDoAPIService.h; path = "AeroGear-TODO/AGToDoAPIService.h"; sourceTree = "<group>"; };
+		6F70C784161B4D3800F20E39 /* AGToDoAPIService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AGToDoAPIService.m; path = "AeroGear-TODO/AGToDoAPIService.m"; sourceTree = "<group>"; };
+		6F9F0DFC161E180100F145B5 /* UIActionSheet+BlockExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActionSheet+BlockExtensions.h"; sourceTree = "<group>"; };
+		6F9F0DFD161E180100F145B5 /* UIActionSheet+BlockExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActionSheet+BlockExtensions.m"; sourceTree = "<group>"; };
+		6F9F0DFE161E180100F145B5 /* UIAlertView+BlockExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+BlockExtensions.h"; sourceTree = "<group>"; };
+		6F9F0DFF161E180100F145B5 /* UIAlertView+BlockExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+BlockExtensions.m"; sourceTree = "<group>"; };
 		6FAF7A3F1618376B00E69ABE /* PRPSmartTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRPSmartTableViewCell.m; sourceTree = "<group>"; };
 		6FAF7A401618376B00E69ABE /* PRPSmartTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRPSmartTableViewCell.h; sourceTree = "<group>"; };
 		6FAF7A4316183A3900E69ABE /* EditCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditCell.h; sourceTree = "<group>"; };
@@ -137,11 +164,13 @@
 		57F2280615F0C3C5005DAA3C /* AeroGear-TODO */ = {
 			isa = PBXGroup;
 			children = (
+				6F70C773161AEE3100F20E39 /* Service */,
 				6FAF7A4C16187BFB00E69ABE /* Model */,
 				6F7E52AA16144DB900C99FDE /* Controllers */,
 				57F2280F15F0C3C5005DAA3C /* AGAppDelegate.h */,
 				57F2281015F0C3C5005DAA3C /* AGAppDelegate.m */,
 				6F4FD042161773D300224A28 /* Table Cells */,
+				6F9F0DF9161E17C100F145B5 /* Utilities */,
 				6F50268816146AD1003CA352 /* Images */,
 				57F2280715F0C3C5005DAA3C /* Supporting Files */,
 			);
@@ -189,6 +218,8 @@
 				6FAF7A4A161851B400E69ABE /* TextViewCell.m */,
 				6FAF7A461618482700E69ABE /* SelectionCell.h */,
 				6FAF7A471618482700E69ABE /* SelectionCell.m */,
+				6F59243D161DACF600E1F357 /* DateSelectionCell.h */,
+				6F59243C161DACF500E1F357 /* DateSelectionCell.m */,
 			);
 			name = "Table Cells";
 			sourceTree = "<group>";
@@ -202,6 +233,16 @@
 			name = Images;
 			sourceTree = "<group>";
 		};
+		6F70C773161AEE3100F20E39 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				6F70C783161B4D3800F20E39 /* AGToDoAPIService.h */,
+				6F70C784161B4D3800F20E39 /* AGToDoAPIService.m */,
+			);
+			name = Service;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		6F7E52AA16144DB900C99FDE /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -209,8 +250,33 @@
 				57F2281615F0C3C5005DAA3C /* AGTasksViewController.m */,
 				6F4FD03E16175FE800224A28 /* AGTaskViewController.h */,
 				6F4FD03F16175FE800224A28 /* AGTaskViewController.m */,
+				6F592431161D777A00E1F357 /* AGProjectsSelectionListViewController.h */,
+				6F592430161D777A00E1F357 /* AGProjectsSelectionListViewController.m */,
+				6F3BEB9F161C6B4B0059A45A /* AGTagsSelectionListViewController.h */,
+				6F3BEBA0161C6B4B0059A45A /* AGTagsSelectionListViewController.m */,
+				6F3BEBA2161CD5880059A45A /* AGMetaEditorViewController.h */,
+				6F3BEBA3161CD5880059A45A /* AGMetaEditorViewController.m */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		6F9F0DF9161E17C100F145B5 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				6F9F0DFB161E180100F145B5 /* UIAlertViewExtentsions */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		6F9F0DFB161E180100F145B5 /* UIAlertViewExtentsions */ = {
+			isa = PBXGroup;
+			children = (
+				6F9F0DFC161E180100F145B5 /* UIActionSheet+BlockExtensions.h */,
+				6F9F0DFD161E180100F145B5 /* UIActionSheet+BlockExtensions.m */,
+				6F9F0DFE161E180100F145B5 /* UIAlertView+BlockExtensions.h */,
+				6F9F0DFF161E180100F145B5 /* UIAlertView+BlockExtensions.m */,
+			);
+			path = UIAlertViewExtentsions;
 			sourceTree = "<group>";
 		};
 		6FAF7A4C16187BFB00E69ABE /* Model */ = {
@@ -218,6 +284,10 @@
 			children = (
 				6FAF7A4D16187C1500E69ABE /* AGTask.h */,
 				6FAF7A4E16187C1500E69ABE /* AGTask.m */,
+				6F3BEB9B161C2D390059A45A /* AGTag.h */,
+				6F3BEB9C161C2D390059A45A /* AGTag.m */,
+				6F59242D161D734B00E1F357 /* AGProject.h */,
+				6F59242C161D734B00E1F357 /* AGProject.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -355,6 +425,15 @@
 				6FAF7A481618482700E69ABE /* SelectionCell.m in Sources */,
 				6FAF7A4B161851B400E69ABE /* TextViewCell.m in Sources */,
 				6FAF7A4F16187C1500E69ABE /* AGTask.m in Sources */,
+				6F70C785161B4D3800F20E39 /* AGToDoAPIService.m in Sources */,
+				6F3BEB9D161C2D390059A45A /* AGTag.m in Sources */,
+				6F3BEBA1161C6B4B0059A45A /* AGTagsSelectionListViewController.m in Sources */,
+				6F3BEBA4161CD5880059A45A /* AGMetaEditorViewController.m in Sources */,
+				6F59242E161D734B00E1F357 /* AGProject.m in Sources */,
+				6F592432161D777A00E1F357 /* AGProjectsSelectionListViewController.m in Sources */,
+				6F59243E161DACF600E1F357 /* DateSelectionCell.m in Sources */,
+				6F9F0E00161E180100F145B5 /* UIActionSheet+BlockExtensions.m in Sources */,
+				6F9F0E01161E180100F145B5 /* UIAlertView+BlockExtensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

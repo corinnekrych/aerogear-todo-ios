@@ -15,22 +15,17 @@
  * limitations under the License.
  */
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-@interface AGTask : NSObject <NSCopying>
+#import "AGMetaEditorViewController.h"
 
-@property(strong, nonatomic) NSNumber *recId;
-@property(copy, nonatomic) NSString *title;
-@property(copy, nonatomic) NSString *descr;
-@property(copy, nonatomic) NSString *dueDate;
+#import "PullRefreshTableViewController.h"
 
-@property(strong, nonatomic) NSMutableArray *tags;
-@property(strong, nonatomic) NSNumber *projID;
+@class AGTask;
 
-// convert from JSON
-- (id)initWithDictionary:(NSDictionary *)dictionary;
-// convert to JSON
-- (NSDictionary *)dictionary;
+@interface AGProjectsSelectionListViewController : PullRefreshTableViewController <AGMetaEditorViewControllerDelegate>
 
-- (void)copyFrom:(AGTask *)task;
+@property(strong, nonatomic) AGTask *task;
+
 @end
+

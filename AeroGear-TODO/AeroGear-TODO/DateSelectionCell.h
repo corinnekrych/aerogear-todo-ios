@@ -15,22 +15,19 @@
  * limitations under the License.
  */
 
-#import <Foundation/Foundation.h>
+#import "SelectionCell.h"
 
-@interface AGTask : NSObject <NSCopying>
+@protocol DateSelectionCellDelegate;
 
-@property(strong, nonatomic) NSNumber *recId;
-@property(copy, nonatomic) NSString *title;
-@property(copy, nonatomic) NSString *descr;
-@property(copy, nonatomic) NSString *dueDate;
+@interface DateSelectionCell : SelectionCell
 
-@property(strong, nonatomic) NSMutableArray *tags;
-@property(strong, nonatomic) NSNumber *projID;
+@property (nonatomic, strong) NSDate *dateValue;
+@property (nonatomic, strong) UIDatePicker *datePicker;
 
-// convert from JSON
-- (id)initWithDictionary:(NSDictionary *)dictionary;
-// convert to JSON
-- (NSDictionary *)dictionary;
+@property (weak, nonatomic) id <DateSelectionCellDelegate> delegate;
 
-- (void)copyFrom:(AGTask *)task;
+@end
+
+@protocol DateSelectionCellDelegate <NSObject>
+- (void)tableViewCell:(DateSelectionCell *)cell didEndEditingWithDate:(NSDate *)date;
 @end

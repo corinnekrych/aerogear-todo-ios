@@ -15,22 +15,21 @@
  * limitations under the License.
  */
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-@interface AGTask : NSObject <NSCopying>
+#import "HRColorPickerViewController.h"
 
-@property(strong, nonatomic) NSNumber *recId;
-@property(copy, nonatomic) NSString *title;
-@property(copy, nonatomic) NSString *descr;
-@property(copy, nonatomic) NSString *dueDate;
+@protocol AGMetaEditorViewControllerDelegate;
 
-@property(strong, nonatomic) NSMutableArray *tags;
-@property(strong, nonatomic) NSNumber *projID;
+@interface AGMetaEditorViewController : UITableViewController <UITextFieldDelegate, HRColorPickerViewControllerDelegate>
 
-// convert from JSON
-- (id)initWithDictionary:(NSDictionary *)dictionary;
-// convert to JSON
-- (NSDictionary *)dictionary;
+@property(copy, nonatomic) NSString *name;
+@property(strong, nonatomic) UIColor *color;
 
-- (void)copyFrom:(AGTask *)task;
+@property (weak, nonatomic) id <AGMetaEditorViewControllerDelegate> delegate;
+
+@end
+
+@protocol AGMetaEditorViewControllerDelegate <NSObject>
+- (void)metaEditorViewControllerDelegateDidFinish:(AGMetaEditorViewController *)controller withTitle:(NSString *)name andColor:(UIColor *)color;
 @end

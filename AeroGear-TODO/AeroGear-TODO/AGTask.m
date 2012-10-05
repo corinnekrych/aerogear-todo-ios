@@ -19,42 +19,86 @@
 
 @implementation AGTask
 
-@synthesize id = _id;
+@synthesize recId = _recId;
 @synthesize title = _title;
-@synthesize description = _description;
+@synthesize descr= _descr;
 @synthesize dueDate = _dueDate;
-@synthesize tags;
-@synthesize project;
+@synthesize tags = _tags;
+@synthesize projID;
 
-
-- (id)initWithDictionary:(NSDictionary *)dictionary {
-    self = [super init];
-
-    if (self) {
-        self.id = [dictionary objectForKey:@"id"];
-        self.title = [dictionary objectForKey:@"title"];
-        self.description = [dictionary objectForKey:@"description"];
-        self.dueDate = [dictionary objectForKey:@"date"];
-        self.tags = [dictionary objectForKey:@"tags"];
-        self.project = [dictionary objectForKey:@"project"];
+- (id)init {
+    if (self = [super init]) {
+        self.tags = [[NSMutableArray alloc] init];            
     }
     
-    return self;
+    return (self);
+}
+
+- (id)initWithDictionary:(NSDictionary *)dictionary {
+    if (self = [super init]) {
+        self.recId = [dictionary objectForKey:@"id"];
+        self.title = [dictionary objectForKey:@"title"];
+        self.descr = [dictionary objectForKey:@"description"];
+        self.dueDate = [dictionary objectForKey:@"date"];
+        
+        if ([dictionary objectForKey:@"tags"] != nil)
+            self.tags = [dictionary objectForKey:@"tags"];
+        
+        if ([dictionary objectForKey:@"project"] != nil)
+            self.projID = [dictionary objectForKey:@"project"];
+    }
+    
+    return (self);
 }
 
 -(NSDictionary *)dictionary {
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
     
-    if (self.id != nil)
-        [dict setObject:self.id forKey:@"id"];
+    if (self.recId != nil)
+        [dict setObject:[self.recId stringValue] forKey:@"id"];
 
     [dict setObject:self.title forKey:@"title"];
-    [dict setObject:self.description forKey:@"description"];
     [dict setObject:self.dueDate forKey:@"date"];
-    [dict setObject:self.tags forKey:@"tags"];    
-    [dict setObject:self.project forKey:@"project"];        
+
+    if (self.descr != nil)
+        [dict setObject:self.descr forKey:@"description"];        
+        
+    if (self.tags != nil)
+        [dict setObject:self.tags forKey:@"tags"];    
+    
+    if (self.projID != nil)
+        [dict setObject:self.projID forKey:@"project"];        
         
     return dict;
+}
+
+- (void)copyFrom:(AGTask *)task {
+    self.recId = task.recId;
+    self.title = task.title;
+    self.descr = task.descr;
+    self.dueDate = task.dueDate;
+    self.tags = task.tags;
+    self.projID = task.projID;
+}
+
+- (id)copyWithZone:(NSZone *)zone {
+    AGTask *task;
+    
+    task = [[[self class] allocWithZone:zone] init];
+    
+    task.recId = self.recId;
+    task.title = self.title;
+    task.descr = self.descr;
+    task.dueDate = self.dueDate;
+    task.tags = [NSMutableArray arrayWithArray:self.tags];
+    task.projID = self.projID;
+    
+    return task;
+}
+
+- (NSString *)description {
+    return [NSString stringWithFormat: @"%@ [id=%@, title=%@, description=%@, tags=%@, project=%@]",
+            self.class, self.recId, self.title, self.descr, self.tags, self.projID];    
 }
 
 @end

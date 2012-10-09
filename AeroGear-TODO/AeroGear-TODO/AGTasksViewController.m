@@ -17,14 +17,22 @@
 
 #import "AGTasksViewController.h"
 
+#import "AGProjectsSelectionListViewController.h"
+#import "AGTagsSelectionListViewController.h"
 #import "AGToDoAPIService.h"
 #import "AGTask.h"
+#import "AGProject.h"
+#import "AGTag.h"
 
 #import "UIActionSheet+BlockExtensions.h"
 #import "SVProgressHUD.h"
 
 @implementation AGTasksViewController {
+    NSMutableArray *_allTasks;
+    
     NSMutableArray *_tasks;
+
+    AGTask *_filterTask;
 }
 
 #pragma mark - View lifecycle
@@ -34,7 +42,7 @@
     
     DLog(@"AGTasksViewController viewDidUnLoad");
     
-    _tasks = nil;
+    _allTasks = nil;
 }
 
 - (void)viewDidLoad {
@@ -69,6 +77,9 @@
     
     self.toolbarItems = [NSArray arrayWithObjects:flexibleSpace, filterProjectsButton, filterTagsButton, flexibleSpace, infoButton, nil];
     
+    // setup a "dummy" task that will be used for filtering
+    _filterTask = [[AGTask alloc] init];
+    
     [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeGradient];
     [AGToDoAPIService initSharedInstanceWithBaseURL:nil success:^{
         [SVProgressHUD dismiss];
@@ -83,8 +94,15 @@
         [alert show];       
 
     }];
-     
+    
     [self refresh];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+
+    // give filter a chance to kick in
+    [self handleFilter];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
@@ -134,7 +152,7 @@
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     NSUInteger row = [indexPath row];
     
-    AGTask *task = [_tasks objectAtIndex:row];
+    AGTask *task = [_allTasks objectAtIndex:row];
     
 	if (editingStyle == UITableViewCellEditingStyleDelete) {
         UIActionSheet *yesno = [[UIActionSheet alloc]
@@ -147,7 +165,8 @@
                                         [[AGToDoAPIService sharedInstance] removeTask:task success:^{
                                             [SVProgressHUD showSuccessWithStatus:@"Successfully deleted!"];
                                             
-                                            [_tasks removeObjectAtIndex:row];
+                                            [_allTasks removeObject:task];
+                                            [_tasks removeObject:task];
                                             
                                             NSArray *paths = [NSArray arrayWithObject: [NSIndexPath indexPathForRow:row inSection:0]];
                                             [[self tableView] deleteRowsAtIndexPaths:paths withRowAnimation:UITableViewRowAnimationTop];                                    
@@ -185,11 +204,22 @@
 }
 
 - (IBAction)filterByProject {
-    // TODO
+    AGProjectsSelectionListViewController *projListController = [[AGProjectsSelectionListViewController alloc] initWithStyle:UITableViewStyleGrouped];
+    projListController.task = _filterTask;
+    
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:projListController];
+    
+    [self presentModalViewController:navController animated:YES];
+
 }
 
 - (IBAction)filterByTag {
-    // TODO
+    AGTagsSelectionListViewController *tagsListController = [[AGTagsSelectionListViewController alloc] initWithStyle:UITableViewStyleGrouped];
+    tagsListController.task = _filterTask;
+
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:tagsListController];
+    
+    [self presentModalViewController:navController animated:YES];
 }
 
 - (IBAction)displayInfo {
@@ -219,7 +249,7 @@
         [SVProgressHUD showSuccessWithStatus:@"Successfully saved!"];
 
         if (isNewTask) { 
-            [_tasks addObject:task]; // add it to the list
+            [_allTasks addObject:task]; // add it to the list
         } else { // otherwise update existing one with the new values
             AGTask *editedTask = controller.task;
             [editedTask copyFrom:task];
@@ -245,12 +275,12 @@
 
 - (void)refresh {
     [[AGToDoAPIService sharedInstance] fetchTasks:^(NSMutableArray *tasks) {
-        _tasks = tasks;
-        
-        [self.tableView reloadData];
+        _allTasks = tasks;
 
-        [self stopLoading];        
+        [self stopLoading];
         
+        [self handleFilter];
+
     } failure:^(NSError *error) {
         [SVProgressHUD dismiss];        
         
@@ -263,4 +293,85 @@
         
     }];
 }
+
+# pragma mark - Filter
+
+- (void)handleFilter {
+    if (_allTasks == nil) // remote date not yet fetched, nothing to do
+        return;
+    
+    // reset filtering
+    _tasks = [NSMutableArray arrayWithArray:_allTasks];
+
+    BOOL hasProjectFilter = _filterTask.projID != nil;
+    BOOL hasTagsFilter = [_filterTask.tags count] != 0;
+    
+    if (hasProjectFilter || hasTagsFilter) {
+        NSMutableArray *toRemove;
+        
+        if (hasProjectFilter) {
+            toRemove =  [[NSMutableArray alloc] init];            
+            
+            for (AGTask *task in _tasks) {
+                if (hasProjectFilter && ![task.projID isEqualToNumber:_filterTask.projID]) {
+                    [toRemove addObject:task];
+                }
+            }
+
+            [_tasks removeObjectsInArray:toRemove];
+        }
+        
+        if (hasTagsFilter) {
+            toRemove =  [[NSMutableArray alloc] init];            
+            
+            for (AGTask *task in _tasks) {
+                NSMutableArray *tmpFilteredTags = [NSMutableArray arrayWithArray:_filterTask.tags];
+                
+                [tmpFilteredTags removeObjectsInArray:task.tags];
+                if ([tmpFilteredTags count] != 0) {
+                    [toRemove addObject:task];
+                }
+            }
+            
+           [_tasks removeObjectsInArray:toRemove];          
+                
+        }
+
+        // setup table header;
+        UILabel *labelView = [[UILabel alloc] initWithFrame:CGRectMake(16, 0, 100, 25)];
+        labelView.backgroundColor = [UIColor lightGrayColor];
+        labelView.font = [UIFont boldSystemFontOfSize:14.0];
+        labelView.textColor = [UIColor whiteColor];
+        // setup header title
+        NSMutableString *txtFilter = [NSMutableString string];
+        if (hasProjectFilter) {
+            
+            AGProject *project = [[AGToDoAPIService sharedInstance].projects objectForKey:_filterTask.projID];
+            [txtFilter appendFormat:@"Project: %@ ", project.title];
+        }
+        
+        if (hasTagsFilter) {
+            [txtFilter appendString:@"Tags: "];
+            
+            NSMutableArray *tagTitles = [[NSMutableArray alloc]init];
+
+            for (NSNumber *tagId in _filterTask.tags) {
+                AGTag *tag = [[AGToDoAPIService sharedInstance].tags objectForKey:tagId];
+                [tagTitles addObject:tag.title];
+            }
+            
+            [txtFilter appendString:[tagTitles componentsJoinedByString:@", "]];
+        }
+        
+        labelView.text = txtFilter;
+
+        self.tableView.tableHeaderView = labelView;
+        
+    } else {
+        self.tableView.tableHeaderView = nil;
+    }
+    
+    [self.tableView reloadData];
+}
+
 @end

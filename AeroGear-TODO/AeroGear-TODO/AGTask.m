@@ -96,6 +96,15 @@
     return task;
 }
 
+- (BOOL)isEqual: (id)other {
+    if (![other isKindOfClass:[AGTask class]])
+        return NO;
+    
+    AGTask *otherTask = (AGTask *) other;
+    
+    return ([self.recId isEqualToNumber:otherTask.recId]);
+}
+
 - (NSString *)description {
     return [NSString stringWithFormat: @"%@ [id=%@, title=%@, description=%@, tags=%@, project=%@]",
             self.class, self.recId, self.title, self.descr, self.tags, self.projID];    

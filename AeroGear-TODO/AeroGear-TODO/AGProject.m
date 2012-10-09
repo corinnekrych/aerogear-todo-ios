@@ -47,6 +47,9 @@
 }
 
 - (UIColor *)color {
+    if ([self.style isKindOfClass:[NSNull class]])
+        return [UIColor whiteColor];
+    
     NSArray *tokens = [self.style componentsSeparatedByString:@"-"];
     
     CGFloat r = [[tokens objectAtIndex:1] floatValue] / 255.0;

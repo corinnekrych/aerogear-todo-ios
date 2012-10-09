@@ -30,12 +30,12 @@
 @implementation AGProjectsSelectionListViewController {
     NSMutableArray *_todoProjects;
     
-    AGProject *_currentEditingProject;
-    
-    NSIndexPath *_lastIndexPath;
+    NSIndexPath *_currentEditedIndexPath;
+    NSIndexPath *_lastSelectedIndexPath;
 }
 
 @synthesize task = _task;
+@synthesize isEditMode;
 
 #pragma mark - View lifecycle
 
@@ -52,10 +52,11 @@
                                                                              target:self
                                                                              action:@selector(close)];
 
-    self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
-    self.tableView.allowsSelectionDuringEditing = YES;
-    
+    if (isEditMode) {
+        self.navigationItem.rightBarButtonItem = self.editButtonItem;
+        self.tableView.allowsSelectionDuringEditing = YES;
+    }
+
     // initialize our "local" model
     _todoProjects = [NSMutableArray arrayWithArray:[[AGToDoAPIService sharedInstance].projects allValues]];    
 }
@@ -96,7 +97,7 @@
         if ([self.task.projID isEqualToNumber:proj.recId]) {
             cell.accessoryType = UITableViewCellAccessoryCheckmark;
             
-            _lastIndexPath = [NSIndexPath indexPathForRow:row inSection:0];
+            _lastSelectedIndexPath = [NSIndexPath indexPathForRow:row inSection:0];
             
         } else {
             cell.accessoryType = UITableViewCellAccessoryNone;
@@ -112,6 +113,10 @@
 - (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSUInteger row = [indexPath row];
     
+    if (!self.editing) {  // disable swipe if not in edit mode
+        return UITableViewCellEditingStyleNone;
+    }
+        
     if (row < [_todoProjects count])
         return UITableViewCellEditingStyleDelete;
     else
@@ -144,8 +149,8 @@
                                                 self.task.projID = nil;
                                             
                                             // reset the "selection"
-                                            if (_lastIndexPath.row == indexPath.row)
-                                                _lastIndexPath = nil;
+                                            if (_lastSelectedIndexPath.row == indexPath.row)
+                                                _lastSelectedIndexPath = nil;
                                             
                                             // update "local" model
                                             [_todoProjects removeObjectAtIndex:row];
@@ -207,27 +212,32 @@
         metaController.delegate = self;
 
         if (proj != nil) {
-            _currentEditingProject = proj;
-            
             metaController.name = proj.title;
             metaController.color = proj.color;
+            
+            _currentEditedIndexPath = indexPath;
         }
         
         [self.navigationController pushViewController:metaController animated:YES];
 
     } else {
         int newRow = [indexPath row];
-        int oldRow = (_lastIndexPath != nil) ? [_lastIndexPath row] : -1;
+        int oldRow = (_lastSelectedIndexPath != nil) ? [_lastSelectedIndexPath row] : -1;
         
         if (newRow != oldRow) {
             UITableViewCell *newCell = [tableView cellForRowAtIndexPath:indexPath];
             newCell.accessoryType = UITableViewCellAccessoryCheckmark;
             self.task.projID = proj.recId;
             
-            UITableViewCell *oldCell = [tableView cellForRowAtIndexPath:_lastIndexPath];
+            UITableViewCell *oldCell = [tableView cellForRowAtIndexPath:_lastSelectedIndexPath];
             oldCell.accessoryType = UITableViewCellAccessoryNone;
          
-            _lastIndexPath = indexPath;
+            _lastSelectedIndexPath = indexPath;
+        } else {
+            UITableViewCell *newCell = [tableView cellForRowAtIndexPath:indexPath];
+            newCell.accessoryType = UITableViewCellAccessoryNone;
+            self.task.projID = nil;
+            _lastSelectedIndexPath = nil;
         }
         
         [tableView deselectRowAtIndexPath:indexPath animated:YES];        
@@ -255,10 +265,10 @@
     
     AGProject *proj;
     
-    if (_currentEditingProject == nil) { // is it a new Project ?
+    if (_currentEditedIndexPath == nil) { // is it a new Project ?
         proj = [[AGProject alloc] init];
     } else {
-        proj = _currentEditingProject;
+        proj = [_todoProjects objectAtIndex:[_currentEditedIndexPath row]];
     }
 
     proj.title = name;
@@ -269,10 +279,10 @@
         [SVProgressHUD showSuccessWithStatus:@"Successfully saved!"];
         
         // if new project add it to our "local" model
-        if (_currentEditingProject == nil) {
+        if (_currentEditedIndexPath == nil) {
             [_todoProjects addObject:proj];
         } else {
-            _currentEditingProject = nil; // reset it
+            _currentEditedIndexPath = nil; // reset it
         }
         
         [self.tableView reloadData];

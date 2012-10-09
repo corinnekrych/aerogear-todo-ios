@@ -29,7 +29,7 @@
 @implementation AGTagsSelectionListViewController {
     NSMutableArray *_todoTags;
     
-    AGTag *_currentEditingTag;
+    NSIndexPath *_currentEditedIndexPath;
 }
 
 @synthesize task = _task;
@@ -196,10 +196,10 @@
         metaController.delegate = self;
 
         if (tag != nil) {
-            _currentEditingTag = tag;
-            
             metaController.name = tag.title;
             metaController.color = tag.color;
+            
+            _currentEditedIndexPath = indexPath;            
         }
         
         [self.navigationController pushViewController:metaController animated:YES];
@@ -239,10 +239,10 @@
     
     AGTag *tag;
     
-    if (_currentEditingTag == nil) { // is it a new Tag ?
+    if (_currentEditedIndexPath == nil) { // is it a new Tag ?
         tag = [[AGTag alloc] init];
     } else {
-        tag = _currentEditingTag;
+        tag = [_todoTags objectAtIndex:[_currentEditedIndexPath row]];
     }
 
     tag.title = name;
@@ -253,10 +253,10 @@
         [SVProgressHUD showSuccessWithStatus:@"Successfully saved!"];
         
          // if new tag add it to our "local" model
-        if (_currentEditingTag == nil) {
+        if (_currentEditedIndexPath == nil) {
             [_todoTags addObject:tag];
         } else {
-            _currentEditingTag = nil;
+            _currentEditedIndexPath = nil;
         }
         
         [self.tableView reloadData];

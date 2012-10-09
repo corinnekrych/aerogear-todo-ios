@@ -241,6 +241,7 @@ enum AGDueProjTagRows {
                 case AGTableSecDueProjTagRowProj:
                 {
                     AGProjectsSelectionListViewController *projListController = [[AGProjectsSelectionListViewController alloc] initWithStyle:UITableViewStyleGrouped];
+                    projListController.isEditMode = YES;
                     projListController.task = _tempTask;
                     
                     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:projListController];
@@ -300,6 +301,17 @@ enum AGDueProjTagRows {
     return YES;
 }
 
+# pragma mark - DateSelectionCell delegate methods
+
+- (void)tableViewCell:(DateSelectionCell *)cell didEndEditingWithDate:(NSDate *)date {
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyy-MM-dd"];
+    
+    _tempTask.dueDate = [formatter stringFromDate:date];
+    
+    [self.tableView reloadData];
+}
+
 #pragma mark - Action Methods
 
 - (IBAction)save {
@@ -317,17 +329,6 @@ enum AGDueProjTagRows {
     }
 
     [delegate taskViewControllerDelegateDidFinish:self task:_tempTask];
-}
-
-# pragma mark - DateSelectionCell delegate methods
-
-- (void)tableViewCell:(DateSelectionCell *)cell didEndEditingWithDate:(NSDate *)date {
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"yyyy-MM-dd"];
-
-    _tempTask.dueDate = [formatter stringFromDate:date];
-    
-    [self.tableView reloadData];
 }
 
 @end

@@ -31,8 +31,7 @@
 @synthesize pipes = _pipes;
 
 
-- (id)init
-{
+- (id)init {
     self = [super init];
     if (self) {
         _pipes = [NSMutableDictionary dictionary];
@@ -52,7 +51,7 @@
 }
 
 -(id) initWithPipe:(NSString*) name baseURL:(NSURL*)baseURL endpoint:(NSString*)endpoint type:(NSString*)type {
-
+    // TODO check ALL supported types...
     if (! [AGRestAdapter accepts :type]) {
         return nil;
     }
@@ -65,7 +64,7 @@
 
         // append the endpoint name and use it as the final URL
         NSURL* finalURL = [self appendEndpoint:endpoint toURL:baseURL];
-        [self add:name url:finalURL type:@"REST"];
+        [self add:name url:finalURL type:type];
     }
     return self;
 }

@@ -15,31 +15,8 @@
  * limitations under the License.
  */
 
-#import "AGBaseAdapter.h"
+#import <Foundation/Foundation.h>
 
-@implementation AGBaseAdapter
-
-
-// abstract:
-- (id)init {
-    if ([self class] == [AGBaseAdapter class]) {
-        @throw [NSException exceptionWithName:NSInternalInconsistencyException
-                            reason:@"Error, attempting to instantiate AGBaseAdapter directly."
-                            userInfo:nil];
-    }
-    
-    self = [super init];
-    if (self) {
-        // Initialization code here.
-    }
-    return self;
-}
-
-+(BOOL)accepts:(NSString *)type {
-    @throw [NSException exceptionWithName:NSInternalInconsistencyException
-                        reason:[NSString stringWithFormat:@"You must override %@ in a subclass",
-                                NSStringFromSelector(_cmd)]
-                        userInfo:nil];
-}
+@interface AGBaseStorage : NSObject
 
 @end

@@ -25,8 +25,7 @@
 @synthesize type = _type;
 @synthesize url = _url;
 
-- (id)init
-{
+- (id)init {
     self = [super init];
     if (self) {
         // base inits:

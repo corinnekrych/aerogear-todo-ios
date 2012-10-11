@@ -16,12 +16,20 @@
  */
 
 #import "AGTaskViewController.h"
+#import "AGProjectsSelectionListViewController.h"
+#import "AGTagsSelectionListViewController.h"
 
 #import "AGTask.h"
+#import "AGTag.h"
+#import "AGProject.h"
 
+#import "AGToDoAPIService.h"
+
+#import "SVProgressHUD.h"
 #import "EditCell.h"
 #import "TextViewCell.h"
 #import "SelectionCell.h"
+#import "DateSelectionCell.h"
 
 // Table Sections
 enum AGTableSections {
@@ -50,29 +58,48 @@ enum AGDueProjTagRows {
 };
 
 @implementation AGTaskViewController {
-    UITextField *_textFieldBeingEdited;
+    id _textFieldBeingEdited;
+    
+    AGTask *_tempTask;
 }
 
 @synthesize task = _task;
-
--(void)dealloc {
-    DLog(@"AGTaskViewController dealloc");    
-}
+@synthesize delegate;
 
 #pragma mark - View lifecycle
 
 - (void)viewDidUnload {
-    DLog(@"AGTaskViewController viewDidUnLoad");
-    
     [super viewDidUnload];
+        
+    DLog(@"AGTaskViewController viewDidUnLoad");
 }
 
 - (void)viewDidLoad {
-    self.title = @"New Task";
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Save" style:UIBarButtonItemStyleDone target:self action:@selector(save)];
-    
     [super viewDidLoad];
     
+    if (self.task == nil) {
+        self.title = @"New Task";
+    } else {
+        self.title = @"Edit Task";
+    }
+
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Save" 
+                                                                              style:UIBarButtonItemStyleDone 
+                                                                             target:self
+       
+                                                                             action:@selector(save)];
+    
+    if(self.task == nil) { // new Task
+        _tempTask = [[AGTask alloc] init];
+        // TEMP HACK that sets the date, will be removed once the Date Editor is implemented 
+        _tempTask.dueDate = @"2010-01-01";
+    
+    } else // edit Task (make a copy so the changes are not immediately applied to the original Task object)
+        _tempTask = [self.task copy];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+ 	[self.tableView reloadData];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
@@ -127,54 +154,74 @@ enum AGDueProjTagRows {
         {
             EditCell *titleCell = [EditCell cellForTableView:tableView];
             titleCell.txtField.delegate = self;
-
-            titleCell.txtField.text = self.task.title;
+            titleCell.txtField.text = _tempTask.title;
             
             cell = titleCell;
-            
             break;
         }
         case AGTableSectionDescr:
         {
             TextViewCell *descrCell = [TextViewCell cellForTableView:tableView];
-            descrCell.textView.delegate = self;
-            
-            descrCell.textView.text = self.task.description;
+            descrCell.txtView.delegate = self;
+            descrCell.txtView.text = _tempTask.descr;
             
             cell = descrCell;
             break;            
         }
         case AGTableSectionDueProjTag:
         {
-            SelectionCell *selCell = [SelectionCell cellForTableView:tableView];
-            selCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-            
             switch (row) {
                 case AGTableSecDueProjTagRowDue:
-                    selCell.textLabel.text = @"Due Date";
-                    selCell.detailTextLabel.text = self.task.dueDate;
+                {
+                    DateSelectionCell *dateCell = [DateSelectionCell cellForTableView:tableView];
+                    dateCell.textLabel.text = @"Due Date";
+
+                    dateCell.detailTextLabel.text = _tempTask.dueDate;
+                    
+                    NSDateFormatter *inputFormat = [[NSDateFormatter alloc] init];
+                    [inputFormat setDateFormat:@"yyyy-MM-dd"];
+                    NSDate *inputDate = [inputFormat dateFromString: _tempTask.dueDate];
+
+                    dateCell.dateValue = inputDate;
+                    dateCell.delegate = self;
+                    
+                    cell = dateCell;                    
                     break;
+                }
                 case AGTableSecDueProjTagRowProj:
+                {
+                    SelectionCell *selCell = [SelectionCell cellForTableView:tableView];
+                    selCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+
                     selCell.textLabel.text = @"Project";
-                    selCell.detailTextLabel.text = [self.task.project description];
-                    
-                    //TODO remove when functionality is implemented
-                    selCell.textLabel.alpha = 0.439216f;
-                    selCell.detailTextLabel.alpha = 0.439216f;
-                    selCell.userInteractionEnabled = NO;
+
+                    AGProject *project = [[AGToDoAPIService sharedInstance].projects objectForKey:_tempTask.projID];
+                    selCell.detailTextLabel.text = project.title;
+                    cell = selCell;                    
                     break;
+                }
                 case AGTableSecDueProjTagRowTag:
+                {
+                    SelectionCell *selCell = [SelectionCell cellForTableView:tableView];
+                    selCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+
                     selCell.textLabel.text = @"Tags";
-                    selCell.detailTextLabel.text = [self.task.tags description];                  
+
+                    NSMutableArray *tagDescrs = [[NSMutableArray alloc] init];
+                    for (NSNumber *id in _tempTask.tags) {
+                        AGTag *tag = [[AGToDoAPIService sharedInstance].tags objectForKey:id];
+                        
+                        if (tag != nil) // TODO: why this?
+                            [tagDescrs addObject:tag.title];
+                    }
                     
-                    //TODO remove when functionality is implemented
-                    selCell.textLabel.alpha = 0.439216f;
-                    selCell.detailTextLabel.alpha = 0.439216f;                    
-                    selCell.userInteractionEnabled = NO;
+                    selCell.detailTextLabel.text = [tagDescrs componentsJoinedByString:@", "];               
+                    cell = selCell;                    
                     break;
+                }
             }   
             
-            cell = selCell;
+
             break;
         }
     }
@@ -185,22 +232,49 @@ enum AGDueProjTagRows {
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-}
+    NSUInteger section = [indexPath section];
+    NSUInteger row = [indexPath row];
 
+    switch (section) {
+        case AGTableSectionDueProjTag:
+            switch (row) {
+                case AGTableSecDueProjTagRowProj:
+                {
+                    AGProjectsSelectionListViewController *projListController = [[AGProjectsSelectionListViewController alloc] initWithStyle:UITableViewStyleGrouped];
+                    projListController.isEditMode = YES;
+                    projListController.task = _tempTask;
+                    
+                    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:projListController];
+                    
+                    [self presentModalViewController:navController animated:YES];
+                    
+                    break;
+                }
+                case AGTableSecDueProjTagRowTag:
+                {
+                    AGTagsSelectionListViewController *tagsListController = [[AGTagsSelectionListViewController alloc] initWithStyle:UITableViewStyleGrouped];
+                    tagsListController.task = _tempTask;
+
+                    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:tagsListController];
+                    
+                    [self presentModalViewController:navController animated:YES];
+                    
+                    break;
+                }
+            }
+            break;
+    }
+}
+ 
 #pragma mark - UITextFieldDelegate methods
+
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
     _textFieldBeingEdited = textField;
 }
 
 - (void)textFieldDidEndEditing:(UITextField *)textField {
-    /*
-	NSNumber *tagAsNum = [[NSNumber alloc] initWithInt:textField.tag];
-	// textfield.text password is not initialized to '' for password fields
-    if (textField.text == nil)
-        return;
-    
-    [_tempValues setObject:textField.text forKey:tagAsNum];
-     */
+    _tempTask.title = textField.text;
+          
     [textField resignFirstResponder];
 }
 
@@ -210,13 +284,51 @@ enum AGDueProjTagRows {
     return YES;
 }
 
+#pragma mark - UITextViewDelegate methods
+- (void)textViewDidBeginEditing:(UITextView *)textView {
+    _textFieldBeingEdited = textView;
+}
+
 - (void)textViewDidEndEditing:(UITextView *)textView {
+    _tempTask.descr = textView.text;
+}
+
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
+    if ([text isEqualToString:@"\n"]) {
+        [textView resignFirstResponder];
+    }
+    
+    return YES;
+}
+
+# pragma mark - DateSelectionCell delegate methods
+
+- (void)tableViewCell:(DateSelectionCell *)cell didEndEditingWithDate:(NSDate *)date {
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyy-MM-dd"];
+    
+    _tempTask.dueDate = [formatter stringFromDate:date];
+    
+    [self.tableView reloadData];
 }
 
 #pragma mark - Action Methods
 
 - (IBAction)save {
-    // TODO
+    // handle the case where the keyboard is still open
+    // and the user clicks "Save" so the delegates( [*]DidEndEditing)
+    // are not yet called to update the model
+    if (_textFieldBeingEdited != nil) {
+        if ([_textFieldBeingEdited isKindOfClass:[UITextField class]])
+            _tempTask.title = ((UITextField *)_textFieldBeingEdited).text;
+        else
+            _tempTask.descr = ((UITextView *)_textFieldBeingEdited).text;
+        
+        
+        [_textFieldBeingEdited resignFirstResponder];        
+    }
+
+    [delegate taskViewControllerDelegateDidFinish:self task:_tempTask];
 }
 
 @end

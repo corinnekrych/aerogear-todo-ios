@@ -17,6 +17,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AGTasksViewController : UITableViewController
+#import "AGTaskViewController.h"
+
+#import "PullRefreshTableViewController.h"
+
+@interface AGTasksViewController : PullRefreshTableViewController <AGTaskViewControllerDelegate>
 
 @end

@@ -19,6 +19,6 @@
 
 @interface TextViewCell : PRPSmartTableViewCell
 
-@property(strong, readonly, nonatomic) UITextView *textView;
+@property(strong, readonly, nonatomic) UITextView *txtView;
 
 @end

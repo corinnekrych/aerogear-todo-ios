@@ -17,19 +17,20 @@
 
 #import <Foundation/Foundation.h>
 
-@interface AGTask : NSObject
+@interface AGTask : NSObject <NSCopying>
 
-@property(strong, nonatomic) NSNumber *id;
+@property(strong, nonatomic) NSNumber *recId;
 @property(copy, nonatomic) NSString *title;
-@property(copy, nonatomic) NSString *description;
+@property(copy, nonatomic) NSString *descr;
 @property(copy, nonatomic) NSString *dueDate;
 
-@property(strong, nonatomic) NSArray *tags;
-@property(strong, nonatomic) NSNumber *project;
+@property(strong, nonatomic) NSMutableArray *tags;
+@property(strong, nonatomic) NSNumber *projID;
 
 // convert from JSON
 - (id)initWithDictionary:(NSDictionary *)dictionary;
 // convert to JSON
 - (NSDictionary *)dictionary;
 
+- (void)copyFrom:(AGTask *)task;
 @end

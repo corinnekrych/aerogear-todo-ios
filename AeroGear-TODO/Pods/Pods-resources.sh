@@ -17,4 +17,5 @@ install_resource()
       ;;
   esac
 }
+install_resource 'PullToRefresh/arrow.png'
 install_resource 'SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle'

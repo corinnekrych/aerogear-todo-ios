@@ -19,6 +19,8 @@
 
 #import "AGProjectsSelectionListViewController.h"
 #import "AGTagsSelectionListViewController.h"
+#import "AGAboutViewController.h"
+
 #import "AGToDoAPIService.h"
 #import "AGTask.h"
 #import "AGProject.h"
@@ -101,6 +103,8 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 
+    self.navigationController.toolbar.hidden = NO;
+    
     // give filter a chance to kick in
     [self handleFilter];
 }
@@ -223,7 +227,17 @@
 }
 
 - (IBAction)displayInfo {
-    // TODO
+    AGAboutViewController *aboutController = [[AGAboutViewController alloc] init];  
+    
+    UIViewAnimationTransition trans = UIViewAnimationTransitionFlipFromRight;
+    [UIView beginAnimations: nil context: nil];
+    [UIView setAnimationDuration:0.8];
+    [UIView setAnimationTransition: trans forView: [self.view window] cache: NO];
+    
+    self.navigationController.toolbar.hidden = YES;
+    [self.navigationController pushViewController:aboutController animated: NO];
+
+    [UIView commitAnimations];
 }
 
 #pragma mark - AGTaskViewController delegate methods

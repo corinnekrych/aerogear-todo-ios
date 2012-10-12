@@ -46,6 +46,8 @@
 		6F3ECD3216281AFE00065148 /* ios-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F3ECD2E16281AFE00065148 /* ios-72.png */; };
 		6F3ECD3316281AFE00065148 /* ios-114.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F3ECD2F16281AFE00065148 /* ios-114.png */; };
 		6F3ECD3416281AFE00065148 /* ios-144.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F3ECD3016281AFE00065148 /* ios-144.png */; };
+		6F42B636162831EF00967BBD /* AGAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F42B635162831EF00967BBD /* AGAboutViewController.m */; };
+		6F42B63A162847E100967BBD /* aerogear_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F42B639162847E100967BBD /* aerogear_logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +121,9 @@
 		6F3ECD2E16281AFE00065148 /* ios-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ios-72.png"; sourceTree = "<group>"; };
 		6F3ECD2F16281AFE00065148 /* ios-114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ios-114.png"; sourceTree = "<group>"; };
 		6F3ECD3016281AFE00065148 /* ios-144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ios-144.png"; sourceTree = "<group>"; };
+		6F42B634162831EF00967BBD /* AGAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AGAboutViewController.h; path = Classes/Controllers/AGAboutViewController.h; sourceTree = "<group>"; };
+		6F42B635162831EF00967BBD /* AGAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AGAboutViewController.m; path = Classes/Controllers/AGAboutViewController.m; sourceTree = "<group>"; };
+		6F42B639162847E100967BBD /* aerogear_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aerogear_logo.png; sourceTree = "<group>"; };
 		B8029C177F0C4C9486B0A095 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -195,10 +200,10 @@
 				6F70C773161AEE3100F20E39 /* Service */,
 				6FAF7A4C16187BFB00E69ABE /* Model */,
 				6F7E52AA16144DB900C99FDE /* Controllers */,
-				57F2280F15F0C3C5005DAA3C /* AGAppDelegate.h */,
-				57F2281015F0C3C5005DAA3C /* AGAppDelegate.m */,
 				6F4FD042161773D300224A28 /* Table Cells */,
 				6F9F0DF9161E17C100F145B5 /* Utilities */,
+				57F2280F15F0C3C5005DAA3C /* AGAppDelegate.h */,
+				57F2281015F0C3C5005DAA3C /* AGAppDelegate.m */,
 				6F50268816146AD1003CA352 /* Images */,
 				57B793D91626AD6100AE6BFD /* Resources */,
 				57F2280715F0C3C5005DAA3C /* Supporting Files */,
@@ -251,6 +256,7 @@
 		6F15C25416280B08007413BD /* images */ = {
 			isa = PBXGroup;
 			children = (
+				6F42B639162847E100967BBD /* aerogear_logo.png */,
 				6F15C25516280B08007413BD /* projects.png */,
 				6F15C25616280B08007413BD /* tags.png */,
 			);
@@ -274,16 +280,16 @@
 		6F4FD042161773D300224A28 /* Table Cells */ = {
 			isa = PBXGroup;
 			children = (
-				6F15C23216280A3F007413BD /* DateSelectionCell.m */,
-				6F15C23316280A3F007413BD /* EditCell.m */,
-				6F15C23416280A3F007413BD /* PRPSmartTableViewCell.m */,
-				6F15C23516280A3F007413BD /* SelectionCell.m */,
-				6F15C23616280A3F007413BD /* TextViewCell.m */,
-				6F15C23716280A3F007413BD /* DateSelectionCell.h */,
-				6F15C23816280A3F007413BD /* EditCell.h */,
 				6F15C23916280A3F007413BD /* PRPSmartTableViewCell.h */,
-				6F15C23A16280A3F007413BD /* SelectionCell.h */,
+				6F15C23416280A3F007413BD /* PRPSmartTableViewCell.m */,
+				6F15C23716280A3F007413BD /* DateSelectionCell.h */,
+				6F15C23216280A3F007413BD /* DateSelectionCell.m */,
 				6F15C23B16280A3F007413BD /* TextViewCell.h */,
+				6F15C23616280A3F007413BD /* TextViewCell.m */,
+				6F15C23816280A3F007413BD /* EditCell.h */,
+				6F15C23316280A3F007413BD /* EditCell.m */,
+				6F15C23A16280A3F007413BD /* SelectionCell.h */,
+				6F15C23516280A3F007413BD /* SelectionCell.m */,
 			);
 			name = "Table Cells";
 			sourceTree = "<group>";
@@ -298,8 +304,8 @@
 		6F70C773161AEE3100F20E39 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				6F15C21716280A0A007413BD /* AGToDoAPIService.m */,
 				6F15C21816280A0A007413BD /* AGToDoAPIService.h */,
+				6F15C21716280A0A007413BD /* AGToDoAPIService.m */,
 			);
 			name = Service;
 			path = ..;
@@ -308,16 +314,18 @@
 		6F7E52AA16144DB900C99FDE /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				6F15C22316280A32007413BD /* AGMetaEditorViewController.m */,
-				6F15C22416280A32007413BD /* AGProjectsSelectionListViewController.m */,
-				6F15C22516280A32007413BD /* AGTagsSelectionListViewController.m */,
-				6F15C22616280A32007413BD /* AGTasksViewController.m */,
-				6F15C22716280A32007413BD /* AGTaskViewController.m */,
-				6F15C22816280A32007413BD /* AGMetaEditorViewController.h */,
-				6F15C22916280A32007413BD /* AGProjectsSelectionListViewController.h */,
-				6F15C22A16280A32007413BD /* AGTagsSelectionListViewController.h */,
 				6F15C22B16280A32007413BD /* AGTasksViewController.h */,
+				6F15C22616280A32007413BD /* AGTasksViewController.m */,
 				6F15C22C16280A32007413BD /* AGTaskViewController.h */,
+				6F15C22716280A32007413BD /* AGTaskViewController.m */,
+				6F15C22916280A32007413BD /* AGProjectsSelectionListViewController.h */,
+				6F15C22416280A32007413BD /* AGProjectsSelectionListViewController.m */,
+				6F15C22A16280A32007413BD /* AGTagsSelectionListViewController.h */,
+				6F15C22516280A32007413BD /* AGTagsSelectionListViewController.m */,
+				6F15C22816280A32007413BD /* AGMetaEditorViewController.h */,
+				6F15C22316280A32007413BD /* AGMetaEditorViewController.m */,
+				6F42B634162831EF00967BBD /* AGAboutViewController.h */,
+				6F42B635162831EF00967BBD /* AGAboutViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -333,10 +341,10 @@
 		6F9F0DFB161E180100F145B5 /* UIAlertViewExtentsions */ = {
 			isa = PBXGroup;
 			children = (
-				6F15C24116280A4C007413BD /* UIActionSheet+BlockExtensions.m */,
+				6F15C24416280A4C007413BD /* UIAlertView+BlockExtensions.h */,
 				6F15C24216280A4C007413BD /* UIAlertView+BlockExtensions.m */,
 				6F15C24316280A4C007413BD /* UIActionSheet+BlockExtensions.h */,
-				6F15C24416280A4C007413BD /* UIAlertView+BlockExtensions.h */,
+				6F15C24116280A4C007413BD /* UIActionSheet+BlockExtensions.m */,
 			);
 			path = UIAlertViewExtentsions;
 			sourceTree = "<group>";
@@ -344,12 +352,12 @@
 		6FAF7A4C16187BFB00E69ABE /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				6F15C21A16280A26007413BD /* AGProject.m */,
-				6F15C21B16280A26007413BD /* AGTag.m */,
-				6F15C21C16280A26007413BD /* AGTask.m */,
-				6F15C21D16280A26007413BD /* AGProject.h */,
-				6F15C21E16280A26007413BD /* AGTag.h */,
 				6F15C21F16280A26007413BD /* AGTask.h */,
+				6F15C21C16280A26007413BD /* AGTask.m */,
+				6F15C21E16280A26007413BD /* AGTag.h */,
+				6F15C21B16280A26007413BD /* AGTag.m */,
+				6F15C21D16280A26007413BD /* AGProject.h */,
+				6F15C21A16280A26007413BD /* AGProject.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -439,6 +447,7 @@
 				6F3ECD3216281AFE00065148 /* ios-72.png in Resources */,
 				6F3ECD3316281AFE00065148 /* ios-114.png in Resources */,
 				6F3ECD3416281AFE00065148 /* ios-144.png in Resources */,
+				6F42B63A162847E100967BBD /* aerogear_logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,6 +514,7 @@
 				6F15C24016280A3F007413BD /* TextViewCell.m in Sources */,
 				6F15C24516280A4C007413BD /* UIActionSheet+BlockExtensions.m in Sources */,
 				6F15C24616280A4C007413BD /* UIAlertView+BlockExtensions.m in Sources */,
+				6F42B636162831EF00967BBD /* AGAboutViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

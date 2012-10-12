@@ -8,39 +8,44 @@
 
 /* Begin PBXBuildFile section */
 		3D069C7EE3134BD8B5D02902 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8029C177F0C4C9486B0A095 /* libPods.a */; };
-		57B793D11626AD1F00AE6BFD /* ios-57.png in Resources */ = {isa = PBXBuildFile; fileRef = 57B793D01626AD1F00AE6BFD /* ios-57.png */; };
-		57B793D41626AD2500AE6BFD /* ios-114.png in Resources */ = {isa = PBXBuildFile; fileRef = 57B793D31626AD2500AE6BFD /* ios-114.png */; };
-		57B793D61626AD4500AE6BFD /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 57B793D51626AD4500AE6BFD /* Default.png */; };
-		57B793D81626AD4C00AE6BFD /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 57B793D71626AD4C00AE6BFD /* Default@2x.png */; };
 		57F2280115F0C3C5005DAA3C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57F2280015F0C3C5005DAA3C /* UIKit.framework */; };
 		57F2280315F0C3C5005DAA3C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57F2280215F0C3C5005DAA3C /* Foundation.framework */; };
 		57F2280515F0C3C5005DAA3C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57F2280415F0C3C5005DAA3C /* CoreGraphics.framework */; };
 		57F2280B15F0C3C5005DAA3C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 57F2280915F0C3C5005DAA3C /* InfoPlist.strings */; };
 		57F2280D15F0C3C5005DAA3C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F2280C15F0C3C5005DAA3C /* main.m */; };
 		57F2281115F0C3C5005DAA3C /* AGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F2281015F0C3C5005DAA3C /* AGAppDelegate.m */; };
-		57F2281715F0C3C5005DAA3C /* AGTasksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F2281615F0C3C5005DAA3C /* AGTasksViewController.m */; };
 		57F2281F15F0C3C5005DAA3C /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57F2281E15F0C3C5005DAA3C /* SenTestingKit.framework */; };
 		57F2282015F0C3C5005DAA3C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57F2280015F0C3C5005DAA3C /* UIKit.framework */; };
 		57F2282115F0C3C5005DAA3C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57F2280215F0C3C5005DAA3C /* Foundation.framework */; };
 		57F2282915F0C3C5005DAA3C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 57F2282715F0C3C5005DAA3C /* InfoPlist.strings */; };
 		57F2282C15F0C3C5005DAA3C /* AeroGear_TODOTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F2282B15F0C3C5005DAA3C /* AeroGear_TODOTests.m */; };
-		6F3BEB9D161C2D390059A45A /* AGTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3BEB9C161C2D390059A45A /* AGTag.m */; };
-		6F3BEBA1161C6B4B0059A45A /* AGTagsSelectionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3BEBA0161C6B4B0059A45A /* AGTagsSelectionListViewController.m */; };
-		6F3BEBA4161CD5880059A45A /* AGMetaEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3BEBA3161CD5880059A45A /* AGMetaEditorViewController.m */; };
-		6F4FD04016175FE900224A28 /* AGTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F4FD03F16175FE800224A28 /* AGTaskViewController.m */; };
-		6F50269216147144003CA352 /* tags.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F50269016147144003CA352 /* tags.png */; };
-		6F502695161471E9003CA352 /* projects.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F502694161471E9003CA352 /* projects.png */; };
-		6F59242E161D734B00E1F357 /* AGProject.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F59242C161D734B00E1F357 /* AGProject.m */; };
-		6F592432161D777A00E1F357 /* AGProjectsSelectionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F592430161D777A00E1F357 /* AGProjectsSelectionListViewController.m */; };
-		6F59243E161DACF600E1F357 /* DateSelectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F59243C161DACF500E1F357 /* DateSelectionCell.m */; };
-		6F70C785161B4D3800F20E39 /* AGToDoAPIService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F70C784161B4D3800F20E39 /* AGToDoAPIService.m */; };
-		6F9F0E00161E180100F145B5 /* UIActionSheet+BlockExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9F0DFD161E180100F145B5 /* UIActionSheet+BlockExtensions.m */; };
-		6F9F0E01161E180100F145B5 /* UIAlertView+BlockExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9F0DFF161E180100F145B5 /* UIAlertView+BlockExtensions.m */; };
-		6FAF7A411618376B00E69ABE /* PRPSmartTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FAF7A3F1618376B00E69ABE /* PRPSmartTableViewCell.m */; };
-		6FAF7A4516183A3900E69ABE /* EditCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FAF7A4416183A3900E69ABE /* EditCell.m */; };
-		6FAF7A481618482700E69ABE /* SelectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FAF7A471618482700E69ABE /* SelectionCell.m */; };
-		6FAF7A4B161851B400E69ABE /* TextViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FAF7A4A161851B400E69ABE /* TextViewCell.m */; };
-		6FAF7A4F16187C1500E69ABE /* AGTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FAF7A4E16187C1500E69ABE /* AGTask.m */; };
+		6F15C21916280A0A007413BD /* AGToDoAPIService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F15C21716280A0A007413BD /* AGToDoAPIService.m */; };
+		6F15C22016280A26007413BD /* AGProject.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F15C21A16280A26007413BD /* AGProject.m */; };
+		6F15C22116280A26007413BD /* AGTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F15C21B16280A26007413BD /* AGTag.m */; };
+		6F15C22216280A26007413BD /* AGTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F15C21C16280A26007413BD /* AGTask.m */; };
+		6F15C22D16280A32007413BD /* AGMetaEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F15C22316280A32007413BD /* AGMetaEditorViewController.m */; };
+		6F15C22E16280A32007413BD /* AGProjectsSelectionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F15C22416280A32007413BD /* AGProjectsSelectionListViewController.m */; };
+		6F15C22F16280A32007413BD /* AGTagsSelectionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F15C22516280A32007413BD /* AGTagsSelectionListViewController.m */; };
+		6F15C23016280A32007413BD /* AGTasksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F15C22616280A32007413BD /* AGTasksViewController.m */; };
+		6F15C23116280A32007413BD /* AGTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F15C22716280A32007413BD /* AGTaskViewController.m */; };
+		6F15C23C16280A3F007413BD /* DateSelectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F15C23216280A3F007413BD /* DateSelectionCell.m */; };
+		6F15C23D16280A3F007413BD /* EditCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F15C23316280A3F007413BD /* EditCell.m */; };
+		6F15C23E16280A3F007413BD /* PRPSmartTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F15C23416280A3F007413BD /* PRPSmartTableViewCell.m */; };
+		6F15C23F16280A3F007413BD /* SelectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F15C23516280A3F007413BD /* SelectionCell.m */; };
+		6F15C24016280A3F007413BD /* TextViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F15C23616280A3F007413BD /* TextViewCell.m */; };
+		6F15C24516280A4C007413BD /* UIActionSheet+BlockExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F15C24116280A4C007413BD /* UIActionSheet+BlockExtensions.m */; };
+		6F15C24616280A4C007413BD /* UIAlertView+BlockExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F15C24216280A4C007413BD /* UIAlertView+BlockExtensions.m */; };
+		6F15C25716280B08007413BD /* projects.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F15C25516280B08007413BD /* projects.png */; };
+		6F15C25816280B08007413BD /* tags.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F15C25616280B08007413BD /* tags.png */; };
+		6F15C25F16280B13007413BD /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F15C25A16280B13007413BD /* Default-Landscape~ipad.png */; };
+		6F15C26016280B13007413BD /* Default-Portrait@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F15C25B16280B13007413BD /* Default-Portrait@2x~ipad.png */; };
+		6F15C26116280B13007413BD /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F15C25C16280B13007413BD /* Default-Portrait~ipad.png */; };
+		6F15C26216280B13007413BD /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F15C25D16280B13007413BD /* Default.png */; };
+		6F15C26316280B13007413BD /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F15C25E16280B13007413BD /* Default@2x.png */; };
+		6F3ECD3116281AFE00065148 /* ios-57.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F3ECD2D16281AFE00065148 /* ios-57.png */; };
+		6F3ECD3216281AFE00065148 /* ios-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F3ECD2E16281AFE00065148 /* ios-72.png */; };
+		6F3ECD3316281AFE00065148 /* ios-114.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F3ECD2F16281AFE00065148 /* ios-114.png */; };
+		6F3ECD3416281AFE00065148 /* ios-144.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F3ECD3016281AFE00065148 /* ios-144.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,10 +60,6 @@
 
 /* Begin PBXFileReference section */
 		3C1939FDBF8A4E8E8174BED8 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
-		57B793D01626AD1F00AE6BFD /* ios-57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ios-57.png"; path = "Resources/icons/ios-57.png"; sourceTree = "<group>"; };
-		57B793D31626AD2500AE6BFD /* ios-114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ios-114.png"; path = "Resources/icons/ios-114.png"; sourceTree = "<group>"; };
-		57B793D51626AD4500AE6BFD /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Resources/splash/Default.png; sourceTree = "<group>"; };
-		57B793D71626AD4C00AE6BFD /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Resources/splash/Default@2x.png"; sourceTree = "<group>"; };
 		57F227FC15F0C3C5005DAA3C /* AeroGear-TODO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AeroGear-TODO.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		57F2280015F0C3C5005DAA3C /* UIKit.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		57F2280215F0C3C5005DAA3C /* Foundation.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -69,46 +70,55 @@
 		57F2280E15F0C3C5005DAA3C /* AeroGear-TODO-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AeroGear-TODO-Prefix.pch"; sourceTree = "<group>"; };
 		57F2280F15F0C3C5005DAA3C /* AGAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGAppDelegate.h; sourceTree = "<group>"; };
 		57F2281015F0C3C5005DAA3C /* AGAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AGAppDelegate.m; sourceTree = "<group>"; };
-		57F2281515F0C3C5005DAA3C /* AGTasksViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AGTasksViewController.h; sourceTree = "<group>"; };
-		57F2281615F0C3C5005DAA3C /* AGTasksViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AGTasksViewController.m; sourceTree = "<group>"; };
 		57F2281D15F0C3C5005DAA3C /* AeroGear-TODOTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AeroGear-TODOTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		57F2281E15F0C3C5005DAA3C /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		57F2282615F0C3C5005DAA3C /* AeroGear-TODOTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AeroGear-TODOTests-Info.plist"; sourceTree = "<group>"; };
 		57F2282815F0C3C5005DAA3C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		57F2282A15F0C3C5005DAA3C /* AeroGear_TODOTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AeroGear_TODOTests.h; sourceTree = "<group>"; };
 		57F2282B15F0C3C5005DAA3C /* AeroGear_TODOTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AeroGear_TODOTests.m; sourceTree = "<group>"; };
-		6F3BEB9B161C2D390059A45A /* AGTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTag.h; sourceTree = "<group>"; };
-		6F3BEB9C161C2D390059A45A /* AGTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTag.m; sourceTree = "<group>"; };
-		6F3BEB9F161C6B4B0059A45A /* AGTagsSelectionListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTagsSelectionListViewController.h; sourceTree = "<group>"; };
-		6F3BEBA0161C6B4B0059A45A /* AGTagsSelectionListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTagsSelectionListViewController.m; sourceTree = "<group>"; };
-		6F3BEBA2161CD5880059A45A /* AGMetaEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGMetaEditorViewController.h; sourceTree = "<group>"; };
-		6F3BEBA3161CD5880059A45A /* AGMetaEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGMetaEditorViewController.m; sourceTree = "<group>"; };
-		6F4FD03E16175FE800224A28 /* AGTaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTaskViewController.h; sourceTree = "<group>"; };
-		6F4FD03F16175FE800224A28 /* AGTaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTaskViewController.m; sourceTree = "<group>"; };
-		6F50269016147144003CA352 /* tags.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tags.png; sourceTree = "<group>"; };
-		6F502694161471E9003CA352 /* projects.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = projects.png; sourceTree = "<group>"; };
-		6F59242C161D734B00E1F357 /* AGProject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGProject.m; sourceTree = "<group>"; };
-		6F59242D161D734B00E1F357 /* AGProject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGProject.h; sourceTree = "<group>"; };
-		6F592430161D777A00E1F357 /* AGProjectsSelectionListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGProjectsSelectionListViewController.m; sourceTree = "<group>"; };
-		6F592431161D777A00E1F357 /* AGProjectsSelectionListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGProjectsSelectionListViewController.h; sourceTree = "<group>"; };
-		6F59243C161DACF500E1F357 /* DateSelectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateSelectionCell.m; sourceTree = "<group>"; };
-		6F59243D161DACF600E1F357 /* DateSelectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateSelectionCell.h; sourceTree = "<group>"; };
-		6F70C783161B4D3800F20E39 /* AGToDoAPIService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AGToDoAPIService.h; path = "AeroGear-TODO/AGToDoAPIService.h"; sourceTree = "<group>"; };
-		6F70C784161B4D3800F20E39 /* AGToDoAPIService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AGToDoAPIService.m; path = "AeroGear-TODO/AGToDoAPIService.m"; sourceTree = "<group>"; };
-		6F9F0DFC161E180100F145B5 /* UIActionSheet+BlockExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActionSheet+BlockExtensions.h"; sourceTree = "<group>"; };
-		6F9F0DFD161E180100F145B5 /* UIActionSheet+BlockExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActionSheet+BlockExtensions.m"; sourceTree = "<group>"; };
-		6F9F0DFE161E180100F145B5 /* UIAlertView+BlockExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+BlockExtensions.h"; sourceTree = "<group>"; };
-		6F9F0DFF161E180100F145B5 /* UIAlertView+BlockExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+BlockExtensions.m"; sourceTree = "<group>"; };
-		6FAF7A3F1618376B00E69ABE /* PRPSmartTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRPSmartTableViewCell.m; sourceTree = "<group>"; };
-		6FAF7A401618376B00E69ABE /* PRPSmartTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRPSmartTableViewCell.h; sourceTree = "<group>"; };
-		6FAF7A4316183A3900E69ABE /* EditCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditCell.h; sourceTree = "<group>"; };
-		6FAF7A4416183A3900E69ABE /* EditCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditCell.m; sourceTree = "<group>"; };
-		6FAF7A461618482700E69ABE /* SelectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectionCell.h; sourceTree = "<group>"; };
-		6FAF7A471618482700E69ABE /* SelectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectionCell.m; sourceTree = "<group>"; };
-		6FAF7A49161851B400E69ABE /* TextViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextViewCell.h; sourceTree = "<group>"; };
-		6FAF7A4A161851B400E69ABE /* TextViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextViewCell.m; sourceTree = "<group>"; };
-		6FAF7A4D16187C1500E69ABE /* AGTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTask.h; sourceTree = "<group>"; };
-		6FAF7A4E16187C1500E69ABE /* AGTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTask.m; sourceTree = "<group>"; };
+		6F15C21716280A0A007413BD /* AGToDoAPIService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AGToDoAPIService.m; path = "AeroGear-TODO/Classes/Service/AGToDoAPIService.m"; sourceTree = "<group>"; };
+		6F15C21816280A0A007413BD /* AGToDoAPIService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AGToDoAPIService.h; path = "AeroGear-TODO/Classes/Service/AGToDoAPIService.h"; sourceTree = "<group>"; };
+		6F15C21A16280A26007413BD /* AGProject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AGProject.m; path = Classes/Model/AGProject.m; sourceTree = "<group>"; };
+		6F15C21B16280A26007413BD /* AGTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AGTag.m; path = Classes/Model/AGTag.m; sourceTree = "<group>"; };
+		6F15C21C16280A26007413BD /* AGTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AGTask.m; path = Classes/Model/AGTask.m; sourceTree = "<group>"; };
+		6F15C21D16280A26007413BD /* AGProject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AGProject.h; path = Classes/Model/AGProject.h; sourceTree = "<group>"; };
+		6F15C21E16280A26007413BD /* AGTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AGTag.h; path = Classes/Model/AGTag.h; sourceTree = "<group>"; };
+		6F15C21F16280A26007413BD /* AGTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AGTask.h; path = Classes/Model/AGTask.h; sourceTree = "<group>"; };
+		6F15C22316280A32007413BD /* AGMetaEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AGMetaEditorViewController.m; path = Classes/Controllers/AGMetaEditorViewController.m; sourceTree = "<group>"; };
+		6F15C22416280A32007413BD /* AGProjectsSelectionListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AGProjectsSelectionListViewController.m; path = Classes/Controllers/AGProjectsSelectionListViewController.m; sourceTree = "<group>"; };
+		6F15C22516280A32007413BD /* AGTagsSelectionListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AGTagsSelectionListViewController.m; path = Classes/Controllers/AGTagsSelectionListViewController.m; sourceTree = "<group>"; };
+		6F15C22616280A32007413BD /* AGTasksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AGTasksViewController.m; path = Classes/Controllers/AGTasksViewController.m; sourceTree = "<group>"; };
+		6F15C22716280A32007413BD /* AGTaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AGTaskViewController.m; path = Classes/Controllers/AGTaskViewController.m; sourceTree = "<group>"; };
+		6F15C22816280A32007413BD /* AGMetaEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AGMetaEditorViewController.h; path = Classes/Controllers/AGMetaEditorViewController.h; sourceTree = "<group>"; };
+		6F15C22916280A32007413BD /* AGProjectsSelectionListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AGProjectsSelectionListViewController.h; path = Classes/Controllers/AGProjectsSelectionListViewController.h; sourceTree = "<group>"; };
+		6F15C22A16280A32007413BD /* AGTagsSelectionListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AGTagsSelectionListViewController.h; path = Classes/Controllers/AGTagsSelectionListViewController.h; sourceTree = "<group>"; };
+		6F15C22B16280A32007413BD /* AGTasksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AGTasksViewController.h; path = Classes/Controllers/AGTasksViewController.h; sourceTree = "<group>"; };
+		6F15C22C16280A32007413BD /* AGTaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AGTaskViewController.h; path = Classes/Controllers/AGTaskViewController.h; sourceTree = "<group>"; };
+		6F15C23216280A3F007413BD /* DateSelectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DateSelectionCell.m; path = Classes/TableCells/DateSelectionCell.m; sourceTree = "<group>"; };
+		6F15C23316280A3F007413BD /* EditCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditCell.m; path = Classes/TableCells/EditCell.m; sourceTree = "<group>"; };
+		6F15C23416280A3F007413BD /* PRPSmartTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PRPSmartTableViewCell.m; path = Classes/TableCells/PRPSmartTableViewCell.m; sourceTree = "<group>"; };
+		6F15C23516280A3F007413BD /* SelectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SelectionCell.m; path = Classes/TableCells/SelectionCell.m; sourceTree = "<group>"; };
+		6F15C23616280A3F007413BD /* TextViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TextViewCell.m; path = Classes/TableCells/TextViewCell.m; sourceTree = "<group>"; };
+		6F15C23716280A3F007413BD /* DateSelectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DateSelectionCell.h; path = Classes/TableCells/DateSelectionCell.h; sourceTree = "<group>"; };
+		6F15C23816280A3F007413BD /* EditCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditCell.h; path = Classes/TableCells/EditCell.h; sourceTree = "<group>"; };
+		6F15C23916280A3F007413BD /* PRPSmartTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PRPSmartTableViewCell.h; path = Classes/TableCells/PRPSmartTableViewCell.h; sourceTree = "<group>"; };
+		6F15C23A16280A3F007413BD /* SelectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SelectionCell.h; path = Classes/TableCells/SelectionCell.h; sourceTree = "<group>"; };
+		6F15C23B16280A3F007413BD /* TextViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextViewCell.h; path = Classes/TableCells/TextViewCell.h; sourceTree = "<group>"; };
+		6F15C24116280A4C007413BD /* UIActionSheet+BlockExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIActionSheet+BlockExtensions.m"; path = "AeroGear-TODO/Utilities/UIAlertViewExtentsions/UIActionSheet+BlockExtensions.m"; sourceTree = SOURCE_ROOT; };
+		6F15C24216280A4C007413BD /* UIAlertView+BlockExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIAlertView+BlockExtensions.m"; path = "AeroGear-TODO/Utilities/UIAlertViewExtentsions/UIAlertView+BlockExtensions.m"; sourceTree = SOURCE_ROOT; };
+		6F15C24316280A4C007413BD /* UIActionSheet+BlockExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIActionSheet+BlockExtensions.h"; path = "AeroGear-TODO/Utilities/UIAlertViewExtentsions/UIActionSheet+BlockExtensions.h"; sourceTree = SOURCE_ROOT; };
+		6F15C24416280A4C007413BD /* UIAlertView+BlockExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIAlertView+BlockExtensions.h"; path = "AeroGear-TODO/Utilities/UIAlertViewExtentsions/UIAlertView+BlockExtensions.h"; sourceTree = SOURCE_ROOT; };
+		6F15C25516280B08007413BD /* projects.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = projects.png; sourceTree = "<group>"; };
+		6F15C25616280B08007413BD /* tags.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tags.png; sourceTree = "<group>"; };
+		6F15C25A16280B13007413BD /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
+		6F15C25B16280B13007413BD /* Default-Portrait@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait@2x~ipad.png"; sourceTree = "<group>"; };
+		6F15C25C16280B13007413BD /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait~ipad.png"; sourceTree = "<group>"; };
+		6F15C25D16280B13007413BD /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		6F15C25E16280B13007413BD /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		6F3ECD2D16281AFE00065148 /* ios-57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ios-57.png"; sourceTree = "<group>"; };
+		6F3ECD2E16281AFE00065148 /* ios-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ios-72.png"; sourceTree = "<group>"; };
+		6F3ECD2F16281AFE00065148 /* ios-114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ios-114.png"; sourceTree = "<group>"; };
+		6F3ECD3016281AFE00065148 /* ios-144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ios-144.png"; sourceTree = "<group>"; };
 		B8029C177F0C4C9486B0A095 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -140,10 +150,9 @@
 		57B793D91626AD6100AE6BFD /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				57B793D71626AD4C00AE6BFD /* Default@2x.png */,
-				57B793D51626AD4500AE6BFD /* Default.png */,
-				57B793D31626AD2500AE6BFD /* ios-114.png */,
-				57B793D01626AD1F00AE6BFD /* ios-57.png */,
+				6F15C25916280B13007413BD /* splash */,
+				6F15C25416280B08007413BD /* images */,
+				6F15C24B16280B01007413BD /* icons */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -227,19 +236,54 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		6F15C24B16280B01007413BD /* icons */ = {
+			isa = PBXGroup;
+			children = (
+				6F3ECD2D16281AFE00065148 /* ios-57.png */,
+				6F3ECD2E16281AFE00065148 /* ios-72.png */,
+				6F3ECD2F16281AFE00065148 /* ios-114.png */,
+				6F3ECD3016281AFE00065148 /* ios-144.png */,
+			);
+			name = icons;
+			path = Resources/icons;
+			sourceTree = "<group>";
+		};
+		6F15C25416280B08007413BD /* images */ = {
+			isa = PBXGroup;
+			children = (
+				6F15C25516280B08007413BD /* projects.png */,
+				6F15C25616280B08007413BD /* tags.png */,
+			);
+			name = images;
+			path = Resources/images;
+			sourceTree = "<group>";
+		};
+		6F15C25916280B13007413BD /* splash */ = {
+			isa = PBXGroup;
+			children = (
+				6F15C25A16280B13007413BD /* Default-Landscape~ipad.png */,
+				6F15C25B16280B13007413BD /* Default-Portrait@2x~ipad.png */,
+				6F15C25C16280B13007413BD /* Default-Portrait~ipad.png */,
+				6F15C25D16280B13007413BD /* Default.png */,
+				6F15C25E16280B13007413BD /* Default@2x.png */,
+			);
+			name = splash;
+			path = Resources/splash;
+			sourceTree = "<group>";
+		};
 		6F4FD042161773D300224A28 /* Table Cells */ = {
 			isa = PBXGroup;
 			children = (
-				6FAF7A401618376B00E69ABE /* PRPSmartTableViewCell.h */,
-				6FAF7A3F1618376B00E69ABE /* PRPSmartTableViewCell.m */,
-				6FAF7A4316183A3900E69ABE /* EditCell.h */,
-				6FAF7A4416183A3900E69ABE /* EditCell.m */,
-				6FAF7A49161851B400E69ABE /* TextViewCell.h */,
-				6FAF7A4A161851B400E69ABE /* TextViewCell.m */,
-				6FAF7A461618482700E69ABE /* SelectionCell.h */,
-				6FAF7A471618482700E69ABE /* SelectionCell.m */,
-				6F59243D161DACF600E1F357 /* DateSelectionCell.h */,
-				6F59243C161DACF500E1F357 /* DateSelectionCell.m */,
+				6F15C23216280A3F007413BD /* DateSelectionCell.m */,
+				6F15C23316280A3F007413BD /* EditCell.m */,
+				6F15C23416280A3F007413BD /* PRPSmartTableViewCell.m */,
+				6F15C23516280A3F007413BD /* SelectionCell.m */,
+				6F15C23616280A3F007413BD /* TextViewCell.m */,
+				6F15C23716280A3F007413BD /* DateSelectionCell.h */,
+				6F15C23816280A3F007413BD /* EditCell.h */,
+				6F15C23916280A3F007413BD /* PRPSmartTableViewCell.h */,
+				6F15C23A16280A3F007413BD /* SelectionCell.h */,
+				6F15C23B16280A3F007413BD /* TextViewCell.h */,
 			);
 			name = "Table Cells";
 			sourceTree = "<group>";
@@ -247,8 +291,6 @@
 		6F50268816146AD1003CA352 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				6F502694161471E9003CA352 /* projects.png */,
-				6F50269016147144003CA352 /* tags.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -256,8 +298,8 @@
 		6F70C773161AEE3100F20E39 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				6F70C783161B4D3800F20E39 /* AGToDoAPIService.h */,
-				6F70C784161B4D3800F20E39 /* AGToDoAPIService.m */,
+				6F15C21716280A0A007413BD /* AGToDoAPIService.m */,
+				6F15C21816280A0A007413BD /* AGToDoAPIService.h */,
 			);
 			name = Service;
 			path = ..;
@@ -266,16 +308,16 @@
 		6F7E52AA16144DB900C99FDE /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				57F2281515F0C3C5005DAA3C /* AGTasksViewController.h */,
-				57F2281615F0C3C5005DAA3C /* AGTasksViewController.m */,
-				6F4FD03E16175FE800224A28 /* AGTaskViewController.h */,
-				6F4FD03F16175FE800224A28 /* AGTaskViewController.m */,
-				6F592431161D777A00E1F357 /* AGProjectsSelectionListViewController.h */,
-				6F592430161D777A00E1F357 /* AGProjectsSelectionListViewController.m */,
-				6F3BEB9F161C6B4B0059A45A /* AGTagsSelectionListViewController.h */,
-				6F3BEBA0161C6B4B0059A45A /* AGTagsSelectionListViewController.m */,
-				6F3BEBA2161CD5880059A45A /* AGMetaEditorViewController.h */,
-				6F3BEBA3161CD5880059A45A /* AGMetaEditorViewController.m */,
+				6F15C22316280A32007413BD /* AGMetaEditorViewController.m */,
+				6F15C22416280A32007413BD /* AGProjectsSelectionListViewController.m */,
+				6F15C22516280A32007413BD /* AGTagsSelectionListViewController.m */,
+				6F15C22616280A32007413BD /* AGTasksViewController.m */,
+				6F15C22716280A32007413BD /* AGTaskViewController.m */,
+				6F15C22816280A32007413BD /* AGMetaEditorViewController.h */,
+				6F15C22916280A32007413BD /* AGProjectsSelectionListViewController.h */,
+				6F15C22A16280A32007413BD /* AGTagsSelectionListViewController.h */,
+				6F15C22B16280A32007413BD /* AGTasksViewController.h */,
+				6F15C22C16280A32007413BD /* AGTaskViewController.h */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -291,10 +333,10 @@
 		6F9F0DFB161E180100F145B5 /* UIAlertViewExtentsions */ = {
 			isa = PBXGroup;
 			children = (
-				6F9F0DFC161E180100F145B5 /* UIActionSheet+BlockExtensions.h */,
-				6F9F0DFD161E180100F145B5 /* UIActionSheet+BlockExtensions.m */,
-				6F9F0DFE161E180100F145B5 /* UIAlertView+BlockExtensions.h */,
-				6F9F0DFF161E180100F145B5 /* UIAlertView+BlockExtensions.m */,
+				6F15C24116280A4C007413BD /* UIActionSheet+BlockExtensions.m */,
+				6F15C24216280A4C007413BD /* UIAlertView+BlockExtensions.m */,
+				6F15C24316280A4C007413BD /* UIActionSheet+BlockExtensions.h */,
+				6F15C24416280A4C007413BD /* UIAlertView+BlockExtensions.h */,
 			);
 			path = UIAlertViewExtentsions;
 			sourceTree = "<group>";
@@ -302,12 +344,12 @@
 		6FAF7A4C16187BFB00E69ABE /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				6FAF7A4D16187C1500E69ABE /* AGTask.h */,
-				6FAF7A4E16187C1500E69ABE /* AGTask.m */,
-				6F3BEB9B161C2D390059A45A /* AGTag.h */,
-				6F3BEB9C161C2D390059A45A /* AGTag.m */,
-				6F59242D161D734B00E1F357 /* AGProject.h */,
-				6F59242C161D734B00E1F357 /* AGProject.m */,
+				6F15C21A16280A26007413BD /* AGProject.m */,
+				6F15C21B16280A26007413BD /* AGTag.m */,
+				6F15C21C16280A26007413BD /* AGTask.m */,
+				6F15C21D16280A26007413BD /* AGProject.h */,
+				6F15C21E16280A26007413BD /* AGTag.h */,
+				6F15C21F16280A26007413BD /* AGTask.h */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -386,12 +428,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				57F2280B15F0C3C5005DAA3C /* InfoPlist.strings in Resources */,
-				6F50269216147144003CA352 /* tags.png in Resources */,
-				6F502695161471E9003CA352 /* projects.png in Resources */,
-				57B793D11626AD1F00AE6BFD /* ios-57.png in Resources */,
-				57B793D41626AD2500AE6BFD /* ios-114.png in Resources */,
-				57B793D61626AD4500AE6BFD /* Default.png in Resources */,
-				57B793D81626AD4C00AE6BFD /* Default@2x.png in Resources */,
+				6F15C25716280B08007413BD /* projects.png in Resources */,
+				6F15C25816280B08007413BD /* tags.png in Resources */,
+				6F15C25F16280B13007413BD /* Default-Landscape~ipad.png in Resources */,
+				6F15C26016280B13007413BD /* Default-Portrait@2x~ipad.png in Resources */,
+				6F15C26116280B13007413BD /* Default-Portrait~ipad.png in Resources */,
+				6F15C26216280B13007413BD /* Default.png in Resources */,
+				6F15C26316280B13007413BD /* Default@2x.png in Resources */,
+				6F3ECD3116281AFE00065148 /* ios-57.png in Resources */,
+				6F3ECD3216281AFE00065148 /* ios-72.png in Resources */,
+				6F3ECD3316281AFE00065148 /* ios-114.png in Resources */,
+				6F3ECD3416281AFE00065148 /* ios-144.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,22 +489,22 @@
 			files = (
 				57F2280D15F0C3C5005DAA3C /* main.m in Sources */,
 				57F2281115F0C3C5005DAA3C /* AGAppDelegate.m in Sources */,
-				57F2281715F0C3C5005DAA3C /* AGTasksViewController.m in Sources */,
-				6F4FD04016175FE900224A28 /* AGTaskViewController.m in Sources */,
-				6FAF7A411618376B00E69ABE /* PRPSmartTableViewCell.m in Sources */,
-				6FAF7A4516183A3900E69ABE /* EditCell.m in Sources */,
-				6FAF7A481618482700E69ABE /* SelectionCell.m in Sources */,
-				6FAF7A4B161851B400E69ABE /* TextViewCell.m in Sources */,
-				6FAF7A4F16187C1500E69ABE /* AGTask.m in Sources */,
-				6F70C785161B4D3800F20E39 /* AGToDoAPIService.m in Sources */,
-				6F3BEB9D161C2D390059A45A /* AGTag.m in Sources */,
-				6F3BEBA1161C6B4B0059A45A /* AGTagsSelectionListViewController.m in Sources */,
-				6F3BEBA4161CD5880059A45A /* AGMetaEditorViewController.m in Sources */,
-				6F59242E161D734B00E1F357 /* AGProject.m in Sources */,
-				6F592432161D777A00E1F357 /* AGProjectsSelectionListViewController.m in Sources */,
-				6F59243E161DACF600E1F357 /* DateSelectionCell.m in Sources */,
-				6F9F0E00161E180100F145B5 /* UIActionSheet+BlockExtensions.m in Sources */,
-				6F9F0E01161E180100F145B5 /* UIAlertView+BlockExtensions.m in Sources */,
+				6F15C21916280A0A007413BD /* AGToDoAPIService.m in Sources */,
+				6F15C22016280A26007413BD /* AGProject.m in Sources */,
+				6F15C22116280A26007413BD /* AGTag.m in Sources */,
+				6F15C22216280A26007413BD /* AGTask.m in Sources */,
+				6F15C22D16280A32007413BD /* AGMetaEditorViewController.m in Sources */,
+				6F15C22E16280A32007413BD /* AGProjectsSelectionListViewController.m in Sources */,
+				6F15C22F16280A32007413BD /* AGTagsSelectionListViewController.m in Sources */,
+				6F15C23016280A32007413BD /* AGTasksViewController.m in Sources */,
+				6F15C23116280A32007413BD /* AGTaskViewController.m in Sources */,
+				6F15C23C16280A3F007413BD /* DateSelectionCell.m in Sources */,
+				6F15C23D16280A3F007413BD /* EditCell.m in Sources */,
+				6F15C23E16280A3F007413BD /* PRPSmartTableViewCell.m in Sources */,
+				6F15C23F16280A3F007413BD /* SelectionCell.m in Sources */,
+				6F15C24016280A3F007413BD /* TextViewCell.m in Sources */,
+				6F15C24516280A4C007413BD /* UIActionSheet+BlockExtensions.m in Sources */,
+				6F15C24616280A4C007413BD /* UIAlertView+BlockExtensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

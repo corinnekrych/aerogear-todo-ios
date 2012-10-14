@@ -120,14 +120,14 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *SimpleTableIdentifier = @"SimpleTableCellIdentifier";
+    static NSString *CellTaskIdentifier = @"CellTaskIdentifier";
     
     NSUInteger row = [indexPath row];
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: SimpleTableIdentifier];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: CellTaskIdentifier];
     
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:SimpleTableIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellTaskIdentifier];
     }
     
     AGTask *task = [_tasks objectAtIndex:row];

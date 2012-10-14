@@ -15,11 +15,9 @@
  * limitations under the License.
  */
 
-#import "SelectionCell.h"
-
 @protocol DateSelectionCellDelegate;
 
-@interface DateSelectionCell : SelectionCell
+@interface DateSelectionCell : UITableViewCell
 
 @property (nonatomic, strong) NSDate *dateValue;
 @property (nonatomic, strong) UIDatePicker *datePicker;

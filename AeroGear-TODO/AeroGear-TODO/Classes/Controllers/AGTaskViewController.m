@@ -28,7 +28,6 @@
 #import "SVProgressHUD.h"
 #import "EditCell.h"
 #import "TextViewCell.h"
-#import "SelectionCell.h"
 #import "DateSelectionCell.h"
 
 // Table Sections
@@ -147,12 +146,12 @@ enum AGDueProjTagRows {
     NSUInteger section = [indexPath section];
     NSUInteger row = [indexPath row];
     
-    id cell;
+    UITableViewCell *cell;
 
     switch (section) {
         case AGTableSectionTitle:
         {
-            EditCell *titleCell = [EditCell cellForTableView:tableView];
+            EditCell *titleCell = [[EditCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
             titleCell.txtField.delegate = self;
             titleCell.txtField.text = _tempTask.title;
             
@@ -161,7 +160,7 @@ enum AGDueProjTagRows {
         }
         case AGTableSectionDescr:
         {
-            TextViewCell *descrCell = [TextViewCell cellForTableView:tableView];
+            TextViewCell *descrCell = [[TextViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
             descrCell.txtView.delegate = self;
             descrCell.txtView.text = _tempTask.descr;
             
@@ -173,9 +172,8 @@ enum AGDueProjTagRows {
             switch (row) {
                 case AGTableSecDueProjTagRowDue:
                 {
-                    DateSelectionCell *dateCell = [DateSelectionCell cellForTableView:tableView];
+                    DateSelectionCell *dateCell = [[DateSelectionCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:nil];
                     dateCell.textLabel.text = @"Due Date";
-
                     dateCell.detailTextLabel.text = _tempTask.dueDate;
                     
                     NSDateFormatter *inputFormat = [[NSDateFormatter alloc] init];
@@ -190,19 +188,20 @@ enum AGDueProjTagRows {
                 }
                 case AGTableSecDueProjTagRowProj:
                 {
-                    SelectionCell *selCell = [SelectionCell cellForTableView:tableView];
+                    UITableViewCell *selCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:nil];
                     selCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 
                     selCell.textLabel.text = @"Project";
 
                     AGProject *project = [[AGToDoAPIService sharedInstance].projects objectForKey:_tempTask.projID];
                     selCell.detailTextLabel.text = project.title;
+
                     cell = selCell;                    
                     break;
                 }
                 case AGTableSecDueProjTagRowTag:
                 {
-                    SelectionCell *selCell = [SelectionCell cellForTableView:tableView];
+                    UITableViewCell *selCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:nil];
                     selCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 
                     selCell.textLabel.text = @"Tags";
@@ -216,11 +215,11 @@ enum AGDueProjTagRows {
                     }
                     
                     selCell.detailTextLabel.text = [tagDescrs componentsJoinedByString:@", "];               
+
                     cell = selCell;                    
                     break;
                 }
             }   
-            
 
             break;
         }

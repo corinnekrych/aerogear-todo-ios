@@ -30,8 +30,6 @@
 		6F15C23116280A32007413BD /* AGTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F15C22716280A32007413BD /* AGTaskViewController.m */; };
 		6F15C23C16280A3F007413BD /* DateSelectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F15C23216280A3F007413BD /* DateSelectionCell.m */; };
 		6F15C23D16280A3F007413BD /* EditCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F15C23316280A3F007413BD /* EditCell.m */; };
-		6F15C23E16280A3F007413BD /* PRPSmartTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F15C23416280A3F007413BD /* PRPSmartTableViewCell.m */; };
-		6F15C23F16280A3F007413BD /* SelectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F15C23516280A3F007413BD /* SelectionCell.m */; };
 		6F15C24016280A3F007413BD /* TextViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F15C23616280A3F007413BD /* TextViewCell.m */; };
 		6F15C24516280A4C007413BD /* UIActionSheet+BlockExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F15C24116280A4C007413BD /* UIActionSheet+BlockExtensions.m */; };
 		6F15C24616280A4C007413BD /* UIAlertView+BlockExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F15C24216280A4C007413BD /* UIAlertView+BlockExtensions.m */; };
@@ -98,13 +96,9 @@
 		6F15C22C16280A32007413BD /* AGTaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AGTaskViewController.h; path = Classes/Controllers/AGTaskViewController.h; sourceTree = "<group>"; };
 		6F15C23216280A3F007413BD /* DateSelectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DateSelectionCell.m; path = Classes/TableCells/DateSelectionCell.m; sourceTree = "<group>"; };
 		6F15C23316280A3F007413BD /* EditCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditCell.m; path = Classes/TableCells/EditCell.m; sourceTree = "<group>"; };
-		6F15C23416280A3F007413BD /* PRPSmartTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PRPSmartTableViewCell.m; path = Classes/TableCells/PRPSmartTableViewCell.m; sourceTree = "<group>"; };
-		6F15C23516280A3F007413BD /* SelectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SelectionCell.m; path = Classes/TableCells/SelectionCell.m; sourceTree = "<group>"; };
 		6F15C23616280A3F007413BD /* TextViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TextViewCell.m; path = Classes/TableCells/TextViewCell.m; sourceTree = "<group>"; };
 		6F15C23716280A3F007413BD /* DateSelectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DateSelectionCell.h; path = Classes/TableCells/DateSelectionCell.h; sourceTree = "<group>"; };
 		6F15C23816280A3F007413BD /* EditCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditCell.h; path = Classes/TableCells/EditCell.h; sourceTree = "<group>"; };
-		6F15C23916280A3F007413BD /* PRPSmartTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PRPSmartTableViewCell.h; path = Classes/TableCells/PRPSmartTableViewCell.h; sourceTree = "<group>"; };
-		6F15C23A16280A3F007413BD /* SelectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SelectionCell.h; path = Classes/TableCells/SelectionCell.h; sourceTree = "<group>"; };
 		6F15C23B16280A3F007413BD /* TextViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextViewCell.h; path = Classes/TableCells/TextViewCell.h; sourceTree = "<group>"; };
 		6F15C24116280A4C007413BD /* UIActionSheet+BlockExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIActionSheet+BlockExtensions.m"; path = "AeroGear-TODO/Utilities/UIAlertViewExtentsions/UIActionSheet+BlockExtensions.m"; sourceTree = SOURCE_ROOT; };
 		6F15C24216280A4C007413BD /* UIAlertView+BlockExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIAlertView+BlockExtensions.m"; path = "AeroGear-TODO/Utilities/UIAlertViewExtentsions/UIAlertView+BlockExtensions.m"; sourceTree = SOURCE_ROOT; };
@@ -280,16 +274,12 @@
 		6F4FD042161773D300224A28 /* Table Cells */ = {
 			isa = PBXGroup;
 			children = (
-				6F15C23916280A3F007413BD /* PRPSmartTableViewCell.h */,
-				6F15C23416280A3F007413BD /* PRPSmartTableViewCell.m */,
 				6F15C23716280A3F007413BD /* DateSelectionCell.h */,
 				6F15C23216280A3F007413BD /* DateSelectionCell.m */,
 				6F15C23B16280A3F007413BD /* TextViewCell.h */,
 				6F15C23616280A3F007413BD /* TextViewCell.m */,
 				6F15C23816280A3F007413BD /* EditCell.h */,
 				6F15C23316280A3F007413BD /* EditCell.m */,
-				6F15C23A16280A3F007413BD /* SelectionCell.h */,
-				6F15C23516280A3F007413BD /* SelectionCell.m */,
 			);
 			name = "Table Cells";
 			sourceTree = "<group>";
@@ -509,8 +499,6 @@
 				6F15C23116280A32007413BD /* AGTaskViewController.m in Sources */,
 				6F15C23C16280A3F007413BD /* DateSelectionCell.m in Sources */,
 				6F15C23D16280A3F007413BD /* EditCell.m in Sources */,
-				6F15C23E16280A3F007413BD /* PRPSmartTableViewCell.m in Sources */,
-				6F15C23F16280A3F007413BD /* SelectionCell.m in Sources */,
 				6F15C24016280A3F007413BD /* TextViewCell.m in Sources */,
 				6F15C24516280A4C007413BD /* UIActionSheet+BlockExtensions.m in Sources */,
 				6F15C24616280A4C007413BD /* UIAlertView+BlockExtensions.m in Sources */,

@@ -26,8 +26,8 @@
 
 @synthesize delegate;
 
-- (id)initWithCellIdentifier:(NSString *)cellID {
-    if (self = [super initWithCellIdentifier:cellID]) {
+- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
+    if ((self = [super initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:reuseIdentifier])) {
         _datePicker = [[UIDatePicker alloc] initWithFrame:CGRectZero];
         _datePicker.datePickerMode = UIDatePickerModeDate;
         _datePicker.autoresizingMask = UIViewAutoresizingFlexibleHeight;        

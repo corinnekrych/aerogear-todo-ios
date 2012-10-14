@@ -15,9 +15,7 @@
  * limitations under the License.
  */
 
-#import "PRPSmartTableViewCell.h"
-
-@interface EditCell : PRPSmartTableViewCell
+@interface EditCell : UITableViewCell
 
 @property(strong, readonly, nonatomic) UITextField *txtField;
 

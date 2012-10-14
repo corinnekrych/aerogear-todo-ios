@@ -16,6 +16,9 @@
 			<array>
 				<string>Default.png</string>
 				<string>Default@2x.png</string>
+				<string>ios-57.png</string>
+				<string>ios-144.png</string>
+				<string>ios-72.png</string>
 				<string>ios-114.png</string>
 			</array>
 		</dict>

@@ -18,7 +18,6 @@
 #import "AGMetaEditorViewController.h"
 
 #import "EditCell.h"
-#import "SelectionCell.h"
 
 // Table Sections
 enum AGTableMetaSections {
@@ -108,7 +107,7 @@ enum AGMetaColorRows {
     switch (section) {
         case AGTableMetaSectionTitle:
         {
-            EditCell *editCell = [EditCell cellForTableView:tableView];
+            EditCell *editCell = [[EditCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
             editCell.txtField.delegate = self;
             editCell.txtField.text = self.name;
             
@@ -117,7 +116,8 @@ enum AGMetaColorRows {
         }
         case AGTableMetaSectionColor:
         {
-            SelectionCell *colorCell = [SelectionCell cellForTableView:tableView];
+            UITableViewCell *colorCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:nil];
+            
             colorCell.backgroundColor = self.color;
             colorCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
             cell = colorCell;
@@ -141,7 +141,9 @@ enum AGMetaColorRows {
                 case AGTableMetaSecColorRowColor:
                 {
                     HRColorPickerViewController *colorController = [HRColorPickerViewController cancelableColorPickerViewControllerWithColor:self.color];
+                    colorController.title = @"Select Color";
                     colorController.delegate = self;
+
                     [self.navigationController pushViewController:colorController animated:YES];
                     break;
                 }

@@ -25,7 +25,6 @@
 
 #import "UIActionSheet+BlockExtensions.h"
 #import "SVProgressHUD.h"
-#import "PRPSmartTableViewCell.h"
 
 @implementation AGProjectsSelectionListViewController {
     NSMutableArray *_todoProjects;
@@ -83,9 +82,16 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *CellProjIdentifier = @"CellProjIdentifier";
+    
     NSUInteger row = [indexPath row];
 
-    PRPSmartTableViewCell *cell = [PRPSmartTableViewCell cellForTableView:tableView];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: CellProjIdentifier];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellProjIdentifier];
+    }
+
     cell.editingAccessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     if (row < [_todoProjects count]) {

@@ -21,8 +21,8 @@
 
 @synthesize txtField = _txtField;
 
-- (id)initWithCellIdentifier:(NSString *)cellID {
-    if (self = [super initWithCellIdentifier:cellID]) {
+- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
+    if ((self = [super initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseIdentifier])) {
         
         _txtField = [[UITextField alloc] initWithFrame:CGRectZero];
         _txtField.font = [UIFont boldSystemFontOfSize:16.0];

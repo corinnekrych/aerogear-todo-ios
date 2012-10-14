@@ -15,9 +15,7 @@
  * limitations under the License.
  */
 
-#import "PRPSmartTableViewCell.h"
-
-@interface TextViewCell : PRPSmartTableViewCell
+@interface TextViewCell : UITableViewCell
 
 @property(strong, readonly, nonatomic) UITextView *txtView;
 

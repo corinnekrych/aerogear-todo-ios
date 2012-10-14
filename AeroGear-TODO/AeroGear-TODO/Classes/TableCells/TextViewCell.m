@@ -21,8 +21,8 @@
 
 @synthesize txtView = _txtView;
 
-- (id)initWithCellIdentifier:(NSString *)cellID {
-    if ((self = [super initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID])) {
+- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
+    if ((self = [super initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseIdentifier])) {
   
         _txtView = [[UITextView alloc] initWithFrame:CGRectZero];
         _txtView.font = [UIFont boldSystemFontOfSize:14.0];

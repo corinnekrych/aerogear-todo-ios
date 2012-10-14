@@ -24,7 +24,6 @@
 
 #import "UIActionSheet+BlockExtensions.h"
 #import "SVProgressHUD.h"
-#import "PRPSmartTableViewCell.h"
 
 @implementation AGTagsSelectionListViewController {
     NSMutableArray *_todoTags;
@@ -79,9 +78,16 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *CellTagIdentifier = @"CellTagIdentifier";
+    
     NSUInteger row = [indexPath row];
-
-    PRPSmartTableViewCell *cell = [PRPSmartTableViewCell cellForTableView:tableView];
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: CellTagIdentifier];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellTagIdentifier];
+    }
+    
     cell.editingAccessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     if (row < [_todoTags count]) {

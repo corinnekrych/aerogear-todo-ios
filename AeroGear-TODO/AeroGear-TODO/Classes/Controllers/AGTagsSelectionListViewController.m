@@ -32,6 +32,7 @@
 }
 
 @synthesize task = _task;
+@synthesize isEditMode;
 
 #pragma mark - View lifecycle
 
@@ -47,11 +48,11 @@
                                                                               style:UIBarButtonItemStylePlain 
                                                                              target:self
                                                                              action:@selector(close)];
+    if (isEditMode) {
+        self.navigationItem.rightBarButtonItem = self.editButtonItem;
+        self.tableView.allowsSelectionDuringEditing = YES;
+    }
 
-    self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
-    self.tableView.allowsSelectionDuringEditing = YES;
-    
      // initialize our "local" model
     _todoTags = [NSMutableArray arrayWithArray:[[AGToDoAPIService sharedInstance].tags allValues]];    
 }

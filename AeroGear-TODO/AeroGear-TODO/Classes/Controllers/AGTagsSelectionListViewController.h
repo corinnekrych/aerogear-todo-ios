@@ -26,6 +26,7 @@
 @interface AGTagsSelectionListViewController : PullRefreshTableViewController <AGMetaEditorViewControllerDelegate>
 
 @property(strong, nonatomic) AGTask *task;
+@property(assign, nonatomic) BOOL isEditMode;
 
 @end
 

@@ -252,6 +252,7 @@ enum AGDueProjTagRows {
                 case AGTableSecDueProjTagRowTag:
                 {
                     AGTagsSelectionListViewController *tagsListController = [[AGTagsSelectionListViewController alloc] initWithStyle:UITableViewStyleGrouped];
+                    tagsListController.isEditMode = YES;
                     tagsListController.task = _tempTask;
 
                     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:tagsListController];

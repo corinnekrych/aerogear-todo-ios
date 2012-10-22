@@ -49,7 +49,6 @@
 		6F6BC19016344FE500E089D5 /* SwitchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F6BC18E16344FE400E089D5 /* SwitchCell.m */; };
 		6F6BC193163450C800E089D5 /* AGSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F6BC191163450C800E089D5 /* AGSettingsViewController.m */; };
 		6F6BC19616345A4D00E089D5 /* LabelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F6BC19516345A4D00E089D5 /* LabelCell.m */; };
-		6F6BC19916345E1100E089D5 /* EditLabelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F6BC19816345E1100E089D5 /* EditLabelCell.m */; };
 		6FDF903016340F2A0059B693 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FDF902F16340F2A0059B693 /* settings.png */; };
 /* End PBXBuildFile section */
 
@@ -129,8 +128,6 @@
 		6F6BC192163450C800E089D5 /* AGSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AGSettingsViewController.h; path = Classes/Controllers/AGSettingsViewController.h; sourceTree = "<group>"; };
 		6F6BC19416345A4D00E089D5 /* LabelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LabelCell.h; path = Classes/TableCells/LabelCell.h; sourceTree = "<group>"; };
 		6F6BC19516345A4D00E089D5 /* LabelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LabelCell.m; path = Classes/TableCells/LabelCell.m; sourceTree = "<group>"; };
-		6F6BC19716345E1000E089D5 /* EditLabelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditLabelCell.h; path = Classes/TableCells/EditLabelCell.h; sourceTree = "<group>"; };
-		6F6BC19816345E1100E089D5 /* EditLabelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditLabelCell.m; path = Classes/TableCells/EditLabelCell.m; sourceTree = "<group>"; };
 		6FDF902F16340F2A0059B693 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
 		B8029C177F0C4C9486B0A095 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -296,8 +293,6 @@
 				6F15C23616280A3F007413BD /* TextViewCell.m */,
 				6F15C23816280A3F007413BD /* EditCell.h */,
 				6F15C23316280A3F007413BD /* EditCell.m */,
-				6F6BC19716345E1000E089D5 /* EditLabelCell.h */,
-				6F6BC19816345E1100E089D5 /* EditLabelCell.m */,
 				6F6BC18F16344FE400E089D5 /* SwitchCell.h */,
 				6F6BC18E16344FE400E089D5 /* SwitchCell.m */,
 			);
@@ -522,7 +517,6 @@
 				6F6BC19016344FE500E089D5 /* SwitchCell.m in Sources */,
 				6F6BC193163450C800E089D5 /* AGSettingsViewController.m in Sources */,
 				6F6BC19616345A4D00E089D5 /* LabelCell.m in Sources */,
-				6F6BC19916345E1100E089D5 /* EditLabelCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

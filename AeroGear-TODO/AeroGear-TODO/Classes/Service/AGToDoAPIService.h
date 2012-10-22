@@ -17,6 +17,8 @@
 
 #import <Foundation/Foundation.h>
 
+#define TodoServiceBaseURLString @"https://todoauth-aerogear.rhcloud.com/todo-server/"
+
 @class AGTask;
 @class AGTag;
 @class AGProject;
@@ -27,6 +29,7 @@
 @property(strong, nonatomic) NSMutableDictionary *projects;
 
 + (void)initSharedInstanceWithBaseURL:(NSString *)baseURL
+                             username:(NSString *)user password:(NSString *)passwd
                               success:(void (^)())success
                               failure:(void (^)(NSError *error))failure;
     

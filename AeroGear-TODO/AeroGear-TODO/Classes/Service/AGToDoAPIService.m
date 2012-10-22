@@ -23,50 +23,60 @@
 
 #import "AeroGear.h"
 
-#define TodoServiceBaseURLString @"http://todo-aerogear.rhcloud.com/todo-server"
-
 static AGToDoAPIService *__sharedInstance;
 
 @implementation AGToDoAPIService {
     id<AGPipe> _tasksPipe;
     id<AGPipe> _tagsPipe;
     id<AGPipe> _projectsPipe;
+      
 }
 
 @synthesize tags = _tags;
 @synthesize projects = _projects;
 
 + (void)initSharedInstanceWithBaseURL:(NSString *)baseURL
+                             username:(NSString *)user
+                             password:(NSString *)paswd
                               success:(void (^)())success
                               failure:(void (^)(NSError *error))failure {
-    if (baseURL == nil) // if the user didn't provide one, use app hosted on rhcloud
-        baseURL = TodoServiceBaseURLString;
-    
-    __sharedInstance = [[AGToDoAPIService alloc] initWithBaseURL:[NSURL URLWithString:baseURL] success:success failure:failure];
+
+    __sharedInstance = [[AGToDoAPIService alloc] initWithBaseURL:[NSURL URLWithString:baseURL]
+                                                        username:user password:paswd 
+                                                         success:success failure:failure];
 }
 
 - (id)initWithBaseURL:(NSURL *)projectsURL
+             username:(NSString *)user
+             password:(NSString *)passwd
               success:(void (^)())success
               failure:(void (^)(NSError *error))failure {
 
     if (self = [super init]) {
-        // set up the pipeline
-        AGPipeline* todo = [AGPipeline pipelineWithPipe:@"tasks" baseURL:projectsURL type:@"REST"];
-        [todo add:@"tags"];
-        [todo add:@"projects"];
         
-        // setup pipes
-        _tasksPipe = [todo get:@"tasks"];
-        _tagsPipe = [todo get:@"tags"];
-        _projectsPipe = [todo get:@"projects"];
+        AGAuthenticator* authenticator = [AGAuthenticator manager];
+        id<AGAuthenticationModule> restAuthModule = [authenticator add:@"restAuthModule" baseURL:projectsURL];
         
-        // initialize tags and projects
-        [self refreshTags:^{
-            [self refreshProjects:^{
-                success();
+        [restAuthModule login:user password:passwd success:^(id object) {
+
+            AGPipeline* pipeline = [AGPipeline pipeline:projectsURL];
+            
+            // setup pipes
+            _tasksPipe = [pipeline add:@"tasks" authModule:restAuthModule];
+            _tagsPipe = [pipeline add:@"tags" authModule:restAuthModule];
+            _projectsPipe = [pipeline add:@"projects" authModule:restAuthModule];
+
+            // initialize tags and projects
+            [self refreshTags:^{
+                [self refreshProjects:^{
+                    success();
+                } failure:^(NSError *error) {
+                    failure(error);
+                }];
             } failure:^(NSError *error) {
                 failure(error);
-            }];
+            }];            
+            
         } failure:^(NSError *error) {
             failure(error);
         }];

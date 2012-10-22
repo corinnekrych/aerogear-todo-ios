@@ -17,10 +17,9 @@
 
 #import <UIKit/UIKit.h>
 
-#import "AGTaskViewController.h"
-#import "AGSettingsViewController.h"
-#import "PullRefreshTableViewController.h"
 
-@interface AGTasksViewController : PullRefreshTableViewController <AGTaskViewControllerDelegate, AGSettingsViewControllerDelegate>
+@interface LabelCell : UITableViewCell 
+
+@property (strong, nonatomic) UILabel *label;
 
 @end

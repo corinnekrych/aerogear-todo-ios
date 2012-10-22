@@ -46,6 +46,11 @@
 		6F3ECD3416281AFE00065148 /* ios-144.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F3ECD3016281AFE00065148 /* ios-144.png */; };
 		6F42B636162831EF00967BBD /* AGAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F42B635162831EF00967BBD /* AGAboutViewController.m */; };
 		6F42B63A162847E100967BBD /* aerogear_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F42B639162847E100967BBD /* aerogear_logo.png */; };
+		6F6BC19016344FE500E089D5 /* SwitchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F6BC18E16344FE400E089D5 /* SwitchCell.m */; };
+		6F6BC193163450C800E089D5 /* AGSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F6BC191163450C800E089D5 /* AGSettingsViewController.m */; };
+		6F6BC19616345A4D00E089D5 /* LabelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F6BC19516345A4D00E089D5 /* LabelCell.m */; };
+		6F6BC19916345E1100E089D5 /* EditLabelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F6BC19816345E1100E089D5 /* EditLabelCell.m */; };
+		6FDF903016340F2A0059B693 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FDF902F16340F2A0059B693 /* settings.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +123,15 @@
 		6F42B634162831EF00967BBD /* AGAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AGAboutViewController.h; path = Classes/Controllers/AGAboutViewController.h; sourceTree = "<group>"; };
 		6F42B635162831EF00967BBD /* AGAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AGAboutViewController.m; path = Classes/Controllers/AGAboutViewController.m; sourceTree = "<group>"; };
 		6F42B639162847E100967BBD /* aerogear_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aerogear_logo.png; sourceTree = "<group>"; };
+		6F6BC18E16344FE400E089D5 /* SwitchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SwitchCell.m; path = Classes/TableCells/SwitchCell.m; sourceTree = "<group>"; };
+		6F6BC18F16344FE400E089D5 /* SwitchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SwitchCell.h; path = Classes/TableCells/SwitchCell.h; sourceTree = "<group>"; };
+		6F6BC191163450C800E089D5 /* AGSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AGSettingsViewController.m; path = Classes/Controllers/AGSettingsViewController.m; sourceTree = "<group>"; };
+		6F6BC192163450C800E089D5 /* AGSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AGSettingsViewController.h; path = Classes/Controllers/AGSettingsViewController.h; sourceTree = "<group>"; };
+		6F6BC19416345A4D00E089D5 /* LabelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LabelCell.h; path = Classes/TableCells/LabelCell.h; sourceTree = "<group>"; };
+		6F6BC19516345A4D00E089D5 /* LabelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LabelCell.m; path = Classes/TableCells/LabelCell.m; sourceTree = "<group>"; };
+		6F6BC19716345E1000E089D5 /* EditLabelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditLabelCell.h; path = Classes/TableCells/EditLabelCell.h; sourceTree = "<group>"; };
+		6F6BC19816345E1100E089D5 /* EditLabelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditLabelCell.m; path = Classes/TableCells/EditLabelCell.m; sourceTree = "<group>"; };
+		6FDF902F16340F2A0059B693 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
 		B8029C177F0C4C9486B0A095 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -198,7 +212,6 @@
 				6F9F0DF9161E17C100F145B5 /* Utilities */,
 				57F2280F15F0C3C5005DAA3C /* AGAppDelegate.h */,
 				57F2281015F0C3C5005DAA3C /* AGAppDelegate.m */,
-				6F50268816146AD1003CA352 /* Images */,
 				57B793D91626AD6100AE6BFD /* Resources */,
 				57F2280715F0C3C5005DAA3C /* Supporting Files */,
 			);
@@ -250,6 +263,7 @@
 		6F15C25416280B08007413BD /* images */ = {
 			isa = PBXGroup;
 			children = (
+				6FDF902F16340F2A0059B693 /* settings.png */,
 				6F42B639162847E100967BBD /* aerogear_logo.png */,
 				6F15C25516280B08007413BD /* projects.png */,
 				6F15C25616280B08007413BD /* tags.png */,
@@ -274,21 +288,20 @@
 		6F4FD042161773D300224A28 /* Table Cells */ = {
 			isa = PBXGroup;
 			children = (
+				6F6BC19416345A4D00E089D5 /* LabelCell.h */,
+				6F6BC19516345A4D00E089D5 /* LabelCell.m */,
 				6F15C23716280A3F007413BD /* DateSelectionCell.h */,
 				6F15C23216280A3F007413BD /* DateSelectionCell.m */,
 				6F15C23B16280A3F007413BD /* TextViewCell.h */,
 				6F15C23616280A3F007413BD /* TextViewCell.m */,
 				6F15C23816280A3F007413BD /* EditCell.h */,
 				6F15C23316280A3F007413BD /* EditCell.m */,
+				6F6BC19716345E1000E089D5 /* EditLabelCell.h */,
+				6F6BC19816345E1100E089D5 /* EditLabelCell.m */,
+				6F6BC18F16344FE400E089D5 /* SwitchCell.h */,
+				6F6BC18E16344FE400E089D5 /* SwitchCell.m */,
 			);
 			name = "Table Cells";
-			sourceTree = "<group>";
-		};
-		6F50268816146AD1003CA352 /* Images */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Images;
 			sourceTree = "<group>";
 		};
 		6F70C773161AEE3100F20E39 /* Service */ = {
@@ -314,6 +327,8 @@
 				6F15C22516280A32007413BD /* AGTagsSelectionListViewController.m */,
 				6F15C22816280A32007413BD /* AGMetaEditorViewController.h */,
 				6F15C22316280A32007413BD /* AGMetaEditorViewController.m */,
+				6F6BC192163450C800E089D5 /* AGSettingsViewController.h */,
+				6F6BC191163450C800E089D5 /* AGSettingsViewController.m */,
 				6F42B634162831EF00967BBD /* AGAboutViewController.h */,
 				6F42B635162831EF00967BBD /* AGAboutViewController.m */,
 			);
@@ -438,6 +453,7 @@
 				6F3ECD3316281AFE00065148 /* ios-114.png in Resources */,
 				6F3ECD3416281AFE00065148 /* ios-144.png in Resources */,
 				6F42B63A162847E100967BBD /* aerogear_logo.png in Resources */,
+				6FDF903016340F2A0059B693 /* settings.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,6 +519,10 @@
 				6F15C24516280A4C007413BD /* UIActionSheet+BlockExtensions.m in Sources */,
 				6F15C24616280A4C007413BD /* UIAlertView+BlockExtensions.m in Sources */,
 				6F42B636162831EF00967BBD /* AGAboutViewController.m in Sources */,
+				6F6BC19016344FE500E089D5 /* SwitchCell.m in Sources */,
+				6F6BC193163450C800E089D5 /* AGSettingsViewController.m in Sources */,
+				6F6BC19616345A4D00E089D5 /* LabelCell.m in Sources */,
+				6F6BC19916345E1100E089D5 /* EditLabelCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -600,7 +620,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AeroGear-TODO/AeroGear-TODO-Prefix.pch";
 				INFOPLIST_FILE = "AeroGear-TODO/AeroGear-TODO-Info.plist";
+				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = NO;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -612,7 +634,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AeroGear-TODO/AeroGear-TODO-Prefix.pch";
 				INFOPLIST_FILE = "AeroGear-TODO/AeroGear-TODO-Info.plist";
+				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = NO;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

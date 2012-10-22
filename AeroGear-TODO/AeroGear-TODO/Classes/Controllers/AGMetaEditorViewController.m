@@ -120,9 +120,9 @@ enum AGMetaColorRows {
             
             colorCell.backgroundColor = self.color;
             colorCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+          
             cell = colorCell;
             break;
-            
         }
     }
     
@@ -169,7 +169,6 @@ enum AGMetaColorRows {
     return YES;
 }
 
-
 #pragma mark - Action Methods
 
 - (IBAction)save {
@@ -178,7 +177,6 @@ enum AGMetaColorRows {
     
     [delegate metaEditorViewControllerDelegateDidFinish:self withTitle:self.name andColor:self.color];
 }
-
 
 #pragma mark - ColorPickerDelegate methods
 
@@ -189,6 +187,5 @@ enum AGMetaColorRows {
     
     //[hexColorLabel setText:[NSString stringWithFormat:@"#%06x",HexColorFromUIColor(color)]];
 }
-
 
 @end

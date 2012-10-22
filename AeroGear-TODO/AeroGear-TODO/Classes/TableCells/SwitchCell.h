@@ -15,12 +15,10 @@
  * limitations under the License.
  */
 
-#import <UIKit/UIKit.h>
+#import "LabelCell.h"
 
-#import "AGTaskViewController.h"
-#import "AGSettingsViewController.h"
-#import "PullRefreshTableViewController.h"
+@interface SwitchCell : LabelCell
 
-@interface AGTasksViewController : PullRefreshTableViewController <AGTaskViewControllerDelegate, AGSettingsViewControllerDelegate>
+@property(strong, readonly, nonatomic) UISwitch *toggler;
 
 @end

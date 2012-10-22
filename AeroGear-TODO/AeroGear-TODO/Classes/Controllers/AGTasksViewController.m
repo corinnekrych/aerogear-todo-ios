@@ -19,6 +19,7 @@
 
 #import "AGProjectsSelectionListViewController.h"
 #import "AGTagsSelectionListViewController.h"
+#import "AGSettingsViewController.h"
 #import "AGAboutViewController.h"
 
 #import "AGToDoAPIService.h"
@@ -30,11 +31,17 @@
 #import "SVProgressHUD.h"
 
 @implementation AGTasksViewController {
-    NSMutableArray *_allTasks;
+    NSMutableArray *_allTasks;  // all tasks "unfiltered"
     
-    NSMutableArray *_tasks;
+    NSMutableArray *_tasks; // tasks after filters are applied
 
     AGTask *_filterTask;
+
+    // the server that we are currently connected
+    NSString *_host;
+    NSString *_username;
+    NSString *_password;
+    BOOL _useOpenShift;
 }
 
 #pragma mark - View lifecycle
@@ -60,7 +67,11 @@
                                                                                            target:self 
                                                                                            action:@selector(addTask)];
     
-    // used to fill up space left and right
+    UIBarButtonItem *settingsButton = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"settings.png"] 
+                                                                      style:UIBarButtonItemStylePlain
+                                                                     target:self
+                                                                     action:@selector(displaySettings)];  
+
     UIBarButtonItem *flexibleSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
                                                                                    target:nil 
                                                                                    action:nil];
@@ -75,29 +86,23 @@
                                                                         action:@selector(filterByTag)];
     
     UIButton *info = [UIButton buttonWithType:UIButtonTypeInfoLight];
-    UIBarButtonItem *infoButton = [[UIBarButtonItem alloc] initWithImage:info.currentImage style:UIBarButtonItemStylePlain target:self action:@selector(displayInfo)];
+    UIBarButtonItem *infoButton = [[UIBarButtonItem alloc] initWithImage:info.currentImage
+                                                                   style:UIBarButtonItemStylePlain 
+                                                                  target:self 
+                                                                  action:@selector(displayInfo)];
     
-    self.toolbarItems = [NSArray arrayWithObjects:flexibleSpace, filterProjectsButton, filterTagsButton, flexibleSpace, infoButton, nil];
+    self.toolbarItems = [NSArray arrayWithObjects:settingsButton, flexibleSpace,
+                         filterProjectsButton, filterTagsButton,
+                         flexibleSpace, infoButton, nil];
     
     // setup a "dummy" task that will be used for filtering
     _filterTask = [[AGTask alloc] init];
     
-    [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeGradient];
-    [AGToDoAPIService initSharedInstanceWithBaseURL:nil success:^{
-        [SVProgressHUD dismiss];
-    } failure:^(NSError *error) {
-        [SVProgressHUD dismiss];        
-        
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!"
-                                                        message:[error localizedDescription]
-                                                       delegate:nil 
-                                              cancelButtonTitle:@"Bummer"
-                                              otherButtonTitles:nil];
-        [alert show];       
-
-    }];
+    // load settings
+    [self load];
     
-    [self refresh];
+    // ..and now login
+    [self login];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -240,6 +245,19 @@
     [UIView commitAnimations];
 }
 
+- (IBAction)displaySettings {
+    AGSettingsViewController *stngsController = [[AGSettingsViewController alloc] initWithStyle:UITableViewStyleGrouped];
+    stngsController.host = _host;
+    stngsController.username = _username;
+    stngsController.password = _password;
+    stngsController.isOpenShift = _useOpenShift;
+    stngsController.delegate = self;
+    
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:stngsController];
+    
+    [self presentModalViewController:navController animated:YES];
+}
+
 #pragma mark - AGTaskViewController delegate methods
 
 - (void)taskViewControllerDelegateDidFinish:(AGTaskViewController *)controller task:(AGTask *)task {
@@ -288,6 +306,7 @@
 # pragma mark - PullToRefresh action
 
 - (void)refresh {
+
     [[AGToDoAPIService sharedInstance] fetchTasks:^(NSMutableArray *tasks) {
         _allTasks = tasks;
 
@@ -297,6 +316,8 @@
 
     } failure:^(NSError *error) {
         [SVProgressHUD dismiss];        
+        
+        [self stopLoading];        
         
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!"
                                                         message:[error localizedDescription]
@@ -311,7 +332,7 @@
 # pragma mark - Filter
 
 - (void)handleFilter {
-    if (_allTasks == nil) // remote date not yet fetched, nothing to do
+    if (_allTasks == nil) // remote data not yet fetched, nothing to do
         return;
     
     // reset filtering
@@ -348,7 +369,6 @@
             }
             
            [_tasks removeObjectsInArray:toRemove];          
-                
         }
 
         // setup table header;
@@ -386,6 +406,98 @@
     }
     
     [self.tableView reloadData];
+}
+
+# pragma mark - AGSettingViewController delegate
+
+- (void)settingsEditorViewControllerDelegateDidFinish:(AGSettingsViewController *)controller 
+                                         withHostname:(NSString *)host
+                                          andUserName:(NSString *)user
+                                          andPassword:(NSString *)passwd
+
+                                          isOpenShift:(BOOL)isOpenShift {
+    
+    if (!isOpenShift && ([host isEqualToString:@""])) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!"
+                                                        message:@"You must specify at least a hostname!"
+                                                       delegate:nil 
+                                              cancelButtonTitle:@"Bummer"
+                                              otherButtonTitles:nil];
+        [alert show];
+        return;
+    }
+        
+    [self dismissModalViewControllerAnimated:YES];
+    
+    _useOpenShift = isOpenShift;
+    if (_useOpenShift) // discard any host set
+        _host = TodoServiceBaseURLString;
+    else
+        _host = host;
+    
+    _username = user;
+    _password = passwd;
+
+    [self save];
+    [self login];
+}
+
+# pragma mark - load/save methods
+
+- (void)load {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+
+    _useOpenShift = [defaults boolForKey:@"useOpenShift"];
+    
+    _host = [defaults objectForKey:@"host"];
+    
+    if (_host == nil) {
+        _host = TodoServiceBaseURLString;
+        _useOpenShift = YES;
+    }
+    
+    _username = [defaults objectForKey:@"username"];
+    if (_username == nil)
+        _username = @"john"; // set default username
+    
+    _password = [defaults objectForKey:@"password"];
+    if (_password == nil)
+        _password = @"123"; // set default password
+}
+
+- (void)save {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+
+    [defaults setBool:_useOpenShift forKey:@"useOpenShift"];
+    [defaults setObject:_host forKey:@"host"];
+    [defaults setObject:_username forKey:@"username"];
+    [defaults setObject:_password forKey:@"password"];
+}
+
+# pragma mark - login
+- (void)login {
+    // reset existing elements, prior to login
+    _tasks = nil;
+    _allTasks = nil;
+    [self.tableView reloadData];
+    
+    [SVProgressHUD showWithStatus:@"Logging you in..." maskType:SVProgressHUDMaskTypeGradient];
+    
+    [AGToDoAPIService initSharedInstanceWithBaseURL:_host username:_username password:_password success:^{
+        [SVProgressHUD dismiss];
+        
+        [self refresh];
+    } failure:^(NSError *error) {
+        [SVProgressHUD dismiss];        
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!"
+                                                        message:[error localizedDescription]
+                                                       delegate:nil 
+                                              cancelButtonTitle:@"Bummer"
+                                              otherButtonTitles:nil];
+        [alert show];       
+        
+    }];
 }
 
 @end

@@ -26,5 +26,9 @@
 #import "AGStore.h"
 #import "AGDataManager.h"
 
+// Security
+#import "AGAuthenticationModule.h"
+#import "AGAuthenticator.h"
+
 #endif /* _AEROGEAR_ */
 

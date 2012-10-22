@@ -16,15 +16,26 @@
  */
 
 #import <Foundation/Foundation.h>
-#import "AGPipe.h"
-#import "AGBaseAdapter.h"
 #import "AGAuthenticationModule.h"
 
-@interface AGRestAdapter : AGBaseAdapter <AGPipe>
+/**
+ * AGAuthenticationModuleAdapter represents the INTERNAL authentication module 'interface'
+ */
+@protocol AGAuthenticationModuleAdapter <AGAuthenticationModule>
 
+/**
+ * Returns the type of the underlying 'auth module implementation'
+ */
+@property (nonatomic, readonly) NSString* authToken;
 
-// todo: move to an 'adapter' protocol
--(id) initForURL:(NSURL*) url authModule:(id<AGAuthenticationModule>) authModule;
-+(id) pipeForURL:(NSURL*) url authModule:(id<AGAuthenticationModule>) authModule;
+/**
+ * Performs a simple check if the user of the module impl. is authenticated.
+ */
+- (BOOL)isAuthenticated;
+
+/**
+ * Performs deauthorization, after logout.
+ */
+- (void)deauthorize;
 
 @end

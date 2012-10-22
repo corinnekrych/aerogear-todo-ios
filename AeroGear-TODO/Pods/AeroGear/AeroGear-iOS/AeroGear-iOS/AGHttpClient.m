@@ -38,5 +38,18 @@
     return self;
 }
 
+// override to not handle the cookies
+- (NSMutableURLRequest *)requestWithMethod:(NSString *)method
+                                      path:(NSString *)path
+                                parameters:(NSDictionary *)parameters
+{
+    // invoke the 'requestWithMethod:path:parameters:' from AFNetworking:
+    NSMutableURLRequest* req = [super requestWithMethod:method path:path parameters:parameters];
+    
+    // disable the default cookie handling in the override:
+    [req setHTTPShouldHandleCookies:NO];
+
+    return req;
+}
 
 @end

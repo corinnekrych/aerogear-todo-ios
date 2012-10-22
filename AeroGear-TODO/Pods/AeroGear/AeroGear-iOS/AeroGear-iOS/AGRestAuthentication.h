@@ -16,15 +16,13 @@
  */
 
 #import <Foundation/Foundation.h>
-#import "AGPipe.h"
-#import "AGBaseAdapter.h"
-#import "AGAuthenticationModule.h"
+#import "AGAuthenticationModuleAdapter.h"
 
-@interface AGRestAdapter : AGBaseAdapter <AGPipe>
+@interface AGRestAuthentication : NSObject <AGAuthenticationModuleAdapter>
 
 
-// todo: move to an 'adapter' protocol
--(id) initForURL:(NSURL*) url authModule:(id<AGAuthenticationModule>) authModule;
-+(id) pipeForURL:(NSURL*) url authModule:(id<AGAuthenticationModule>) authModule;
+-(id) initForBaseURL:(NSURL*) baseURL;
++(id) moduleForBaseURL:(NSURL*) baseURL;
+
 
 @end

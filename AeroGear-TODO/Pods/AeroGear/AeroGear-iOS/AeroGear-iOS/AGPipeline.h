@@ -17,6 +17,7 @@
 
 #import <Foundation/Foundation.h>
 #import "AGPipe.h"
+#import "AGAuthenticationModule.h"
 
 /**
  * AGPipeline represents a 'collection' of server connections (pipes) and
@@ -28,104 +29,32 @@
 @interface AGPipeline : NSObject
 
 /**
- * An initializer method to instantiate the AGPipeline, which
- * contains a RESTful pipe.
- *
- * @param name the endpoint name of the first AGPipe object
- * @param baseURL the URL of the server
+ * An initializer method to instantiate an empty AGPipeline.
  *
  * @return the AGPipeline object
  */
--(id) initWithPipe:(NSString*) name baseURL:(NSURL*)baseURL;
+-(id) init:(NSURL*) baseURL;
 
 /**
- * An initializer method to instantiate the AGPipeline, which
- * contains a pipe object. The actual type is determined by the type argument.
- *
- * @param name the endpoint name of the first AGPipe object
- * @param baseURL the URL of the server
- * @param type the type of the actual pipe/connection
+ * An initializer method to instantiate an empty AGPipeline.
  *
  * @return the AGPipeline object
  */
--(id) initWithPipe:(NSString*) name baseURL:(NSURL*)baseURL type:(NSString*)type;
+-(id) init;
 
 /**
- * An initializer method to instantiate the AGPipeline, which
- * contains a RESTful pipe. The RESTful endpoint is determined by the endpoint argument.
- *
- * @param name the logical name of the first AGPipe object
- * @param baseURL the URL of the server
- * @param endpoint the serivce endpoint name
+ * A factory method to instantiate an empty AGPipeline.
  *
  * @return the AGPipeline object
  */
--(id) initWithPipe:(NSString*) name baseURL:(NSURL*)baseURL endpoint:(NSString*)endpoint;
++(id) pipeline;
 
 /**
- * An initializer method to instantiate the AGPipeline, which
- * contains a pipe object. The actual type is determined by the type argument.
- * The endpoint is determined by the endpoint argument.
- *
- * @param name the logical name of the first AGPipe object
- * @param baseURL the URL of the server
- * @param endpoint the serivce endpoint name
- * @param type the type of the actual pipe/connection
+ * A factory method to instantiate an empty AGPipeline.
  *
  * @return the AGPipeline object
  */
--(id) initWithPipe:(NSString*) name baseURL:(NSURL*)baseURL endpoint:(NSString*)endpoint type:(NSString*)type;
-
-/**
- * A factory method to instantiate the AGPipeline, which
- * contains a RESTful pipe.
- *
- * @param name the endpoint name of the first AGPipe object
- * @param baseURL the URL of the server
- *
- * @return the AGPipeline object
- */
-+(id) pipelineWithPipe:(NSString*) name baseURL:(NSURL*)baseURL;
-
-/**
- * A factory method to instantiate the AGPipeline, which
- * contains a pipe object. The actual type is determined by the type argument.
- *
- * @param name the endpoint name of the first AGPipe object
- * @param baseURL the URL of the server
- * @param type the type of the actual pipe/connection
- *
- * @return the AGPipeline object
- */
-+(id) pipelineWithPipe:(NSString*) name baseURL:(NSURL*)baseURL type:(NSString*)type;
-
-/**
- * A factory method to instantiate the AGPipeline, which
- * contains a RESTful pipe. The endpoint is determined by the endpoint argument.
- *
- * @param name the logical name of the first AGPipe object
- * @param baseURL the URL of the server
- * @param endpoint the serivce endpoint name
- *
- * @return the AGPipeline object
- */
-+(id) pipelineWithPipe:(NSString*) name baseURL:(NSURL*)baseURL endpoint:(NSString*)endpoint;
-
-
-/**
- * A factory method to instantiate the AGPipeline, which
- * contains a pipe object. The actual type is determined by the type argument.
- * The endpoint is determined by the endpoint argument.
- *
- * @param name the logical name of the first AGPipe object
- * @param baseURL the URL of the server
- * @param endpoint the serivce endpoint name
- * @param type the type of the actual pipe/connection
- *
- * @return the AGPipeline object
- */
-+(id) pipelineWithPipe:(NSString*) name baseURL:(NSURL*)baseURL endpoint:(NSString*)endpoint type:(NSString*)type;
-
++(id) pipeline:(NSURL*) baseURL;
 
 // =====================================
 // Adds that leverage the given base URL
@@ -146,12 +75,33 @@
  * Adds a new RESTful pipe to the AGPipeline object,
  * leveraging the given baseURL argument.
  *
+ * @param name the endpoint name of the actual pipe
+ *
+ * @return the new created AGPipe object
+ */
+-(id<AGPipe>) add:(NSString*) name authModule:(id<AGAuthenticationModule>) authModule;
+
+/**
+ * Adds a new RESTful pipe to the AGPipeline object,
+ * leveraging the given baseURL argument.
+ *
  * @param name the name of the actual pipe
  * @param endpoint the serivce endpoint, if differs from the pipe name.
  *
  * @return the new created AGPipe object
  */
 -(id<AGPipe>) add:(NSString*) name endpoint:(NSString*)endpoint;
+
+/**
+ * Adds a new RESTful pipe to the AGPipeline object,
+ * leveraging the given baseURL argument.
+ *
+ * @param name the name of the actual pipe
+ * @param endpoint the serivce endpoint, if differs from the pipe name.
+ *
+ * @return the new created AGPipe object
+ */
+-(id<AGPipe>) add:(NSString*) name endpoint:(NSString*)endpoint authModule:(id<AGAuthenticationModule>) authModule;
 
 /**
  * Adds a new pipe (server connection) to the AGPipeline object,
@@ -168,6 +118,17 @@
  * Adds a new pipe (server connection) to the AGPipeline object,
  * leveraging the given baseURL argument.
  *
+ * @param name the endpoint name of the actual pipe
+ * @param type the type of the actual pipe/connection
+ *
+ * @return the new created AGPipe object
+ */
+-(id<AGPipe>) add:(NSString*) name type:(NSString*)type authModule:(id<AGAuthenticationModule>) authModule;
+
+/**
+ * Adds a new pipe (server connection) to the AGPipeline object,
+ * leveraging the given baseURL argument.
+ *
  * @param name the logical name of the actual pipe
  * @param endpoint the serivce endpoint, if differs from the pipe name.
  * @param type the type of the actual pipe/connection
@@ -175,6 +136,18 @@
  * @return the new created AGPipe object
  */
 -(id<AGPipe>) add:(NSString*) name endpoint:(NSString*)endpoint type:(NSString*)type;
+
+/**
+ * Adds a new pipe (server connection) to the AGPipeline object,
+ * leveraging the given baseURL argument.
+ *
+ * @param name the logical name of the actual pipe
+ * @param endpoint the serivce endpoint, if differs from the pipe name.
+ * @param type the type of the actual pipe/connection
+ *
+ * @return the new created AGPipe object
+ */
+-(id<AGPipe>) add:(NSString*) name endpoint:(NSString*)endpoint type:(NSString*)type authModule:(id<AGAuthenticationModule>) authModule;
 
 
 // =======================================
@@ -194,6 +167,16 @@
 /**
  * Adds a new RESTful pipe to the AGPipeline object
  *
+ * @param name the endpoint name of the actual pipe
+ * @param baseURL the URL of the server
+ *
+ * @return the new created AGPipe object
+ */
+-(id<AGPipe>) add:(NSString*) name baseURL:(NSURL*)baseURL authModule:(id<AGAuthenticationModule>) authModule;
+
+/**
+ * Adds a new RESTful pipe to the AGPipeline object
+ *
  * @param name the name of the actual pipe
  * @param baseURL the URL of the server
  * @param endpoint the serivce endpoint, if differs from the pipe name.
@@ -201,6 +184,17 @@
  * @return the new created AGPipe object
  */
 -(id<AGPipe>) add:(NSString*) name baseURL:(NSURL*)baseURL endpoint:(NSString*)endpoint;
+
+/**
+ * Adds a new RESTful pipe to the AGPipeline object
+ *
+ * @param name the name of the actual pipe
+ * @param baseURL the URL of the server
+ * @param endpoint the serivce endpoint, if differs from the pipe name.
+ *
+ * @return the new created AGPipe object
+ */
+-(id<AGPipe>) add:(NSString*) name baseURL:(NSURL*)baseURL endpoint:(NSString*)endpoint authModule:(id<AGAuthenticationModule>) authModule;
 
 /**
  * Adds a new pipe (server connection) to the AGPipeline object
@@ -216,6 +210,17 @@
 /**
  * Adds a new pipe (server connection) to the AGPipeline object
  *
+ * @param name the endpoint name of the actual pipe
+ * @param baseURL the URL of the server
+ * @param type the type of the actual pipe/connection
+ *
+ * @return the new created AGPipe object
+ */
+-(id<AGPipe>) add:(NSString*) name baseURL:(NSURL*)baseURL type:(NSString*)type authModule:(id<AGAuthenticationModule>) authModule;
+
+/**
+ * Adds a new pipe (server connection) to the AGPipeline object
+ *
  * @param name the logical name of the actual pipe
  * @param baseURL the URL of the server
  * @param endpoint the serivce endpoint, if differs from the pipe name.
@@ -224,6 +229,18 @@
  * @return the new created AGPipe object
  */
 -(id<AGPipe>) add:(NSString*) name baseURL:(NSURL*)baseURL endpoint:(NSString*)endpoint type:(NSString*)type;
+
+/**
+ * Adds a new pipe (server connection) to the AGPipeline object
+ *
+ * @param name the logical name of the actual pipe
+ * @param baseURL the URL of the server
+ * @param endpoint the serivce endpoint, if differs from the pipe name.
+ * @param type the type of the actual pipe/connection
+ *
+ * @return the new created AGPipe object
+ */
+-(id<AGPipe>) add:(NSString*) name baseURL:(NSURL*)baseURL endpoint:(NSString*)endpoint type:(NSString*)type authModule:(id<AGAuthenticationModule>) authModule;
 
 
 // ============================

@@ -38,89 +38,94 @@
     }
     return self;
 }
--(id) initWithPipe:(NSString*) name baseURL:(NSURL*)baseURL {
-    return [self initWithPipe:name baseURL:baseURL endpoint:name type:@"REST"];
-}
 
--(id) initWithPipe:(NSString*) name baseURL:(NSURL*)baseURL type:(NSString*)type {
-    return [self initWithPipe:name baseURL:baseURL endpoint:name type:type];
-}
-
--(id) initWithPipe:(NSString*) name baseURL:(NSURL*)baseURL endpoint:(NSString*)endpoint {
-    return [self initWithPipe:name baseURL:baseURL endpoint:endpoint type:@"REST"];
-}
-
--(id) initWithPipe:(NSString*) name baseURL:(NSURL*)baseURL endpoint:(NSString*)endpoint type:(NSString*)type {
-    // TODO check ALL supported types...
-    if (! [AGRestAdapter accepts :type]) {
-        return nil;
-    }
-    
+- (id)init:(NSURL*) baseURL {
     self = [self init];
     if (self) {
         
         // stash the baseURL, used for the 'add' functions that have no (base)URL argument
         _baseURL = baseURL;
-
-        // append the endpoint name and use it as the final URL
-        NSURL* finalURL = [self appendEndpoint:endpoint toURL:baseURL];
-        [self add:name url:finalURL type:type];
     }
     return self;
 }
 
-+(id) pipelineWithPipe:(NSString*) name baseURL:(NSURL*)baseURL {
-    return [[self alloc] initWithPipe:name baseURL:baseURL];
++(id)pipeline {
+    return [[self alloc] init];
 }
 
-+(id) pipelineWithPipe:(NSString*) name baseURL:(NSURL*)baseURL type:(NSString*)type {
-    return [[self alloc] initWithPipe:name baseURL:baseURL type:type];
++(id)pipeline:(NSURL*) baseURL; {
+    return [[self alloc] init:baseURL];
 }
-
-+(id) pipelineWithPipe:(NSString*) name baseURL:(NSURL*)baseURL endpoint:(NSString*)endpoint {
-    return [[self alloc] initWithPipe:name baseURL:baseURL endpoint:endpoint];
-}
-
-+(id) pipelineWithPipe:(NSString*) name baseURL:(NSURL*)baseURL endpoint:(NSString*)endpoint type:(NSString*)type {
-    return [[self alloc] initWithPipe:name baseURL:baseURL endpoint:endpoint type:type];
-}
-
 
 -(id<AGPipe>) add:(NSString*) name {
-    return [self add:name baseURL:_baseURL endpoint:name type:@"REST"];
+    return [self add:name baseURL:_baseURL endpoint:name type:@"REST" authModule:nil];
 }
 
+-(id<AGPipe>) add:(NSString*) name authModule:(id<AGAuthenticationModule>) authModule {
+    return [self add:name baseURL:_baseURL endpoint:name type:@"REST" authModule:authModule];
+}
+
+
 -(id<AGPipe>) add:(NSString*) name endpoint:(NSString*)endpoint {
-    return [self add:name baseURL:_baseURL endpoint:endpoint type:@"REST"];
+    return [self add:name baseURL:_baseURL endpoint:endpoint type:@"REST" authModule:nil];
+}
+
+-(id<AGPipe>) add:(NSString*) name endpoint:(NSString*)endpoint authModule:(id<AGAuthenticationModule>) authModule {
+    return [self add:name baseURL:_baseURL endpoint:endpoint type:@"REST" authModule:authModule];
 }
 
 -(id<AGPipe>) add:(NSString*) name type:(NSString*)type {
-    return [self add:name baseURL:_baseURL endpoint:name type:type];
+    return [self add:name baseURL:_baseURL endpoint:name type:type authModule:nil];
+}
+
+-(id<AGPipe>) add:(NSString*) name type:(NSString*)type authModule:(id<AGAuthenticationModule>) authModule {
+    return [self add:name baseURL:_baseURL endpoint:name type:type authModule:authModule];
 }
 
 -(id<AGPipe>) add:(NSString*) name endpoint:(NSString*)endpoint type:(NSString*)type {
-    return [self add:name baseURL:_baseURL endpoint:endpoint type:type];
+    return [self add:name baseURL:_baseURL endpoint:endpoint type:type authModule:nil];
+}
+
+-(id<AGPipe>) add:(NSString*) name endpoint:(NSString*)endpoint type:(NSString*)type authModule:(id<AGAuthenticationModule>) authModule {
+    return [self add:name baseURL:_baseURL endpoint:endpoint type:type authModule:authModule];
 }
 
 -(id<AGPipe>) add:(NSString*) name baseURL:(NSURL*)baseURL {
-    return [self add:name baseURL:baseURL endpoint:name type:@"REST"];
+    return [self add:name baseURL:baseURL endpoint:name type:@"REST" authModule:nil];
 }
+-(id<AGPipe>) add:(NSString*) name baseURL:(NSURL*)baseURL authModule:(id<AGAuthenticationModule>) authModule {
+    return [self add:name baseURL:baseURL endpoint:name type:@"REST" authModule:authModule];
+}
+
 -(id<AGPipe>) add:(NSString*) name baseURL:(NSURL*)baseURL endpoint:(NSString*)endpoint {
-    return [self add:name baseURL:baseURL endpoint:endpoint type:@"REST"];
+    return [self add:name baseURL:baseURL endpoint:endpoint type:@"REST" authModule:nil];
+}
+
+-(id<AGPipe>) add:(NSString*) name baseURL:(NSURL*)baseURL endpoint:(NSString*)endpoint authModule:(id<AGAuthenticationModule>) authModule {
+    return [self add:name baseURL:baseURL endpoint:endpoint type:@"REST" authModule:authModule];
 }
 
 -(id<AGPipe>) add:(NSString*) name baseURL:(NSURL*)baseURL type:(NSString*)type {
-    return [self add:name baseURL:baseURL endpoint:name type:type];
+    return [self add:name baseURL:baseURL endpoint:name type:type authModule:nil];
 }
+
+-(id<AGPipe>) add:(NSString*) name baseURL:(NSURL*)baseURL type:(NSString*)type authModule:(id<AGAuthenticationModule>) authModule {
+    return [self add:name baseURL:baseURL endpoint:name type:type authModule:authModule];
+}
+
 -(id<AGPipe>) add:(NSString*) name baseURL:(NSURL*)baseURL endpoint:(NSString*)endpoint type:(NSString*)type {
+    return [self add:name baseURL:baseURL endpoint:endpoint type:type authModule:nil];
+}
+
+-(id<AGPipe>) add:(NSString*) name baseURL:(NSURL*)baseURL endpoint:(NSString*)endpoint type:(NSString*)type authModule:(id<AGAuthenticationModule>) authModule {
     
     // append the endpoint name and use it as the final URL
     NSURL* finalURL = [self appendEndpoint:endpoint toURL:baseURL];
-    return [self add:name url:finalURL type:type];
+    return [self add:name url:finalURL type:type authModule:authModule];
 }
 
 // a private add, since we really don't have a 'baseURL' on the final URL...
--(id<AGPipe>) add:(NSString*) name url:(NSURL*)url type:(NSString*)type {
+-(id<AGPipe>) add:(NSString*) name url:(NSURL*)url type:(NSString*)type authModule:(id<AGAuthenticationModule>) authModule {
     // TODO check ALL supported types...
     if (! [AGRestAdapter accepts:type]) {
         return nil;
@@ -133,7 +138,7 @@
         url = [url URLByAppendingPathComponent:@""];
     }
     
-    id<AGPipe> pipe = [AGRestAdapter pipeForURL:url];
+    id<AGPipe> pipe = [AGRestAdapter pipeForURL:url authModule:authModule];
     [_pipes setValue:pipe forKey:name];
     return pipe;
     

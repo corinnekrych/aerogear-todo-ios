@@ -60,7 +60,7 @@ enum AGStngHostRows {
     
     DLog(@"AGSettingsViewController viewDidLoad");        
     
-    self.title = @"Settings";
+    self.title = @"Login";
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Close" 
                                                                              style:UIBarButtonItemStylePlain 

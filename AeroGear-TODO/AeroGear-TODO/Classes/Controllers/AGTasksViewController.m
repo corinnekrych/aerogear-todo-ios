@@ -70,7 +70,7 @@
     UIBarButtonItem *settingsButton = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"settings.png"] 
                                                                       style:UIBarButtonItemStylePlain
                                                                      target:self
-                                                                     action:@selector(displaySettings)];  
+                                                                     action:@selector(displayLoginScreen)];  
 
     UIBarButtonItem *flexibleSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace
                                                                                    target:nil 
@@ -101,8 +101,9 @@
     // load settings
     [self load];
     
-    // ..and now login
-    [self login];
+    // display Login dialog
+    [self displayLoginScreen];
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -245,7 +246,7 @@
     [UIView commitAnimations];
 }
 
-- (IBAction)displaySettings {
+- (IBAction)displayLoginScreen {
     AGSettingsViewController *stngsController = [[AGSettingsViewController alloc] initWithStyle:UITableViewStyleGrouped];
     stngsController.host = _host;
     stngsController.username = _username;

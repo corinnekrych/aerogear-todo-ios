@@ -20,16 +20,15 @@
 #import "AGAuthenticationModule.h"
 
 /**
- * AGPipeline represents a 'collection' of server connections (pipes) and
- * their corresponding data models. This object provides a standard way to
+ * AGPipeline represents a 'collection' of server connections (pipes). This object provides a standard way to
  * communicate with the server no matter the data format or transport expected.
- *
- * A pipeline must have at least one pipe.
  */
 @interface AGPipeline : NSObject
 
 /**
  * An initializer method to instantiate an empty AGPipeline.
+ *
+ * @param baseURL the URL of the server
  *
  * @return the AGPipeline object
  */
@@ -51,6 +50,8 @@
 
 /**
  * A factory method to instantiate an empty AGPipeline.
+ *
+ * @param baseURL the URL of the server
  *
  * @return the AGPipeline object
  */
@@ -76,6 +77,7 @@
  * leveraging the given baseURL argument.
  *
  * @param name the endpoint name of the actual pipe
+ * @param authModule the AGAuthenticationModule used to access protected resources
  *
  * @return the new created AGPipe object
  */
@@ -98,6 +100,7 @@
  *
  * @param name the name of the actual pipe
  * @param endpoint the serivce endpoint, if differs from the pipe name.
+ * @param authModule the AGAuthenticationModule used to access protected resources
  *
  * @return the new created AGPipe object
  */
@@ -120,6 +123,7 @@
  *
  * @param name the endpoint name of the actual pipe
  * @param type the type of the actual pipe/connection
+ * @param authModule the AGAuthenticationModule used to access protected resources
  *
  * @return the new created AGPipe object
  */
@@ -144,6 +148,7 @@
  * @param name the logical name of the actual pipe
  * @param endpoint the serivce endpoint, if differs from the pipe name.
  * @param type the type of the actual pipe/connection
+ * @param authModule the AGAuthenticationModule used to access protected resources
  *
  * @return the new created AGPipe object
  */
@@ -169,6 +174,7 @@
  *
  * @param name the endpoint name of the actual pipe
  * @param baseURL the URL of the server
+ * @param authModule the AGAuthenticationModule used to access protected resources
  *
  * @return the new created AGPipe object
  */
@@ -191,6 +197,7 @@
  * @param name the name of the actual pipe
  * @param baseURL the URL of the server
  * @param endpoint the serivce endpoint, if differs from the pipe name.
+ * @param authModule the AGAuthenticationModule used to access protected resources
  *
  * @return the new created AGPipe object
  */
@@ -213,6 +220,7 @@
  * @param name the endpoint name of the actual pipe
  * @param baseURL the URL of the server
  * @param type the type of the actual pipe/connection
+ * @param authModule the AGAuthenticationModule used to access protected resources
  *
  * @return the new created AGPipe object
  */
@@ -237,6 +245,7 @@
  * @param baseURL the URL of the server
  * @param endpoint the serivce endpoint, if differs from the pipe name.
  * @param type the type of the actual pipe/connection
+ * @param authModule the AGAuthenticationModule used to access protected resources
  *
  * @return the new created AGPipe object
  */

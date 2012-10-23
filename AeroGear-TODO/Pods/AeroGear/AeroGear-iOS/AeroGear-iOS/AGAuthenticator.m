@@ -30,7 +30,7 @@
     return self;
 }
 
-+(id) manager {
++(id) authenticator {
     return [[self alloc] init];
 }
 

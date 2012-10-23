@@ -27,48 +27,12 @@
  */
 @interface AGDataManager : NSObject
 
-
 /**
- * An initializer method to instantiate the AGDataManager, which
- * contains an in-memory AGStore object.
- *
- * @param name the logical name of the first AGStore object
+ * A factory method to instantiate the AGDataManager object.
  *
  * @return the AGDataManager object
  */
--(id) initWithStore:(NSString*) name;
-
-/**
- * An initializer method to instantiate the AGDataManager, which
- * contains a AGStore object. The actual type is determined by the type argument.
- *
- * @param name the logical name of the first AGStore object
- * @param type the type of the actual storage system
- *
- * @return the AGDataManager object
- */
--(id) initWithStore:(NSString*) name type:(NSString*)type;
-
-/**
- * A factory method to instantiate the AGDataManager, which
- * contains an in-memory AGStore object.
- *
- * @param name the logical name of the first AGStore object
- *
- * @return the AGDataManager object
- */
-+(id) store:(NSString*) name;
-
-/**
- * A factory method to instantiate the AGDataManager, which
- * contains a AGStore object. The actual type is determined by the type argument.
- *
- * @param name the logical name of the first AGStore object
- * @param type the type of the actual storage system
- *
- * @return the AGDataManager object
- */
-+(id) store:(NSString*) name type:(NSString*)type;
++(id) manager;
 
 /**
  * Creates a new default (in memory) AGStore implemention.

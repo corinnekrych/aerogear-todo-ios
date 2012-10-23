@@ -19,7 +19,7 @@
 #import "AGAuthenticationModule.h"
 
 /**
- * AGAuthenticationManager manages different AGAuthenticationModule implementations. It is basically a
+ * AGAuthenticator manages different AGAuthenticationModule implementations. It is basically a
  * factory that hides the concrete instanciation of a specific AGAuthenticationModule implementation.
  * The class offers simple APIs to add, remove or get access to a 'authentication module'.
  *
@@ -28,11 +28,11 @@
 
 
 /**
- * A factory method to instantiate an empty AGAuthenticationManager.
+ * A factory method to instantiate an empty AGAuthenticator.
  *
- * @return the AGAuthenticationManager object
+ * @return the AGAuthenticator object
  */
-+(id) manager;
++(id) authenticator;
 
 /**
  * Creates a new default (REST) AGAuthenticationModule implemention.
@@ -52,7 +52,7 @@
 -(id<AGAuthenticationModule>)add:(NSString*) moduleName baseURL:(NSURL*)baseURL type:(NSString*) type;
 
 /**
- * Removes a AGAuthenticationModule implemention from the AGAuthenticationManager. The auth module,
+ * Removes a AGAuthenticationModule implemention from the AGAuthenticator. The auth module,
  * to be removed is determined by the moduleName argument.
  *
  * @param moduleName The name of the actual auth module object.

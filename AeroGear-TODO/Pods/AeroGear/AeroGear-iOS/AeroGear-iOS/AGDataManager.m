@@ -30,31 +30,8 @@
     return self;
 }
 
-
-//
--(id) initWithStore:(NSString*) name {
-    return [self initWithStore:name type:@"MEMORY"];
-}
--(id) initWithStore:(NSString*) name type:(NSString*)type {
-
-    // TODO: util class
-    if (! [type isEqualToString:@"MEMORY"]) {
-        return nil;
-    }
-
-    self = [self init];
-    if (self) {
-        // TODO: really pass the string here (again?)
-        [self add:name type:@"MEMORY"];
-    }
-    return self;
-}
-
-+(id) store:(NSString*) name {
-    return [[self alloc] initWithStore:name];
-}
-+(id) store:(NSString*) name type:(NSString*)type {
-    return [[self alloc] initWithStore:name type:type];
++(id)manager {
+    return [[self alloc] init];
 }
 
 -(id<AGStore>)add:(NSString*) storeName {

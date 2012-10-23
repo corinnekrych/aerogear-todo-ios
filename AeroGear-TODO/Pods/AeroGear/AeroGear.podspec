@@ -16,12 +16,12 @@
 #
 Pod::Spec.new do |s|
   s.name         = "AeroGear"
-  s.version      = "0.9.9"
+  s.version      = "1.0.0.M1"
   s.summary      = "Provides a lightweight set of utilities for communication, security, storage and more."
   s.homepage     = "https://github.com/aerogear/aerogear-ios"
   s.license      = 'Apache License, Version 2.0'
   s.author       = "Red Hat, Inc."
-  s.source       = { :git => 'https://github.com/aerogear/aerogear-ios.git', :tag => '0.9.9' }
+  s.source       = { :git => 'https://github.com/aerogear/aerogear-ios.git', :tag => '1.0.0.M1' }
   s.platform     = :ios
   s.source_files = 'AeroGear-iOS/AeroGear-iOS'
 s.public_header_files = 'AeroGear-iOS/AeroGear-iOS/AeroGear.h', 'AeroGear-iOS/AeroGear-iOS/AGPipe.h', 'AeroGear-iOS/AeroGear-iOS/AGPipeline.h', 'AeroGear-iOS/AeroGear-iOS/AGStore.h', 'AeroGear-iOS/AeroGear-iOS/AGDataManager.h', 'AeroGear-iOS/AeroGear-iOS/AGAuthenticationModule.h', 'AeroGear-iOS/AeroGear-iOS/AGAuthenticator.h'

@@ -54,7 +54,7 @@ static AGToDoAPIService *__sharedInstance;
 
     if (self = [super init]) {
         
-        AGAuthenticator* authenticator = [AGAuthenticator manager];
+        AGAuthenticator* authenticator = [AGAuthenticator authenticator];
         id<AGAuthenticationModule> restAuthModule = [authenticator add:@"restAuthModule" baseURL:projectsURL];
         
         [restAuthModule login:user password:passwd success:^(id object) {

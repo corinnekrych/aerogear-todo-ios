@@ -56,12 +56,8 @@
 -(void) read:(void (^)(id responseObject))success
      failure:(void (^)(NSError *error))failure {
     
-    
-    if ([_authModule isAuthenticated]) {
-        [_restClient setDefaultHeader:@"Auth-Token" value:[_authModule authToken]];
-        
-    }
-    
+    // try to add auth.token:
+    [self applyAuthToken];
     
 
     // TODO: better Endpoints....
@@ -83,14 +79,18 @@
 -(void) readWithFilter:(id)filterObject
                success:(void (^)(id responseObject))success
                failure:(void (^)(NSError *error))failure {
-    // TODO...
+//    // try to add auth.token:
+//    [self applyAuthToken];
+// TODO...
 }
-
 
 -(void) save:(NSDictionary*) object
      success:(void (^)(id responseObject))success
      failure:(void (^)(NSError *error))failure {
 
+    // try to add auth.token:
+    [self applyAuthToken];
+    
     // Does a PUT or POST based on the fact if the object
     // already exists (if there is an 'id').
     
@@ -127,6 +127,9 @@
        success:(void (^)(id responseObject))success
        failure:(void (^)(NSError *error))failure {
 
+    // try to add auth.token:
+    [self applyAuthToken];
+
     id deleteKey;
     if ([key isKindOfClass:[NSString class]]) {
         deleteKey = key;
@@ -148,6 +151,13 @@
         }
     } ];
 
+}
+
+// helper method:
+-(void) applyAuthToken {
+    if ([_authModule isAuthenticated]) {
+        [_restClient setDefaultHeader:@"Auth-Token" value:[_authModule authToken]];
+    }
 }
 
 -(NSString *) description {

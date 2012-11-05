@@ -9,4 +9,8 @@ You can watch a screencast demonstrating the app "in action" [here](https://vime
 
 If you are new to AeroGear, please have a look at the [Getting Started Guide with XCode and iOS](http://aerogear.org/guides/GetStartedwithAeroGearandXcode/)
 
+## Running the app:
 
+You need to open the AeroGear-TODO.xcworkspace in order to run the TODO app!
+
+Enjoy!

@@ -21,7 +21,7 @@
 #import "AGTag.h"
 #import "AGProject.h"
 
-#import "AeroGear.h"
+#import <AeroGear/AeroGear.h>
 
 static AGToDoAPIService *__sharedInstance;
 
@@ -29,7 +29,8 @@ static AGToDoAPIService *__sharedInstance;
     id<AGPipe> _tasksPipe;
     id<AGPipe> _tagsPipe;
     id<AGPipe> _projectsPipe;
-      
+    
+    id<AGAuthenticationModule> _restAuthModule;
 }
 
 @synthesize tags = _tags;
@@ -55,16 +56,34 @@ static AGToDoAPIService *__sharedInstance;
     if (self = [super init]) {
         
         AGAuthenticator* authenticator = [AGAuthenticator authenticator];
-        id<AGAuthenticationModule> restAuthModule = [authenticator add:@"restAuthModule" baseURL:projectsURL];
         
-        [restAuthModule login:user password:passwd success:^(id object) {
+        _restAuthModule = [authenticator auth:^(id<AGAuthConfig> config) {
+            [config name:@"restAuthMod"];
+            [config baseURL:projectsURL];
+        }];
+        
+        [_restAuthModule login:user password:passwd success:^(id object) {
 
             AGPipeline* pipeline = [AGPipeline pipeline:projectsURL];
             
             // setup pipes
-            _tasksPipe = [pipeline add:@"tasks" authModule:restAuthModule];
-            _tagsPipe = [pipeline add:@"tags" authModule:restAuthModule];
-            _projectsPipe = [pipeline add:@"projects" authModule:restAuthModule];
+            _tasksPipe = [pipeline pipe:^(id<AGPipeConfig> config) {
+                [config name:@"tasks"];
+                [config authModule:_restAuthModule];
+                [config type:@"REST"];
+            }];
+            
+            _tagsPipe = [pipeline pipe:^(id<AGPipeConfig> config) {
+                [config name:@"tags"];
+                [config authModule:_restAuthModule];
+                [config type:@"REST"];
+            }];
+            
+            _projectsPipe = [pipeline pipe:^(id<AGPipeConfig> config) {
+                [config name:@"projects"];
+                [config authModule:_restAuthModule];
+                [config type:@"REST"];
+            }];
 
             // initialize tags and projects
             [self refreshTags:^{
@@ -254,6 +273,22 @@ static AGToDoAPIService *__sharedInstance;
         failure(error);
     }];            
 }
-    
 
+- (void) logout:(void (^)())success
+        failure:(void (^)(NSError *error))failure {
+    [_restAuthModule logout:success failure:failure];
+}
+
++ (void)enrollUser:(NSDictionary *)userInfo
+           success:(void (^)())success
+           failure:(void (^)(NSError *error))failure {
+ 
+    AGAuthenticator* authenticator = [AGAuthenticator authenticator];
+    id<AGAuthenticationModule> restAuthModule = [authenticator auth:^(id<AGAuthConfig> config) {
+        [config name:@"restAuthMod"];
+        [config baseURL:[NSURL URLWithString:TodoServiceBaseURLString]];
+    }];
+
+    [restAuthModule enroll:userInfo success:success failure:failure];
+}
 @end

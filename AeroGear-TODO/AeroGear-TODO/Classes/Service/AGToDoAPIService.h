@@ -68,5 +68,12 @@
 
 - (void)refreshProjects:(void (^)())success
                 failure:(void (^)(NSError *error))failure;
-    
+
+- (void) logout:(void (^)())success
+        failure:(void (^)(NSError *error))failure;
+
++ (void)enrollUser:(NSDictionary *)userInfo
+           success:(void (^)())success
+           failure:(void (^)(NSError *error))failure;
+
 @end

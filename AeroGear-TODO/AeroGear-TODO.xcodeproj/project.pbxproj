@@ -19,6 +19,10 @@
 		57F2282115F0C3C5005DAA3C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57F2280215F0C3C5005DAA3C /* Foundation.framework */; };
 		57F2282915F0C3C5005DAA3C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 57F2282715F0C3C5005DAA3C /* InfoPlist.strings */; };
 		57F2282C15F0C3C5005DAA3C /* AeroGear_TODOTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F2282B15F0C3C5005DAA3C /* AeroGear_TODOTests.m */; };
+		6F0BCA5F165236B100A563F9 /* AGLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F0BCA5E165236B100A563F9 /* AGLoginViewController.m */; };
+		6F0BCA631652370300A563F9 /* AGRegisterUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F0BCA621652370300A563F9 /* AGRegisterUserViewController.m */; };
+		6F0BCA661652372900A563F9 /* AGRoleListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F0BCA651652372900A563F9 /* AGRoleListViewController.m */; };
+		6F0BCA691652374A00A563F9 /* LabelEditCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F0BCA681652374A00A563F9 /* LabelEditCell.m */; };
 		6F15C21916280A0A007413BD /* AGToDoAPIService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F15C21716280A0A007413BD /* AGToDoAPIService.m */; };
 		6F15C22016280A26007413BD /* AGProject.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F15C21A16280A26007413BD /* AGProject.m */; };
 		6F15C22116280A26007413BD /* AGTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F15C21B16280A26007413BD /* AGTag.m */; };
@@ -47,7 +51,6 @@
 		6F42B636162831EF00967BBD /* AGAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F42B635162831EF00967BBD /* AGAboutViewController.m */; };
 		6F42B63A162847E100967BBD /* aerogear_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F42B639162847E100967BBD /* aerogear_logo.png */; };
 		6F6BC19016344FE500E089D5 /* SwitchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F6BC18E16344FE400E089D5 /* SwitchCell.m */; };
-		6F6BC193163450C800E089D5 /* AGSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F6BC191163450C800E089D5 /* AGSettingsViewController.m */; };
 		6F6BC19616345A4D00E089D5 /* LabelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F6BC19516345A4D00E089D5 /* LabelCell.m */; };
 		6FDF903016340F2A0059B693 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FDF902F16340F2A0059B693 /* settings.png */; };
 /* End PBXBuildFile section */
@@ -80,6 +83,14 @@
 		57F2282815F0C3C5005DAA3C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		57F2282A15F0C3C5005DAA3C /* AeroGear_TODOTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AeroGear_TODOTests.h; sourceTree = "<group>"; };
 		57F2282B15F0C3C5005DAA3C /* AeroGear_TODOTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AeroGear_TODOTests.m; sourceTree = "<group>"; };
+		6F0BCA5D165236B100A563F9 /* AGLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AGLoginViewController.h; path = Classes/Controllers/AGLoginViewController.h; sourceTree = "<group>"; };
+		6F0BCA5E165236B100A563F9 /* AGLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AGLoginViewController.m; path = Classes/Controllers/AGLoginViewController.m; sourceTree = "<group>"; };
+		6F0BCA611652370300A563F9 /* AGRegisterUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AGRegisterUserViewController.h; path = Classes/Controllers/AGRegisterUserViewController.h; sourceTree = "<group>"; };
+		6F0BCA621652370300A563F9 /* AGRegisterUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AGRegisterUserViewController.m; path = Classes/Controllers/AGRegisterUserViewController.m; sourceTree = "<group>"; };
+		6F0BCA641652372900A563F9 /* AGRoleListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AGRoleListViewController.h; path = Classes/Controllers/AGRoleListViewController.h; sourceTree = "<group>"; };
+		6F0BCA651652372900A563F9 /* AGRoleListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AGRoleListViewController.m; path = Classes/Controllers/AGRoleListViewController.m; sourceTree = "<group>"; };
+		6F0BCA671652374A00A563F9 /* LabelEditCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LabelEditCell.h; path = Classes/TableCells/LabelEditCell.h; sourceTree = "<group>"; };
+		6F0BCA681652374A00A563F9 /* LabelEditCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LabelEditCell.m; path = Classes/TableCells/LabelEditCell.m; sourceTree = "<group>"; };
 		6F15C21716280A0A007413BD /* AGToDoAPIService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AGToDoAPIService.m; path = "AeroGear-TODO/Classes/Service/AGToDoAPIService.m"; sourceTree = "<group>"; };
 		6F15C21816280A0A007413BD /* AGToDoAPIService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AGToDoAPIService.h; path = "AeroGear-TODO/Classes/Service/AGToDoAPIService.h"; sourceTree = "<group>"; };
 		6F15C21A16280A26007413BD /* AGProject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AGProject.m; path = Classes/Model/AGProject.m; sourceTree = "<group>"; };
@@ -124,8 +135,6 @@
 		6F42B639162847E100967BBD /* aerogear_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aerogear_logo.png; sourceTree = "<group>"; };
 		6F6BC18E16344FE400E089D5 /* SwitchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SwitchCell.m; path = Classes/TableCells/SwitchCell.m; sourceTree = "<group>"; };
 		6F6BC18F16344FE400E089D5 /* SwitchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SwitchCell.h; path = Classes/TableCells/SwitchCell.h; sourceTree = "<group>"; };
-		6F6BC191163450C800E089D5 /* AGSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AGSettingsViewController.m; path = Classes/Controllers/AGSettingsViewController.m; sourceTree = "<group>"; };
-		6F6BC192163450C800E089D5 /* AGSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AGSettingsViewController.h; path = Classes/Controllers/AGSettingsViewController.h; sourceTree = "<group>"; };
 		6F6BC19416345A4D00E089D5 /* LabelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LabelCell.h; path = Classes/TableCells/LabelCell.h; sourceTree = "<group>"; };
 		6F6BC19516345A4D00E089D5 /* LabelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LabelCell.m; path = Classes/TableCells/LabelCell.m; sourceTree = "<group>"; };
 		6FDF902F16340F2A0059B693 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
@@ -207,10 +216,10 @@
 				6F7E52AA16144DB900C99FDE /* Controllers */,
 				6F4FD042161773D300224A28 /* Table Cells */,
 				6F9F0DF9161E17C100F145B5 /* Utilities */,
-				57F2280F15F0C3C5005DAA3C /* AGAppDelegate.h */,
-				57F2281015F0C3C5005DAA3C /* AGAppDelegate.m */,
 				57B793D91626AD6100AE6BFD /* Resources */,
 				57F2280715F0C3C5005DAA3C /* Supporting Files */,
+				57F2280F15F0C3C5005DAA3C /* AGAppDelegate.h */,
+				57F2281015F0C3C5005DAA3C /* AGAppDelegate.m */,
 			);
 			path = "AeroGear-TODO";
 			sourceTree = "<group>";
@@ -293,6 +302,8 @@
 				6F15C23616280A3F007413BD /* TextViewCell.m */,
 				6F15C23816280A3F007413BD /* EditCell.h */,
 				6F15C23316280A3F007413BD /* EditCell.m */,
+				6F0BCA671652374A00A563F9 /* LabelEditCell.h */,
+				6F0BCA681652374A00A563F9 /* LabelEditCell.m */,
 				6F6BC18F16344FE400E089D5 /* SwitchCell.h */,
 				6F6BC18E16344FE400E089D5 /* SwitchCell.m */,
 			);
@@ -312,6 +323,10 @@
 		6F7E52AA16144DB900C99FDE /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				6F0BCA5D165236B100A563F9 /* AGLoginViewController.h */,
+				6F0BCA5E165236B100A563F9 /* AGLoginViewController.m */,
+				6F0BCA641652372900A563F9 /* AGRoleListViewController.h */,
+				6F0BCA651652372900A563F9 /* AGRoleListViewController.m */,
 				6F15C22B16280A32007413BD /* AGTasksViewController.h */,
 				6F15C22616280A32007413BD /* AGTasksViewController.m */,
 				6F15C22C16280A32007413BD /* AGTaskViewController.h */,
@@ -322,8 +337,8 @@
 				6F15C22516280A32007413BD /* AGTagsSelectionListViewController.m */,
 				6F15C22816280A32007413BD /* AGMetaEditorViewController.h */,
 				6F15C22316280A32007413BD /* AGMetaEditorViewController.m */,
-				6F6BC192163450C800E089D5 /* AGSettingsViewController.h */,
-				6F6BC191163450C800E089D5 /* AGSettingsViewController.m */,
+				6F0BCA611652370300A563F9 /* AGRegisterUserViewController.h */,
+				6F0BCA621652370300A563F9 /* AGRegisterUserViewController.m */,
 				6F42B634162831EF00967BBD /* AGAboutViewController.h */,
 				6F42B635162831EF00967BBD /* AGAboutViewController.m */,
 			);
@@ -515,8 +530,11 @@
 				6F15C24616280A4C007413BD /* UIAlertView+BlockExtensions.m in Sources */,
 				6F42B636162831EF00967BBD /* AGAboutViewController.m in Sources */,
 				6F6BC19016344FE500E089D5 /* SwitchCell.m in Sources */,
-				6F6BC193163450C800E089D5 /* AGSettingsViewController.m in Sources */,
 				6F6BC19616345A4D00E089D5 /* LabelCell.m in Sources */,
+				6F0BCA5F165236B100A563F9 /* AGLoginViewController.m in Sources */,
+				6F0BCA631652370300A563F9 /* AGRegisterUserViewController.m in Sources */,
+				6F0BCA661652372900A563F9 /* AGRoleListViewController.m in Sources */,
+				6F0BCA691652374A00A563F9 /* LabelEditCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

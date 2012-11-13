@@ -17,9 +17,15 @@
 
 #import <UIKit/UIKit.h>
 
-#import "AGTaskViewController.h"
-#import "PullRefreshTableViewController.h"
+@protocol AGRoleListViewControllerDelegate;
 
-@interface AGTasksViewController : PullRefreshTableViewController <AGTaskViewControllerDelegate>
+@interface AGRoleListViewController: UITableViewController
 
+@property (copy, nonatomic) NSString *selectedRole;
+
+@property (weak, nonatomic) id <AGRoleListViewControllerDelegate> delegate;
+@end
+
+@protocol AGRoleListViewControllerDelegate <NSObject>
+- (void)roleListViewControllerDelegateDidFinish:(AGRoleListViewController *)controller withRole:(NSString *)role;
 @end

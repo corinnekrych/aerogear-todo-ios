@@ -16,23 +16,30 @@
  */
 
 #import "AGAppDelegate.h"
+
+#import "AGLoginViewController.h"
 #import "AGTasksViewController.h"
 
 @implementation AGAppDelegate
 
 @synthesize window = _window;
-@synthesize navController;
+@synthesize viewController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
+    // Override point for customization after application launch.
+    self.viewController = [[AGLoginViewController alloc] init];
+    self.window.rootViewController = self.viewController;
+    [self.window makeKeyAndVisible];
+    
+    /*
     AGTasksViewController *tasksViewController = [[AGTasksViewController alloc] initWithStyle:UITableViewStylePlain];
     self.navController = [[UINavigationController alloc] initWithRootViewController:tasksViewController];
     self.navController.toolbarHidden = NO;
     
     [self.window addSubview:self.navController.view];
-    [self.window makeKeyAndVisible];
-    
+     */
     return YES;
 }
 

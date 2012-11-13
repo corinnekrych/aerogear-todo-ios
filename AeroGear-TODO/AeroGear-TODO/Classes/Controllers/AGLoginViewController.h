@@ -17,9 +17,8 @@
 
 #import <UIKit/UIKit.h>
 
-#import "AGTaskViewController.h"
-#import "PullRefreshTableViewController.h"
+#import "AGRegisterUserViewController.h"
 
-@interface AGTasksViewController : PullRefreshTableViewController <AGTaskViewControllerDelegate>
+@interface AGLoginViewController : UIViewController <AGRegisterUserViewControllerDelegate, UITextFieldDelegate>
 
 @end

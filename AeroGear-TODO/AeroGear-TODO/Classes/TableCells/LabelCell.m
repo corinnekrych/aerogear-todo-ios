@@ -31,7 +31,6 @@
         _label.font = [UIFont boldSystemFontOfSize:12.0];
         _label.adjustsFontSizeToFitWidth = YES;
         _label.baselineAdjustment = UIBaselineAdjustmentNone;
-        //_label.numberOfLines = 20;
         
         [self.contentView addSubview:_label];
     }

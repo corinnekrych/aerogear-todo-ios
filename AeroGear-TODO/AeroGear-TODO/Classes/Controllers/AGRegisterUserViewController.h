@@ -17,9 +17,23 @@
 
 #import <UIKit/UIKit.h>
 
-#import "AGTaskViewController.h"
-#import "PullRefreshTableViewController.h"
+#import "AGRoleListViewController.h"
 
-@interface AGTasksViewController : PullRefreshTableViewController <AGTaskViewControllerDelegate>
+#define kUserFirst 0
+#define kUserLast 1
+#define kUserEmail 2
+#define kUserUsername 3
+#define kUserPasswd 4
+
+@protocol AGRegisterUserViewControllerDelegate;
+
+@interface AGRegisterUserViewController : UITableViewController <UITextFieldDelegate, AGRoleListViewControllerDelegate>
+
+@property (weak, nonatomic) id <AGRegisterUserViewControllerDelegate> delegate;
 
 @end
+
+@protocol AGRegisterUserViewControllerDelegate <NSObject>
+- (void)registerUserViewControllerDelegateDidFinish:(AGRegisterUserViewController *)controller withUserInfo:(NSDictionary *)info;
+@end
+

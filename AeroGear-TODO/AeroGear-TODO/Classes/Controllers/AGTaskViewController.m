@@ -162,7 +162,9 @@ enum AGDueProjTagRows {
         {
             TextViewCell *descrCell = [[TextViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
             descrCell.txtView.delegate = self;
-            descrCell.txtView.text = _tempTask.descr;
+            
+            if (![_tempTask.descr isKindOfClass:[NSNull class]])
+                descrCell.txtView.text = _tempTask.descr;
             
             cell = descrCell;
             break;            

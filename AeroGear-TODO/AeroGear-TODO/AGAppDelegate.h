@@ -17,9 +17,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class AGLoginViewController;
+
 @interface AGAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-@property (strong, nonatomic) UINavigationController *navController;
+@property (strong, nonatomic) AGLoginViewController *viewController;
 
 @end

@@ -1,1 +1,1 @@
-../../AeroGear/AeroGear-iOS/AeroGear-iOS/AGBaseAdapter.h
+../../AeroGear/AeroGear-iOS/AeroGear-iOS/utils/AGBaseAdapter.h

@@ -1,23 +1,27 @@
 
-COCOAPODS: 0.14.0
-
-DEPENDENCIES: 
-- AeroGear (= 1.0.0.M1)
-- Color-Picker-for-iOS (= 0.1.1)
-- PullToRefresh (= 0.0.1)
-- SVProgressHUD (= 0.8)
+COCOAPODS: 0.15.2
 
 PODS: 
 - AFNetworking (1.0RC1)
-- AeroGear (1.0.0.M1): 
+- AeroGear (1.0.0.M1.20121113): 
   - AFNetworking (= 1.0RC1)
 - Color-Picker-for-iOS (0.1.1)
 - PullToRefresh (0.0.1)
 - SVProgressHUD (0.8)
 
 SPEC CHECKSUMS: 
-  AeroGear: 9583fb663697a454d6de231e55977f9ee88e732e
-  SVProgressHUD: 51042a14e3a716efdbdd73cbb2181fb23ee94389
-  PullToRefresh: 6cc6f9dc1289564b261a2ed1358eae952d91759b
+  AeroGear: b1787e0c73c3302f2bad4a6904b630a7d23c8dab
   Color-Picker-for-iOS: 7859a5b63273f630fa5206eaa5a16e5a00782ed7
+  PullToRefresh: 6cc6f9dc1289564b261a2ed1358eae952d91759b
+  SVProgressHUD: 51042a14e3a716efdbdd73cbb2181fb23ee94389
   AFNetworking: b21c1252d437fd322e7db1caa93b163d76a362cb
+
+EXTERNAL SOURCES: 
+  AeroGear: 
+    :podspec: https://raw.github.com/aerogear/aerogear-ios/1.0.0.M1.20121113/AeroGear.podspec
+
+DEPENDENCIES: 
+- AeroGear (from `https://raw.github.com/aerogear/aerogear-ios/1.0.0.M1.20121113/AeroGear.podspec')
+- Color-Picker-for-iOS (= 0.1.1)
+- PullToRefresh (= 0.0.1)
+- SVProgressHUD (= 0.8)

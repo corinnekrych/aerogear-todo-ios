@@ -1,1 +1,1 @@
-../../AeroGear/AeroGear-iOS/AeroGear-iOS/AGBaseStorage.h
+../../AeroGear/AeroGear-iOS/AeroGear-iOS/datamanager/AGBaseStorage.h

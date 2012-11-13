@@ -1,1 +1,1 @@
-../../AeroGear/AeroGear-iOS/AeroGear-iOS/AGHttpClient.h
+../../AeroGear/AeroGear-iOS/AeroGear-iOS/core/AGHttpClient.h

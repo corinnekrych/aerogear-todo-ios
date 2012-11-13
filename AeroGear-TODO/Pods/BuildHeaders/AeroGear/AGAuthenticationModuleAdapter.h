@@ -1,1 +1,1 @@
-../../AeroGear/AeroGear-iOS/AeroGear-iOS/AGAuthenticationModuleAdapter.h
+../../AeroGear/AeroGear-iOS/AeroGear-iOS/security/AGAuthenticationModuleAdapter.h

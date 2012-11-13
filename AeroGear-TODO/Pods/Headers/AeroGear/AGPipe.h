@@ -1,1 +1,1 @@
-../../AeroGear/AeroGear-iOS/AeroGear-iOS/AGPipe.h
+../../AeroGear/AeroGear-iOS/AeroGear-iOS/pipeline/AGPipe.h

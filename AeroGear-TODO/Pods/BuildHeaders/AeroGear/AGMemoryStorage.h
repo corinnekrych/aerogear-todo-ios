@@ -1,1 +1,1 @@
-../../AeroGear/AeroGear-iOS/AeroGear-iOS/AGMemoryStorage.h
+../../AeroGear/AeroGear-iOS/AeroGear-iOS/datamanager/AGMemoryStorage.h

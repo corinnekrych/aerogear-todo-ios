@@ -1,1 +1,1 @@
-../../AeroGear/AeroGear-iOS/AeroGear-iOS/AGStore.h
+../../AeroGear/AeroGear-iOS/AeroGear-iOS/datamanager/AGStore.h

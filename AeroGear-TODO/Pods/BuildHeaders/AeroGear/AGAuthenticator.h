@@ -1,1 +1,1 @@
-../../AeroGear/AeroGear-iOS/AeroGear-iOS/AGAuthenticator.h
+../../AeroGear/AeroGear-iOS/AeroGear-iOS/security/AGAuthenticator.h

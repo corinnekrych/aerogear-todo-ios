@@ -2,7 +2,7 @@ xcodeproj 'AeroGear-TODO.xcodeproj'
 
 platform :ios
 
-pod 'AeroGear', :podspec => 'https://raw.github.com/aerogear/aerogear-ios/1.0.0.M1.20121113/AeroGear.podspec'
+pod 'AeroGear', '1.0.0.M1.20121113'
 pod 'PullToRefresh', '0.0.1'
 pod 'SVProgressHUD', '0.8'
 pod 'Color-Picker-for-iOS', '0.1.1' 

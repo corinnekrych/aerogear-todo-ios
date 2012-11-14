@@ -10,1186 +10,7 @@
 	<string>46</string>
 	<key>objects</key>
 	<dict>
-		<key>00CEFBE7687D4E6EAF03ADDA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>9DF04101CE8A48C78825AC1E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>0615519C6D7A481493AC602D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>AFNetworkActivityIndicatorManager.h</string>
-			<key>path</key>
-			<string>AFNetworking/AFNetworking/AFNetworkActivityIndicatorManager.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>061EC7460770456FB90BE445</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>HRCgUtil.h</string>
-			<key>path</key>
-			<string>Color-Picker-for-iOS/ColorPicker/HRCgUtil.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>0729C065E1E84758889AF9B2</key>
-		<dict>
-			<key>fileRef</key>
-			<string>F084271587A441B1AC271710</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-fobjc-arc</string>
-			</dict>
-		</dict>
-		<key>083B35E6888648968CD53C5B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4E4BDC8089C54D7DAEB6A81B</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>09D68A6CE5394D469B3D9976</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>AGDataManager.m</string>
-			<key>path</key>
-			<string>AeroGear/AeroGear-iOS/AeroGear-iOS/datamanager/AGDataManager.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>0ACAA8ABBCA54F97B50ABD0F</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>dstPath</key>
-			<string>$(PRODUCT_NAME)</string>
-			<key>dstSubfolderSpec</key>
-			<string>16</string>
-			<key>files</key>
-			<array>
-				<string>FCF406E133B5414392E289C1</string>
-				<string>9886E38227F144639FA0F0BB</string>
-				<string>7A740B0AC8D64E92A9C850FE</string>
-				<string>8B71A2304A95479B933F5F63</string>
-				<string>6D2D667735C2453D9EA1B88C</string>
-				<string>F77129A7D76F45329891EA45</string>
-				<string>84C03A82276D4EC595B83649</string>
-				<string>9BD4CD8340AC4D89B238F3CF</string>
-				<string>6B3F4FA485FC4CF6BE87EA49</string>
-				<string>A020026E44BE4B4DA320746E</string>
-				<string>BFD101881C2C49D8B73CE2E1</string>
-				<string>85E2FCC061A54F98B2CFCEB5</string>
-				<string>A4029A10F961459393D3E4AA</string>
-				<string>FC262FC23A7741B793AEAC74</string>
-				<string>5BB09A9D231C477489BC31CD</string>
-				<string>9A15C059593845DFB13FEAE8</string>
-				<string>257167DC0D8842BEAC3B340F</string>
-				<string>41159E6AC5DA47A1955A4139</string>
-				<string>2AEB322EBD014527A1B7E0EF</string>
-				<string>BAD120FF77474869AF057C2B</string>
-				<string>5B337AD1E3BD4D6DB142C8BA</string>
-				<string>51FC4D97184941E6AFF6A0A1</string>
-				<string>A6C902D1EACF48089D6AB9EC</string>
-				<string>083B35E6888648968CD53C5B</string>
-				<string>4645B6FE2F9A4CDC8520BF24</string>
-				<string>318DC7CE8F25406BAC14163D</string>
-				<string>3A550E04A179455DA81256E3</string>
-				<string>DAEF7A8F9E35420885C7FCD7</string>
-				<string>10BD7166F68C437DB65CF41D</string>
-				<string>3EBCA05B8C4841328DDAD4C7</string>
-				<string>D2E18FD9D4ED40329C1E6857</string>
-				<string>18F0EE3A85F9417BB6F78FF0</string>
-				<string>E9600A31B9EE4E2DAD7F9113</string>
-				<string>2285AFC62D68429F995DC96E</string>
-				<string>8990F6F3A6CB4A1096A4C815</string>
-				<string>7C21A0FB72564DA69EDE99A6</string>
-				<string>89F256B6ED6B4FA4A7333924</string>
-				<string>E32B652B15AC4B1790B044B4</string>
-				<string>589B26D9CB7A4D4B811CFCCA</string>
-				<string>ACA433F4F41644B092DD6025</string>
-				<string>DF746D53C9004A73BF289154</string>
-				<string>94884A7BEA0A49C19F6BAAC2</string>
-			</array>
-			<key>isa</key>
-			<string>PBXCopyFilesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>10BD7166F68C437DB65CF41D</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D437A06BD073465CA3A16ECF</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>139A576782464282B03DDC3F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>AFXMLRequestOperation.m</string>
-			<key>path</key>
-			<string>AFNetworking/AFNetworking/AFXMLRequestOperation.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>142F407F3FFD45BBAE8FA655</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>AFHTTPClient.h</string>
-			<key>path</key>
-			<string>AFNetworking/AFNetworking/AFHTTPClient.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>16072F02BB3348AEBE0B05BB</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>AGBaseAdapter.m</string>
-			<key>path</key>
-			<string>AeroGear/AeroGear-iOS/AeroGear-iOS/utils/AGBaseAdapter.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>1730F49B970F4FE490AF34DE</key>
-		<dict>
-			<key>fileRef</key>
-			<string>22C1B7BB4D2C431080586CC3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-fobjc-arc</string>
-			</dict>
-		</dict>
-		<key>177E481FAC3741CB99CD6302</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>PodsDummy_Pods.m</string>
-			<key>path</key>
-			<string>PodsDummy_Pods.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>18A0CD05E0BD4821A025F329</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>AGPipeConfig.h</string>
-			<key>path</key>
-			<string>AeroGear/AeroGear-iOS/AeroGear-iOS/pipeline/AGPipeConfig.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>18F0EE3A85F9417BB6F78FF0</key>
-		<dict>
-			<key>fileRef</key>
-			<string>45BC8B41E2704BE4B1120CB5</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>190F8FDCDCEF4A0BA1727A26</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>AGPipeConfiguration.m</string>
-			<key>path</key>
-			<string>AeroGear/AeroGear-iOS/AeroGear-iOS/pipeline/AGPipeConfiguration.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>1ADAD631AE894A60A386549A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>PullRefreshTableViewController.h</string>
-			<key>path</key>
-			<string>PullToRefresh/Classes/PullRefreshTableViewController.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>1B0D5F15422D46EB9AEE958C</key>
-		<dict>
-			<key>fileRef</key>
-			<string>900A63F97C6147F7903FFA37</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-fobjc-arc</string>
-			</dict>
-		</dict>
-		<key>1BECCFDB139B47A1A110F518</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>EF2DD92DC3734F1D866FF77F</string>
-				<string>64161D8A6BE1424F80A5F98D</string>
-				<string>E1DAAC93736C46ABB084FDF0</string>
-				<string>7B39BAF76FCF413DB1B53AF7</string>
-				<string>36D451063B364284B84FB502</string>
-				<string>3EC9A52FFFB8432DB498E03F</string>
-				<string>3F5296AA05E542409A0EBE4F</string>
-				<string>2E91F2A13F334FC2ACEA0B10</string>
-				<string>1D514ADA67384408858A258F</string>
-				<string>71AF46DD3EC9427C81426766</string>
-				<string>18A0CD05E0BD4821A025F329</string>
-				<string>A323853E60474B5BB8E17397</string>
-				<string>4E4BDC8089C54D7DAEB6A81B</string>
-				<string>386AF69632984F1293B72980</string>
-				<string>1BF382FC27C5484EB9E5C0AF</string>
-				<string>53EF778420024AB196DB6868</string>
-				<string>707F1A32606D4C5384142DC9</string>
-				<string>D437A06BD073465CA3A16ECF</string>
-				<string>8FF844A41811423D90070395</string>
-				<string>87110A79B9234BC8BA410972</string>
-				<string>45BC8B41E2704BE4B1120CB5</string>
-				<string>D43B8931351C48AE8896C3FF</string>
-				<string>8F6936E88CA74D1C83628767</string>
-				<string>DAF737B2E9764C60B57255BE</string>
-				<string>09D68A6CE5394D469B3D9976</string>
-				<string>5AF996C718A1474BA54AB452</string>
-				<string>C3DAD85D003440868752D767</string>
-				<string>190F8FDCDCEF4A0BA1727A26</string>
-				<string>63BE5B33F88147E5A97B3F3C</string>
-				<string>49806BE1991E42589B89B131</string>
-				<string>342D662F40B64B7286146B9F</string>
-				<string>ACF781CAF5CE42679138D40A</string>
-				<string>22C1B7BB4D2C431080586CC3</string>
-				<string>16072F02BB3348AEBE0B05BB</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>AeroGear</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1BF382FC27C5484EB9E5C0AF</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>AGAuthConfig.h</string>
-			<key>path</key>
-			<string>AeroGear/AeroGear-iOS/AeroGear-iOS/security/AGAuthConfig.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>1D514ADA67384408858A258F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>AGStoreConfiguration.h</string>
-			<key>path</key>
-			<string>AeroGear/AeroGear-iOS/AeroGear-iOS/datamanager/AGStoreConfiguration.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>1F190D58902C454FBFBD8722</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C447391A540F4253B1760DF4</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>2285AFC62D68429F995DC96E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>95B5978B475A4B44AE5E87BE</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>22C1B7BB4D2C431080586CC3</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>AGRestAuthentication.m</string>
-			<key>path</key>
-			<string>AeroGear/AeroGear-iOS/AeroGear-iOS/security/AGRestAuthentication.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>22F30C622D09421A9FFABDA0</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>6E743B1D5BE242468D5CC4D8</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>2347F2BFEACC4B6E8307C980</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>HRColorUtil.h</string>
-			<key>path</key>
-			<string>Color-Picker-for-iOS/ColorPicker/HRColorUtil.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>2526208E03C24C1A8F0BE086</key>
-		<dict>
-			<key>fileRef</key>
-			<string>E7C6CE1EFF124A54A06F6636</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>257167DC0D8842BEAC3B340F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3EC9A52FFFB8432DB498E03F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>29BFF335F06346F5A3BBFBD5</key>
-		<dict>
-			<key>fileRef</key>
-			<string>922A8A29216947C28BAC41F8</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>2AEB322EBD014527A1B7E0EF</key>
-		<dict>
-			<key>fileRef</key>
-			<string>2E91F2A13F334FC2ACEA0B10</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>2D8BD7B76C1444CF9608337B</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>AFPropertyListRequestOperation.h</string>
-			<key>path</key>
-			<string>AFNetworking/AFNetworking/AFPropertyListRequestOperation.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>2E91F2A13F334FC2ACEA0B10</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>AGStoreConfig.h</string>
-			<key>path</key>
-			<string>AeroGear/AeroGear-iOS/AeroGear-iOS/datamanager/AGStoreConfig.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>318DC7CE8F25406BAC14163D</key>
-		<dict>
-			<key>fileRef</key>
-			<string>1BF382FC27C5484EB9E5C0AF</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>342D662F40B64B7286146B9F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>AGAuthConfiguration.m</string>
-			<key>path</key>
-			<string>AeroGear/AeroGear-iOS/AeroGear-iOS/security/AGAuthConfiguration.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>36D451063B364284B84FB502</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>AGDataManager.h</string>
-			<key>path</key>
-			<string>AeroGear/AeroGear-iOS/AeroGear-iOS/datamanager/AGDataManager.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>36DA0588FAD141D587BF28B7</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>8A0DF649AC48405283A834D8</string>
-				<string>BB51DC574FCF46A39C71D141</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>386AF69632984F1293B72980</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>AGRestAdapter.h</string>
-			<key>path</key>
-			<string>AeroGear/AeroGear-iOS/AeroGear-iOS/pipeline/AGRestAdapter.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>393C1613860F4E8C8D6A975A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>Pods-prefix.pch</string>
-			<key>path</key>
-			<string>Pods-prefix.pch</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>3A550E04A179455DA81256E3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>53EF778420024AB196DB6868</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>3C8F7522F1B44ACEB3AF9957</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>HRColorPickerView.m</string>
-			<key>path</key>
-			<string>Color-Picker-for-iOS/ColorPicker/HRColorPickerView.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>3E69533CF3854C1D9922EBFC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>190F8FDCDCEF4A0BA1727A26</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-fobjc-arc</string>
-			</dict>
-		</dict>
-		<key>3EBCA05B8C4841328DDAD4C7</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8FF844A41811423D90070395</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>3EC9A52FFFB8432DB498E03F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>AGMemoryStorage.h</string>
-			<key>path</key>
-			<string>AeroGear/AeroGear-iOS/AeroGear-iOS/datamanager/AGMemoryStorage.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>3F5296AA05E542409A0EBE4F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>AGStore.h</string>
-			<key>path</key>
-			<string>AeroGear/AeroGear-iOS/AeroGear-iOS/datamanager/AGStore.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>41159E6AC5DA47A1955A4139</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3F5296AA05E542409A0EBE4F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>42054B255DF64313876FC8CF</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>UIImageView+AFNetworking.h</string>
-			<key>path</key>
-			<string>AFNetworking/AFNetworking/UIImageView+AFNetworking.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>44C498EFBAD74816AD53C3DD</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>SVProgressHUD.m</string>
-			<key>path</key>
-			<string>SVProgressHUD/SVProgressHUD/SVProgressHUD.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>45896359011E455E97EC08CA</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict/>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>45BC8B41E2704BE4B1120CB5</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>AGAdapter.h</string>
-			<key>path</key>
-			<string>AeroGear/AeroGear-iOS/AeroGear-iOS/utils/AGAdapter.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>4645B6FE2F9A4CDC8520BF24</key>
-		<dict>
-			<key>fileRef</key>
-			<string>386AF69632984F1293B72980</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>494790371BDA415B84F0E80C</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastUpgradeCheck</key>
-				<string>0450</string>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>97F8F8A2281E49229FD340AF</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-			</array>
-			<key>mainGroup</key>
-			<string>BAE21FD0308245808E188969</string>
-			<key>productRefGroup</key>
-			<string>C1507600CB894B89A9461B82</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>643C45A5AE534FD4838EA95F</string>
-			</array>
-		</dict>
-		<key>49806BE1991E42589B89B131</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>AGRestAdapter.m</string>
-			<key>path</key>
-			<string>AeroGear/AeroGear-iOS/AeroGear-iOS/pipeline/AGRestAdapter.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>4B498701407E4A118F5379B4</key>
-		<dict>
-			<key>fileRef</key>
-			<string>DAF737B2E9764C60B57255BE</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-fobjc-arc</string>
-			</dict>
-		</dict>
-		<key>4C3ED812A2944FFDA2E22E2A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>SVProgressHUD.h</string>
-			<key>path</key>
-			<string>SVProgressHUD/SVProgressHUD/SVProgressHUD.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>4E4BDC8089C54D7DAEB6A81B</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>AGPipeline.h</string>
-			<key>path</key>
-			<string>AeroGear/AeroGear-iOS/AeroGear-iOS/pipeline/AGPipeline.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>4F8F235576DD40E28A15672C</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>95B5978B475A4B44AE5E87BE</string>
-				<string>061EC7460770456FB90BE445</string>
-				<string>7DDAFBB54A5647D1987D611C</string>
-				<string>DEC951A0BE4546FEBB977607</string>
-				<string>9F8E79FEE5794576B6381D4C</string>
-				<string>940A0C1AA5674793A25DA85E</string>
-				<string>2347F2BFEACC4B6E8307C980</string>
-				<string>A62AE16832C0439E8C85ACFB</string>
-				<string>8DA36DEF4EBC4CBFA45FF0E8</string>
-				<string>7B2FD447544949B69B924528</string>
-				<string>3C8F7522F1B44ACEB3AF9957</string>
-				<string>F084271587A441B1AC271710</string>
-				<string>900A63F97C6147F7903FFA37</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Color-Picker-for-iOS</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4FE8DE463D574BBD9FBFCD2A</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>9EF2C9FBAC06431E9265DD2C</string>
-				<string>393C1613860F4E8C8D6A975A</string>
-				<string>7BAC8BEBC4BF48DCAFA50AA7</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>51FC4D97184941E6AFF6A0A1</key>
-		<dict>
-			<key>fileRef</key>
-			<string>18A0CD05E0BD4821A025F329</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>5223D5371A1B4E6E9F223A69</key>
-		<dict>
-			<key>fileRef</key>
-			<string>342D662F40B64B7286146B9F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-fobjc-arc</string>
-			</dict>
-		</dict>
-		<key>53B02988737B479995365949</key>
-		<dict>
-			<key>fileRef</key>
-			<string>139A576782464282B03DDC3F</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>53EF778420024AB196DB6868</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>AGAuthConfiguration.h</string>
-			<key>path</key>
-			<string>AeroGear/AeroGear-iOS/AeroGear-iOS/security/AGAuthConfiguration.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>566A7FF9904A4CEFA0C280FC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>97FCED36A06B41B496497927</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>589B26D9CB7A4D4B811CFCCA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>940A0C1AA5674793A25DA85E</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>597A9C4FEF9342CE9E643D0F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>UIImageView+AFNetworking.m</string>
-			<key>path</key>
-			<string>AFNetworking/AFNetworking/UIImageView+AFNetworking.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>5AF996C718A1474BA54AB452</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>AGMemoryStorage.m</string>
-			<key>path</key>
-			<string>AeroGear/AeroGear-iOS/AeroGear-iOS/datamanager/AGMemoryStorage.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>5B337AD1E3BD4D6DB142C8BA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>71AF46DD3EC9427C81426766</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>5BB09A9D231C477489BC31CD</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7B39BAF76FCF413DB1B53AF7</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>5C5DECD1F4D84A6DB31D0519</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>AFURLConnectionOperation.h</string>
-			<key>path</key>
-			<string>AFNetworking/AFNetworking/AFURLConnectionOperation.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>62F80E2D6F26490A996FDEDF</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>AFHTTPRequestOperation.m</string>
-			<key>path</key>
-			<string>AFNetworking/AFNetworking/AFHTTPRequestOperation.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>636CE34DBE784267BC26FB64</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>libPods.a</string>
-			<key>path</key>
-			<string>libPods.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>63BE5B33F88147E5A97B3F3C</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>AGPipeline.m</string>
-			<key>path</key>
-			<string>AeroGear/AeroGear-iOS/AeroGear-iOS/pipeline/AGPipeline.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>64161D8A6BE1424F80A5F98D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>AGConfig.h</string>
-			<key>path</key>
-			<string>AeroGear/AeroGear-iOS/AeroGear-iOS/config/AGConfig.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>643C45A5AE534FD4838EA95F</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>36DA0588FAD141D587BF28B7</string>
-			<key>buildPhases</key>
-			<array>
-				<string>9182B9AD9B18447696F7C110</string>
-				<string>0ACAA8ABBCA54F97B50ABD0F</string>
-				<string>22F30C622D09421A9FFABDA0</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>productName</key>
-			<string>Pods</string>
-			<key>productReference</key>
-			<string>636CE34DBE784267BC26FB64</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
-		</dict>
-		<key>68013B8810254645B1071B5F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A62AE16832C0439E8C85ACFB</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-fobjc-arc</string>
-			</dict>
-		</dict>
-		<key>6B3F4FA485FC4CF6BE87EA49</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5C5DECD1F4D84A6DB31D0519</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>6D2D667735C2453D9EA1B88C</key>
-		<dict>
-			<key>fileRef</key>
-			<string>F2C45955BB3A4C26908E7B3C</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>6E743B1D5BE242468D5CC4D8</key>
-		<dict>
-			<key>fileRef</key>
-			<string>843ADB44F93B42538A0627C9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>707F1A32606D4C5384142DC9</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>AGAuthenticationModule.h</string>
-			<key>path</key>
-			<string>AeroGear/AeroGear-iOS/AeroGear-iOS/security/AGAuthenticationModule.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>71AF46DD3EC9427C81426766</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>AGPipe.h</string>
-			<key>path</key>
-			<string>AeroGear/AeroGear-iOS/AeroGear-iOS/pipeline/AGPipe.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>71C83CFC5C3D4AC28014D1B2</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>142F407F3FFD45BBAE8FA655</string>
-				<string>BEE2B57784964832A73B2EB1</string>
-				<string>F112998FF2A4452C920F6798</string>
-				<string>B03DEA3D1E6845BABDACA3A0</string>
-				<string>F2C45955BB3A4C26908E7B3C</string>
-				<string>0615519C6D7A481493AC602D</string>
-				<string>9B8A76F554A34A17925AAF55</string>
-				<string>2D8BD7B76C1444CF9608337B</string>
-				<string>5C5DECD1F4D84A6DB31D0519</string>
-				<string>D45F2433DD8B4E7EAE2DE328</string>
-				<string>42054B255DF64313876FC8CF</string>
-				<string>922A8A29216947C28BAC41F8</string>
-				<string>62F80E2D6F26490A996FDEDF</string>
-				<string>A6B3D9A5660947C4B52E826F</string>
-				<string>78E09183225948C19611AD9D</string>
-				<string>C447391A540F4253B1760DF4</string>
-				<string>97FCED36A06B41B496497927</string>
-				<string>82C3E0F535434CCF9C37CE70</string>
-				<string>9DF04101CE8A48C78825AC1E</string>
-				<string>139A576782464282B03DDC3F</string>
-				<string>597A9C4FEF9342CE9E643D0F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>AFNetworking</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>78E09183225948C19611AD9D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>AFJSONRequestOperation.m</string>
-			<key>path</key>
-			<string>AFNetworking/AFNetworking/AFJSONRequestOperation.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>7A740B0AC8D64E92A9C850FE</key>
-		<dict>
-			<key>fileRef</key>
-			<string>F112998FF2A4452C920F6798</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>7B2FD447544949B69B924528</key>
+		<key>002C4932992D4D9E9FC68275</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1202,10 +23,109 @@
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>7B33BC393F174F20AB52F1EE</key>
+		<key>021A8386C856472DBC093CD4</key>
 		<dict>
 			<key>fileRef</key>
-			<string>63BE5B33F88147E5A97B3F3C</string>
+			<string>7D0A2248712348ABADCC27DC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>0381792C1F364AA29819FDBA</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>AFJSONRequestOperation.m</string>
+			<key>path</key>
+			<string>AFNetworking/AFNetworking/AFJSONRequestOperation.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>06491255F7A54328A2DB0BC5</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>59B30746F65C4F2C8339A1B5</string>
+				<string>CB7993D920C848D690168334</string>
+				<string>3843A1036BB6453B859BE245</string>
+				<string>16145A975E1F4A25854A3D85</string>
+				<string>299993A931B846BDB230D6AA</string>
+				<string>0CA47ACAC2A84693A3C5C17E</string>
+				<string>11A4A685B8D64A7E88682A5B</string>
+				<string>4204C229C36D4DE7B8CBC572</string>
+				<string>F650D188D7C1421C9F968A90</string>
+				<string>26AFBF9E073D4AB38503BEAB</string>
+				<string>9CCEF36EA03C45199855C37D</string>
+				<string>5C15F200BB244B3786E66A08</string>
+				<string>A9A084217AB347D2AAF67C02</string>
+				<string>AA69DF3C447E414BB080561D</string>
+				<string>EF89E06C56F54C679269D836</string>
+				<string>084D76995B2A4304A4EBE38E</string>
+				<string>3C1768F60D6A42599615B663</string>
+				<string>C1C4D2CD26EF4469A9ABCF4D</string>
+				<string>95D2A0E1FE294EBAB5C18CAD</string>
+				<string>C4CF009F347C4A5B974E3992</string>
+				<string>FD81F70741B54F2B8A060F1A</string>
+				<string>B2515AA965A340B69339F9E4</string>
+				<string>BE00B12751574D47AFAF4B89</string>
+				<string>EE2C83577C4546E3926BAB9F</string>
+				<string>4A77CCCEE0604673A3CD4DD0</string>
+				<string>98AD31045F2C4E898FA235D9</string>
+				<string>8BD2915E727646BD9404F92E</string>
+				<string>A1E64C6E58364058BAB1A07F</string>
+				<string>E7AE92418AEC4E73A6732364</string>
+				<string>53C8090BB43F46F99FFB7943</string>
+				<string>903827BA1EAD4FADA3937355</string>
+				<string>CF5C1503402B443CAE1C2AB6</string>
+				<string>4A3DAB37544E4C22B59A01C2</string>
+				<string>C04589171C7941799F9DE3E9</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>AeroGear</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0816DDC96C334F72A7FD1690</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>SVProgressHUD.m</string>
+			<key>path</key>
+			<string>SVProgressHUD/SVProgressHUD/SVProgressHUD.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>084D76995B2A4304A4EBE38E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>AGAuthConfiguration.h</string>
+			<key>path</key>
+			<string>AeroGear/AeroGear-iOS/AeroGear-iOS/security/AGAuthConfiguration.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>092F81520BC74F72B927C758</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F41E0DD983334A71A6C64FBF</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1214,38 +134,10 @@
 				<string>-fobjc-arc</string>
 			</dict>
 		</dict>
-		<key>7B39BAF76FCF413DB1B53AF7</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>AGBaseStorage.h</string>
-			<key>path</key>
-			<string>AeroGear/AeroGear-iOS/AeroGear-iOS/datamanager/AGBaseStorage.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>7BAC8BEBC4BF48DCAFA50AA7</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods.xcconfig</string>
-			<key>path</key>
-			<string>Pods.xcconfig</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>7C21A0FB72564DA69EDE99A6</key>
+		<key>09B36FB291D249B897F4B4BA</key>
 		<dict>
 			<key>fileRef</key>
-			<string>7DDAFBB54A5647D1987D611C</string>
+			<string>3C1768F60D6A42599615B663</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1256,25 +148,52 @@
 				</array>
 			</dict>
 		</dict>
-		<key>7DDAFBB54A5647D1987D611C</key>
+		<key>0C2A1BA4CB9A44F89D595ED6</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>2B63ED41F5184745B6580F0D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0CA47ACAC2A84693A3C5C17E</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>HRColorCursor.h</string>
+			<string>AGMemoryStorage.h</string>
 			<key>path</key>
-			<string>Color-Picker-for-iOS/ColorPicker/HRColorCursor.h</string>
+			<string>AeroGear/AeroGear-iOS/AeroGear-iOS/datamanager/AGMemoryStorage.h</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>820852C0E6A1414B92A1A2D9</key>
+		<key>0CC59FB5EDDF4405B3462659</key>
+		<dict>
+			<key>fileRef</key>
+			<string>436825818EE547149C52E0A9</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>102A88E7B5BC440E81659457</key>
 		<dict>
 			<key>children</key>
 			<array>
-				<string>1ADAD631AE894A60A386549A</string>
-				<string>E7C6CE1EFF124A54A06F6636</string>
+				<string>7D0A2248712348ABADCC27DC</string>
+				<string>B85A150073E04D08886D3763</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
@@ -1283,38 +202,30 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>82C3E0F535434CCF9C37CE70</key>
+		<key>11A4A685B8D64A7E88682A5B</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>AFPropertyListRequestOperation.m</string>
+			<string>AGStore.h</string>
 			<key>path</key>
-			<string>AFNetworking/AFNetworking/AFPropertyListRequestOperation.m</string>
+			<string>AeroGear/AeroGear-iOS/AeroGear-iOS/datamanager/AGStore.h</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>843ADB44F93B42538A0627C9</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>Foundation.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/Foundation.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>84C03A82276D4EC595B83649</key>
+		<key>12D808F61A4C46289F489A5A</key>
 		<dict>
 			<key>fileRef</key>
-			<string>9B8A76F554A34A17925AAF55</string>
+			<string>623FC6A78D5449C9AD2433E4</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>13F5B1D342894E0F973414C8</key>
+		<dict>
+			<key>fileRef</key>
+			<string>26AFBF9E073D4AB38503BEAB</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1325,10 +236,10 @@
 				</array>
 			</dict>
 		</dict>
-		<key>85E2FCC061A54F98B2CFCEB5</key>
+		<key>14D4F7BDABF04EDB98125ACC</key>
 		<dict>
 			<key>fileRef</key>
-			<string>EF2DD92DC3734F1D866FF77F</string>
+			<string>0CA47ACAC2A84693A3C5C17E</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1339,23 +250,10 @@
 				</array>
 			</dict>
 		</dict>
-		<key>87110A79B9234BC8BA410972</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>AGRestAuthentication.h</string>
-			<key>path</key>
-			<string>AeroGear/AeroGear-iOS/AeroGear-iOS/security/AGRestAuthentication.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>8990F6F3A6CB4A1096A4C815</key>
+		<key>1508AE0EFBE3415DA39F66F5</key>
 		<dict>
 			<key>fileRef</key>
-			<string>061EC7460770456FB90BE445</string>
+			<string>4204C229C36D4DE7B8CBC572</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1366,24 +264,10 @@
 				</array>
 			</dict>
 		</dict>
-		<key>89F256B6ED6B4FA4A7333924</key>
-		<dict>
-			<key>fileRef</key>
-			<string>DEC951A0BE4546FEBB977607</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>8A0DF649AC48405283A834D8</key>
+		<key>159BD4392B1F44F0BB07F9E9</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>7BAC8BEBC4BF48DCAFA50AA7</string>
+			<string>1FEF554BD42F4F13A2591D71</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>ALWAYS_SEARCH_USER_PATHS</key>
@@ -1439,200 +323,51 @@
 			<key>name</key>
 			<string>Debug</string>
 		</dict>
-		<key>8B71A2304A95479B933F5F63</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B03DEA3D1E6845BABDACA3A0</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>8DA36DEF4EBC4CBFA45FF0E8</key>
+		<key>15EFD3F8118C4E01B2DD54BB</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>HRCgUtil.m</string>
+			<string>AFHTTPClient.h</string>
 			<key>path</key>
-			<string>Color-Picker-for-iOS/ColorPicker/HRCgUtil.m</string>
+			<string>AFNetworking/AFNetworking/AFHTTPClient.h</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>8F6936E88CA74D1C83628767</key>
+		<key>16145A975E1F4A25854A3D85</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>AGHttpClient.m</string>
+			<string>AGBaseStorage.h</string>
 			<key>path</key>
-			<string>AeroGear/AeroGear-iOS/AeroGear-iOS/core/AGHttpClient.m</string>
+			<string>AeroGear/AeroGear-iOS/AeroGear-iOS/datamanager/AGBaseStorage.h</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>8FB96D30A7204FAAAA1F9CA4</key>
-		<dict>
-			<key>fileRef</key>
-			<string>49806BE1991E42589B89B131</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-fobjc-arc</string>
-			</dict>
-		</dict>
-		<key>8FF844A41811423D90070395</key>
+		<key>1B7731F36BEB44FAA35F50A3</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>AGAuthenticator.h</string>
+			<string>AFHTTPRequestOperation.m</string>
 			<key>path</key>
-			<string>AeroGear/AeroGear-iOS/AeroGear-iOS/security/AGAuthenticator.h</string>
+			<string>AFNetworking/AFNetworking/AFHTTPRequestOperation.m</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>900A63F97C6147F7903FFA37</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>HRColorUtil.m</string>
-			<key>path</key>
-			<string>Color-Picker-for-iOS/ColorPicker/HRColorUtil.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>9182B9AD9B18447696F7C110</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>29BFF335F06346F5A3BBFBD5</string>
-				<string>A74A7B70F3A14F5D9AEFEE51</string>
-				<string>F7317120F39E4B53AE13FB5B</string>
-				<string>AE99E90856B14A6BB72F435D</string>
-				<string>1F190D58902C454FBFBD8722</string>
-				<string>566A7FF9904A4CEFA0C280FC</string>
-				<string>EAF7F297E48F4AD688FCC2E4</string>
-				<string>00CEFBE7687D4E6EAF03ADDA</string>
-				<string>53B02988737B479995365949</string>
-				<string>AE3C40AF28C44FAD821E010D</string>
-				<string>C0983C127ACF4CAFA0868D45</string>
-				<string>4B498701407E4A118F5379B4</string>
-				<string>E38258D0C5B44B63AB578672</string>
-				<string>D4F2597C0CF54603A96E9323</string>
-				<string>E01D1FC923F34CE68EB19DBA</string>
-				<string>3E69533CF3854C1D9922EBFC</string>
-				<string>7B33BC393F174F20AB52F1EE</string>
-				<string>8FB96D30A7204FAAAA1F9CA4</string>
-				<string>5223D5371A1B4E6E9F223A69</string>
-				<string>DE3F19C757B84CB1A635182C</string>
-				<string>1730F49B970F4FE490AF34DE</string>
-				<string>F7351B34DAD944D59ACDD58F</string>
-				<string>68013B8810254645B1071B5F</string>
-				<string>CF3D491275504B6A8317E724</string>
-				<string>E100FD26183440BD9DFEA9AA</string>
-				<string>E4601EB9AE6544FE8925E53F</string>
-				<string>0729C065E1E84758889AF9B2</string>
-				<string>1B0D5F15422D46EB9AEE958C</string>
-				<string>2526208E03C24C1A8F0BE086</string>
-				<string>A96FFB5ABBA5422F9C4F7395</string>
-				<string>E972E534569044ECA87024F9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>922A8A29216947C28BAC41F8</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>AFHTTPClient.m</string>
-			<key>path</key>
-			<string>AFNetworking/AFNetworking/AFHTTPClient.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>940A0C1AA5674793A25DA85E</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>HRColorPickerViewController.h</string>
-			<key>path</key>
-			<string>Color-Picker-for-iOS/ColorPicker/HRColorPickerViewController.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>94884A7BEA0A49C19F6BAAC2</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4C3ED812A2944FFDA2E22E2A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>95B5978B475A4B44AE5E87BE</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>HRBrightnessCursor.h</string>
-			<key>path</key>
-			<string>Color-Picker-for-iOS/ColorPicker/HRBrightnessCursor.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>97A2F1F445B64D8192319354</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>4C3ED812A2944FFDA2E22E2A</string>
-				<string>44C498EFBAD74816AD53C3DD</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>SVProgressHUD</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>97F8F8A2281E49229FD340AF</key>
+		<key>1BB4B23ACA1D446F86B3C67D</key>
 		<dict>
 			<key>buildConfigurations</key>
 			<array>
-				<string>B9FA2584720949DB8CB297E5</string>
-				<string>45896359011E455E97EC08CA</string>
+				<string>EF1A200EEC114F3C9864D93F</string>
+				<string>9A9E3868D3DF4626891C7D7E</string>
 			</array>
 			<key>defaultConfigurationIsVisible</key>
 			<string>0</string>
@@ -1641,23 +376,116 @@
 			<key>isa</key>
 			<string>XCConfigurationList</string>
 		</dict>
-		<key>97FCED36A06B41B496497927</key>
+		<key>1EA1FE3FDBCD4875A4814F3D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>5600A29A653A43BAAB22091A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fobjc-arc</string>
+			</dict>
+		</dict>
+		<key>1FEF554BD42F4F13A2591D71</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods.xcconfig</string>
+			<key>path</key>
+			<string>Pods.xcconfig</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2091D9924F3E40AB977F7E19</key>
+		<dict>
+			<key>fileRef</key>
+			<string>903827BA1EAD4FADA3937355</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fobjc-arc</string>
+			</dict>
+		</dict>
+		<key>222E82E851834F439E64CA26</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A1E64C6E58364058BAB1A07F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fobjc-arc</string>
+			</dict>
+		</dict>
+		<key>264B38C2DD774483AD93D3FB</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>159BD4392B1F44F0BB07F9E9</string>
+				<string>7EB8623B731142098112F2F6</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>26944440C68F4DCAA71A638A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>8CF41C0CF4F54F39B265287D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>26AFBF9E073D4AB38503BEAB</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>AFNetworkActivityIndicatorManager.m</string>
+			<string>AGPipe.h</string>
 			<key>path</key>
-			<string>AFNetworking/AFNetworking/AFNetworkActivityIndicatorManager.m</string>
+			<string>AeroGear/AeroGear-iOS/AeroGear-iOS/pipeline/AGPipe.h</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>9886E38227F144639FA0F0BB</key>
+		<key>275003C030664EF0A6C87840</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>6F675B8D39C64C80A886E44D</string>
+				<string>696925C3EFDA4A418D8EE269</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Targets Support Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>28673B9BC5A44D9DAF5B8860</key>
 		<dict>
 			<key>fileRef</key>
-			<string>BEE2B57784964832A73B2EB1</string>
+			<string>FD81F70741B54F2B8A060F1A</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1668,10 +496,23 @@
 				</array>
 			</dict>
 		</dict>
-		<key>9A15C059593845DFB13FEAE8</key>
+		<key>299993A931B846BDB230D6AA</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>AGDataManager.h</string>
+			<key>path</key>
+			<string>AeroGear/AeroGear-iOS/AeroGear-iOS/datamanager/AGDataManager.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>2A2BDB86330942DFB4B0ED16</key>
 		<dict>
 			<key>fileRef</key>
-			<string>36D451063B364284B84FB502</string>
+			<string>299993A931B846BDB230D6AA</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1682,7 +523,7 @@
 				</array>
 			</dict>
 		</dict>
-		<key>9B8A76F554A34A17925AAF55</key>
+		<key>2A37BA728FE54436A704388B</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1695,10 +536,10 @@
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>9BD4CD8340AC4D89B238F3CF</key>
+		<key>2A5E8E5C1D7F42BB913B4E1E</key>
 		<dict>
 			<key>fileRef</key>
-			<string>2D8BD7B76C1444CF9608337B</string>
+			<string>16145A975E1F4A25854A3D85</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1709,20 +550,49 @@
 				</array>
 			</dict>
 		</dict>
-		<key>9DF04101CE8A48C78825AC1E</key>
+		<key>2B63ED41F5184745B6580F0D</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>libPods.a</string>
+			<key>path</key>
+			<string>libPods.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>2D11A1909D1E49F4A48ADA05</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1B7731F36BEB44FAA35F50A3</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>36776FBF4196402E8EB07DEE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>696925C3EFDA4A418D8EE269</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>3843A1036BB6453B859BE245</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>AFURLConnectionOperation.m</string>
+			<string>AGHttpClient.h</string>
 			<key>path</key>
-			<string>AFNetworking/AFNetworking/AFURLConnectionOperation.m</string>
+			<string>AeroGear/AeroGear-iOS/AeroGear-iOS/core/AGHttpClient.h</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>9EF2C9FBAC06431E9265DD2C</key>
+		<key>3A0E9FA60EFC4AF79521F490</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1735,23 +605,35 @@
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>9F8E79FEE5794576B6381D4C</key>
+		<key>3C1768F60D6A42599615B663</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>HRColorPickerView.h</string>
+			<string>AGAuthenticationModule.h</string>
 			<key>path</key>
-			<string>Color-Picker-for-iOS/ColorPicker/HRColorPickerView.h</string>
+			<string>AeroGear/AeroGear-iOS/AeroGear-iOS/security/AGAuthenticationModule.h</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>A020026E44BE4B4DA320746E</key>
+		<key>3CF20B821A224B6B92B9F084</key>
 		<dict>
 			<key>fileRef</key>
-			<string>D45F2433DD8B4E7EAE2DE328</string>
+			<string>BE00B12751574D47AFAF4B89</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fobjc-arc</string>
+			</dict>
+		</dict>
+		<key>3E9BDF4BDBBC4EB6924F47B2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2A37BA728FE54436A704388B</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1762,7 +644,292 @@
 				</array>
 			</dict>
 		</dict>
-		<key>A323853E60474B5BB8E17397</key>
+		<key>3EA00373C7C04CE5A24075AC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B94FA382702547C5B5FD7571</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>415CF10FDF3645368DC2C7AB</key>
+		<dict>
+			<key>fileRef</key>
+			<string>55A251DFC532426C944C8E72</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>4204C229C36D4DE7B8CBC572</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>AGStoreConfig.h</string>
+			<key>path</key>
+			<string>AeroGear/AeroGear-iOS/AeroGear-iOS/datamanager/AGStoreConfig.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>436825818EE547149C52E0A9</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>AFImageRequestOperation.h</string>
+			<key>path</key>
+			<string>AFNetworking/AFNetworking/AFImageRequestOperation.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>487CC64387C1407CA1C4DA52</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E281002D6F2E43B1AF9CA31F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>4997DF0135514583B00D46DF</key>
+		<dict>
+			<key>fileRef</key>
+			<string>EF89E06C56F54C679269D836</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>4A3DAB37544E4C22B59A01C2</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>AGRestAuthentication.m</string>
+			<key>path</key>
+			<string>AeroGear/AeroGear-iOS/AeroGear-iOS/security/AGRestAuthentication.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>4A77CCCEE0604673A3CD4DD0</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>AGDataManager.m</string>
+			<key>path</key>
+			<string>AeroGear/AeroGear-iOS/AeroGear-iOS/datamanager/AGDataManager.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>4C3099556E344F6A8E4BE801</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>LastUpgradeCheck</key>
+				<string>0450</string>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>1BB4B23ACA1D446F86B3C67D</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+			</array>
+			<key>mainGroup</key>
+			<string>82BC83D4A880444EA533B24C</string>
+			<key>productRefGroup</key>
+			<string>0C2A1BA4CB9A44F89D595ED6</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>F8D0D609E06642EDAC658949</string>
+			</array>
+		</dict>
+		<key>4FAC0BF9ECC549FFBF5C6BC6</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9D12FF2A35F343C49C8E7F70</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>52F7FEABF13340B38026E9B5</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F93C0A7DC19D437A96766C2A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fobjc-arc</string>
+			</dict>
+		</dict>
+		<key>53C8090BB43F46F99FFB7943</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>AGRestAdapter.m</string>
+			<key>path</key>
+			<string>AeroGear/AeroGear-iOS/AeroGear-iOS/pipeline/AGRestAdapter.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>549C44F887CB46D98399A5FD</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>AFNetworkActivityIndicatorManager.h</string>
+			<key>path</key>
+			<string>AFNetworking/AFNetworking/AFNetworkActivityIndicatorManager.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>54A3F82E33644732BDDB7A02</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>AFPropertyListRequestOperation.m</string>
+			<key>path</key>
+			<string>AFNetworking/AFNetworking/AFPropertyListRequestOperation.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>55A251DFC532426C944C8E72</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>AFJSONUtilities.h</string>
+			<key>path</key>
+			<string>AFNetworking/AFNetworking/AFJSONUtilities.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>5600A29A653A43BAAB22091A</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>HRColorUtil.m</string>
+			<key>path</key>
+			<string>Color-Picker-for-iOS/ColorPicker/HRColorUtil.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>57A4AF8C6F4E4DBA8F702F1D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>11A4A685B8D64A7E88682A5B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>595BC63EF1E34F779148ED8F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>8304B65E52AA4F4AABA028EC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>59B30746F65C4F2C8339A1B5</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>AeroGear.h</string>
+			<key>path</key>
+			<string>AeroGear/AeroGear-iOS/AeroGear-iOS/AeroGear.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>5A477EA076ED4053A9FBB87E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E7AE92418AEC4E73A6732364</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fobjc-arc</string>
+			</dict>
+		</dict>
+		<key>5AAEE3E1A0934FDB8CA3D3A5</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>HRColorPickerView.m</string>
+			<key>path</key>
+			<string>Color-Picker-for-iOS/ColorPicker/HRColorPickerView.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>5C15F200BB244B3786E66A08</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1775,71 +942,17 @@
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>A4029A10F961459393D3E4AA</key>
+		<key>5E722435503B43EBB243A5A0</key>
 		<dict>
 			<key>fileRef</key>
-			<string>64161D8A6BE1424F80A5F98D</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>A62AE16832C0439E8C85ACFB</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>HRBrightnessCursor.m</string>
-			<key>path</key>
-			<string>Color-Picker-for-iOS/ColorPicker/HRBrightnessCursor.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>A6B3D9A5660947C4B52E826F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>AFImageRequestOperation.m</string>
-			<key>path</key>
-			<string>AFNetworking/AFNetworking/AFImageRequestOperation.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>A6C902D1EACF48089D6AB9EC</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A323853E60474B5BB8E17397</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>A74A7B70F3A14F5D9AEFEE51</key>
-		<dict>
-			<key>fileRef</key>
-			<string>62F80E2D6F26490A996FDEDF</string>
+			<string>98685E41FC97439880CC286D</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>A96FFB5ABBA5422F9C4F7395</key>
+		<key>602DA33A561042BDAEBC1969</key>
 		<dict>
 			<key>fileRef</key>
-			<string>44C498EFBAD74816AD53C3DD</string>
+			<string>8BD2915E727646BD9404F92E</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1848,10 +961,55 @@
 				<string>-fobjc-arc</string>
 			</dict>
 		</dict>
-		<key>ACA433F4F41644B092DD6025</key>
+		<key>623FC6A78D5449C9AD2433E4</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>AFJSONUtilities.m</string>
+			<key>path</key>
+			<string>AFNetworking/AFNetworking/AFJSONUtilities.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>6311A5F5B08C4BA7A107FA03</key>
 		<dict>
 			<key>fileRef</key>
-			<string>2347F2BFEACC4B6E8307C980</string>
+			<string>0816DDC96C334F72A7FD1690</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fobjc-arc</string>
+			</dict>
+		</dict>
+		<key>6490CC2D266845A49A8D0C17</key>
+		<dict>
+			<key>fileRef</key>
+			<string>54A3F82E33644732BDDB7A02</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>651CE34C502643CBA0F8ADD9</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>Pods-prefix.pch</string>
+			<key>path</key>
+			<string>Pods-prefix.pch</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>65925DB367EB4BB38682B458</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F6B3B54777CE4CAC93ECD5D0</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1862,42 +1020,118 @@
 				</array>
 			</dict>
 		</dict>
-		<key>ACF781CAF5CE42679138D40A</key>
+		<key>687E336C42BC4965B11D5947</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0381792C1F364AA29819FDBA</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>696925C3EFDA4A418D8EE269</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>AGAuthenticator.m</string>
+			<string>PodsDummy_Pods.m</string>
 			<key>path</key>
-			<string>AeroGear/AeroGear-iOS/AeroGear-iOS/security/AGAuthenticator.m</string>
+			<string>PodsDummy_Pods.m</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>AE3C40AF28C44FAD821E010D</key>
+		<key>69CF0F07A3874E01A83DB97C</key>
 		<dict>
 			<key>fileRef</key>
-			<string>597A9C4FEF9342CE9E643D0F</string>
+			<string>907F2A4CF1EB42B090D7D7EE</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
 		</dict>
-		<key>AE99E90856B14A6BB72F435D</key>
+		<key>69DAE9953C58407FAB7920C3</key>
 		<dict>
-			<key>fileRef</key>
-			<string>78E09183225948C19611AD9D</string>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>dstPath</key>
+			<string>$(PRODUCT_NAME)</string>
+			<key>dstSubfolderSpec</key>
+			<string>16</string>
+			<key>files</key>
+			<array>
+				<string>C15F405B95134FC1B64BC7CF</string>
+				<string>FF0D4763E19C4A858635B903</string>
+				<string>0CC59FB5EDDF4405B3462659</string>
+				<string>9BF477A692004A75AB389CF4</string>
+				<string>415CF10FDF3645368DC2C7AB</string>
+				<string>83EE48DAA043464D8ABFE6D3</string>
+				<string>3E9BDF4BDBBC4EB6924F47B2</string>
+				<string>E44D98EE082D431D95988552</string>
+				<string>69CF0F07A3874E01A83DB97C</string>
+				<string>26944440C68F4DCAA71A638A</string>
+				<string>B67A40A24B1541E1A7ACD7E7</string>
+				<string>D6CA2F2235104AF8BE94B537</string>
+				<string>CB6D6D8FDC434AB69DCB662F</string>
+				<string>7B08743840944C0E82C7E313</string>
+				<string>2A5E8E5C1D7F42BB913B4E1E</string>
+				<string>2A2BDB86330942DFB4B0ED16</string>
+				<string>14D4F7BDABF04EDB98125ACC</string>
+				<string>57A4AF8C6F4E4DBA8F702F1D</string>
+				<string>1508AE0EFBE3415DA39F66F5</string>
+				<string>F9314B23B42F454D9A45339F</string>
+				<string>13F5B1D342894E0F973414C8</string>
+				<string>9AB4E4C33F0B444791CE6786</string>
+				<string>878DA333052C4441A47805CC</string>
+				<string>AF2709255FD44AB5ADFCD6E4</string>
+				<string>FCF5D867464D48DA83476F17</string>
+				<string>4997DF0135514583B00D46DF</string>
+				<string>E876A1BEACF14857A267A837</string>
+				<string>09B36FB291D249B897F4B4BA</string>
+				<string>E8BA28FDD0A446E6978C6EA0</string>
+				<string>ACC3A3FC1A5D4B8999FA2AD2</string>
+				<string>BC0CAE42509244D8BF28D95B</string>
+				<string>28673B9BC5A44D9DAF5B8860</string>
+				<string>E385346361D64915A5FCB079</string>
+				<string>65925DB367EB4BB38682B458</string>
+				<string>4FAC0BF9ECC549FFBF5C6BC6</string>
+				<string>B5CE52AE1F484E0AABF18AAF</string>
+				<string>B0C8C2AEAC4443109A1888E5</string>
+				<string>487CC64387C1407CA1C4DA52</string>
+				<string>F824F2B4FF524AFBB4630FC3</string>
+				<string>8E3418D92B6249B1B81D5530</string>
+				<string>021A8386C856472DBC093CD4</string>
+				<string>B5799AAF4D7D4FBEBFA7D885</string>
+			</array>
 			<key>isa</key>
-			<string>PBXBuildFile</string>
+			<string>PBXCopyFilesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
 		</dict>
-		<key>AF30882990DE46AEB22C6699</key>
+		<key>6B3444FA7F16437EB3F94541</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>UIImageView+AFNetworking.h</string>
+			<key>path</key>
+			<string>AFNetworking/AFNetworking/UIImageView+AFNetworking.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>6F675B8D39C64C80A886E44D</key>
 		<dict>
 			<key>children</key>
 			<array>
-				<string>71C83CFC5C3D4AC28014D1B2</string>
-				<string>1BECCFDB139B47A1A110F518</string>
-				<string>4F8F235576DD40E28A15672C</string>
-				<string>820852C0E6A1414B92A1A2D9</string>
-				<string>97A2F1F445B64D8192319354</string>
+				<string>3A0E9FA60EFC4AF79521F490</string>
+				<string>651CE34C502643CBA0F8ADD9</string>
+				<string>1FEF554BD42F4F13A2591D71</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
@@ -1906,32 +1140,22 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>B03DEA3D1E6845BABDACA3A0</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>AFJSONRequestOperation.h</string>
-			<key>path</key>
-			<string>AFNetworking/AFNetworking/AFJSONRequestOperation.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>B9FA2584720949DB8CB297E5</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict/>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>BAD120FF77474869AF057C2B</key>
+		<key>7AD51E79C54E4B419B1DA739</key>
 		<dict>
 			<key>fileRef</key>
-			<string>1D514ADA67384408858A258F</string>
+			<string>CF5C1503402B443CAE1C2AB6</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fobjc-arc</string>
+			</dict>
+		</dict>
+		<key>7B08743840944C0E82C7E313</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3843A1036BB6453B859BE245</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1942,24 +1166,47 @@
 				</array>
 			</dict>
 		</dict>
-		<key>BAE21FD0308245808E188969</key>
+		<key>7C16ECA0F5FA432697758419</key>
 		<dict>
-			<key>children</key>
-			<array>
-				<string>C1507600CB894B89A9461B82</string>
-				<string>AF30882990DE46AEB22C6699</string>
-				<string>DB9B5F919ABF489492C3D4B2</string>
-				<string>C2DFD40606F3479486FE6A2E</string>
-			</array>
+			<key>fileRef</key>
+			<string>53C8090BB43F46F99FFB7943</string>
 			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fobjc-arc</string>
+			</dict>
 		</dict>
-		<key>BB51DC574FCF46A39C71D141</key>
+		<key>7D0A2248712348ABADCC27DC</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>PullRefreshTableViewController.h</string>
+			<key>path</key>
+			<string>PullToRefresh/Classes/PullRefreshTableViewController.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>7DA48D4871E74614A503310E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C04589171C7941799F9DE3E9</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fobjc-arc</string>
+			</dict>
+		</dict>
+		<key>7EB8623B731142098112F2F6</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>7BAC8BEBC4BF48DCAFA50AA7</string>
+			<string>1FEF554BD42F4F13A2591D71</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>ALWAYS_SEARCH_USER_PATHS</key>
@@ -2006,23 +1253,39 @@
 			<key>name</key>
 			<string>Release</string>
 		</dict>
-		<key>BEE2B57784964832A73B2EB1</key>
+		<key>82BC83D4A880444EA533B24C</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>0C2A1BA4CB9A44F89D595ED6</string>
+				<string>E70EACBF2D184029986627AE</string>
+				<string>275003C030664EF0A6C87840</string>
+				<string>DABDE4B55E924783A1A8CF9E</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8304B65E52AA4F4AABA028EC</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
 			<key>name</key>
-			<string>AFHTTPRequestOperation.h</string>
+			<string>Foundation.framework</string>
 			<key>path</key>
-			<string>AFNetworking/AFNetworking/AFHTTPRequestOperation.h</string>
+			<string>System/Library/Frameworks/Foundation.framework</string>
 			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
+			<string>SDKROOT</string>
 		</dict>
-		<key>BFD101881C2C49D8B73CE2E1</key>
+		<key>83EE48DAA043464D8ABFE6D3</key>
 		<dict>
 			<key>fileRef</key>
-			<string>42054B255DF64313876FC8CF</string>
+			<string>549C44F887CB46D98399A5FD</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2033,201 +1296,7 @@
 				</array>
 			</dict>
 		</dict>
-		<key>C0983C127ACF4CAFA0868D45</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8F6936E88CA74D1C83628767</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-fobjc-arc</string>
-			</dict>
-		</dict>
-		<key>C1507600CB894B89A9461B82</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>636CE34DBE784267BC26FB64</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C2DFD40606F3479486FE6A2E</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>843ADB44F93B42538A0627C9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C3DAD85D003440868752D767</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>AGStoreConfiguration.m</string>
-			<key>path</key>
-			<string>AeroGear/AeroGear-iOS/AeroGear-iOS/datamanager/AGStoreConfiguration.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>C447391A540F4253B1760DF4</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>AFJSONUtilities.m</string>
-			<key>path</key>
-			<string>AFNetworking/AFNetworking/AFJSONUtilities.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>CF3D491275504B6A8317E724</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8DA36DEF4EBC4CBFA45FF0E8</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-fobjc-arc</string>
-			</dict>
-		</dict>
-		<key>D2E18FD9D4ED40329C1E6857</key>
-		<dict>
-			<key>fileRef</key>
-			<string>87110A79B9234BC8BA410972</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>D437A06BD073465CA3A16ECF</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>AGAuthenticationModuleAdapter.h</string>
-			<key>path</key>
-			<string>AeroGear/AeroGear-iOS/AeroGear-iOS/security/AGAuthenticationModuleAdapter.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>D43B8931351C48AE8896C3FF</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>AGBaseAdapter.h</string>
-			<key>path</key>
-			<string>AeroGear/AeroGear-iOS/AeroGear-iOS/utils/AGBaseAdapter.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>D45F2433DD8B4E7EAE2DE328</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>AFXMLRequestOperation.h</string>
-			<key>path</key>
-			<string>AFNetworking/AFNetworking/AFXMLRequestOperation.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>D4F2597C0CF54603A96E9323</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5AF996C718A1474BA54AB452</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-fobjc-arc</string>
-			</dict>
-		</dict>
-		<key>DAEF7A8F9E35420885C7FCD7</key>
-		<dict>
-			<key>fileRef</key>
-			<string>707F1A32606D4C5384142DC9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>DAF737B2E9764C60B57255BE</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>AGBaseStorage.m</string>
-			<key>path</key>
-			<string>AeroGear/AeroGear-iOS/AeroGear-iOS/datamanager/AGBaseStorage.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>DB9B5F919ABF489492C3D4B2</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>4FE8DE463D574BBD9FBFCD2A</string>
-				<string>177E481FAC3741CB99CD6302</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Targets Support Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DE3F19C757B84CB1A635182C</key>
-		<dict>
-			<key>fileRef</key>
-			<string>ACF781CAF5CE42679138D40A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-fobjc-arc</string>
-			</dict>
-		</dict>
-		<key>DEC951A0BE4546FEBB977607</key>
+		<key>8498E2416ACF438E867AEAFB</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -2240,10 +1309,10 @@
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>DF746D53C9004A73BF289154</key>
+		<key>878DA333052C4441A47805CC</key>
 		<dict>
 			<key>fileRef</key>
-			<string>1ADAD631AE894A60A386549A</string>
+			<string>5C15F200BB244B3786E66A08</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2254,47 +1323,36 @@
 				</array>
 			</dict>
 		</dict>
-		<key>E01D1FC923F34CE68EB19DBA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C3DAD85D003440868752D767</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-fobjc-arc</string>
-			</dict>
-		</dict>
-		<key>E100FD26183440BD9DFEA9AA</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7B2FD447544949B69B924528</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-fobjc-arc</string>
-			</dict>
-		</dict>
-		<key>E1DAAC93736C46ABB084FDF0</key>
+		<key>8BD2915E727646BD9404F92E</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>AGHttpClient.h</string>
+			<string>AGStoreConfiguration.m</string>
 			<key>path</key>
-			<string>AeroGear/AeroGear-iOS/AeroGear-iOS/core/AGHttpClient.h</string>
+			<string>AeroGear/AeroGear-iOS/AeroGear-iOS/datamanager/AGStoreConfiguration.m</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>E32B652B15AC4B1790B044B4</key>
+		<key>8CF41C0CF4F54F39B265287D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>AFXMLRequestOperation.h</string>
+			<key>path</key>
+			<string>AFNetworking/AFNetworking/AFXMLRequestOperation.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>8E3418D92B6249B1B81D5530</key>
 		<dict>
 			<key>fileRef</key>
-			<string>9F8E79FEE5794576B6381D4C</string>
+			<string>B4BF1A86A5BA4EA6A061C040</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2305,47 +1363,130 @@
 				</array>
 			</dict>
 		</dict>
-		<key>E38258D0C5B44B63AB578672</key>
-		<dict>
-			<key>fileRef</key>
-			<string>09D68A6CE5394D469B3D9976</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-fobjc-arc</string>
-			</dict>
-		</dict>
-		<key>E4601EB9AE6544FE8925E53F</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3C8F7522F1B44ACEB3AF9957</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-fobjc-arc</string>
-			</dict>
-		</dict>
-		<key>E7C6CE1EFF124A54A06F6636</key>
+		<key>903827BA1EAD4FADA3937355</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>PullRefreshTableViewController.m</string>
+			<string>AGAuthConfiguration.m</string>
 			<key>path</key>
-			<string>PullToRefresh/Classes/PullRefreshTableViewController.m</string>
+			<string>AeroGear/AeroGear-iOS/AeroGear-iOS/security/AGAuthConfiguration.m</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>E9600A31B9EE4E2DAD7F9113</key>
+		<key>907F2A4CF1EB42B090D7D7EE</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>AFURLConnectionOperation.h</string>
+			<key>path</key>
+			<string>AFNetworking/AFNetworking/AFURLConnectionOperation.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>92E4B439FC934FA99D8B6B1B</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>C0F10A00057143F8B126A5A7</string>
+				<string>0816DDC96C334F72A7FD1690</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>SVProgressHUD</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9387F79D29BE4DC596E0D0A6</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>AFPropertyListRequestOperation.h</string>
+			<key>path</key>
+			<string>AFNetworking/AFNetworking/AFPropertyListRequestOperation.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>93BED013EBAC42FD8243241E</key>
 		<dict>
 			<key>fileRef</key>
-			<string>D43B8931351C48AE8896C3FF</string>
+			<string>A6B7302B83AB43B9B4686C33</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>95D2A0E1FE294EBAB5C18CAD</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>AGAuthenticator.h</string>
+			<key>path</key>
+			<string>AeroGear/AeroGear-iOS/AeroGear-iOS/security/AGAuthenticator.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>982F2ADDB12F42B2A40C2764</key>
+		<dict>
+			<key>fileRef</key>
+			<string>4A3DAB37544E4C22B59A01C2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fobjc-arc</string>
+			</dict>
+		</dict>
+		<key>98685E41FC97439880CC286D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>UIImageView+AFNetworking.m</string>
+			<key>path</key>
+			<string>AFNetworking/AFNetworking/UIImageView+AFNetworking.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>98AD31045F2C4E898FA235D9</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>AGMemoryStorage.m</string>
+			<key>path</key>
+			<string>AeroGear/AeroGear-iOS/AeroGear-iOS/datamanager/AGMemoryStorage.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>9A9E3868D3DF4626891C7D7E</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict/>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>9AB4E4C33F0B444791CE6786</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9CCEF36EA03C45199855C37D</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2356,34 +1497,184 @@
 				</array>
 			</dict>
 		</dict>
-		<key>E972E534569044ECA87024F9</key>
+		<key>9BF477A692004A75AB389CF4</key>
 		<dict>
 			<key>fileRef</key>
-			<string>177E481FAC3741CB99CD6302</string>
+			<string>A660FF69E84549138925D3F5</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
 		</dict>
-		<key>EAF7F297E48F4AD688FCC2E4</key>
-		<dict>
-			<key>fileRef</key>
-			<string>82C3E0F535434CCF9C37CE70</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>EF2DD92DC3734F1D866FF77F</key>
+		<key>9CCEF36EA03C45199855C37D</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>name</key>
-			<string>AeroGear.h</string>
+			<string>AGPipeConfig.h</string>
 			<key>path</key>
-			<string>AeroGear/AeroGear-iOS/AeroGear-iOS/AeroGear.h</string>
+			<string>AeroGear/AeroGear-iOS/AeroGear-iOS/pipeline/AGPipeConfig.h</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>F084271587A441B1AC271710</key>
+		<key>9D12FF2A35F343C49C8E7F70</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>HRCgUtil.h</string>
+			<key>path</key>
+			<string>Color-Picker-for-iOS/ColorPicker/HRCgUtil.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>9E7D5D026EB44F76A40E14C8</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>HRColorCursor.h</string>
+			<key>path</key>
+			<string>Color-Picker-for-iOS/ColorPicker/HRColorCursor.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>9F9368E5A91745B5BA281EB9</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>AFHTTPRequestOperation.h</string>
+			<key>path</key>
+			<string>AFNetworking/AFNetworking/AFHTTPRequestOperation.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>A1E64C6E58364058BAB1A07F</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>AGPipeConfiguration.m</string>
+			<key>path</key>
+			<string>AeroGear/AeroGear-iOS/AeroGear-iOS/pipeline/AGPipeConfiguration.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>A660FF69E84549138925D3F5</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>AFJSONRequestOperation.h</string>
+			<key>path</key>
+			<string>AFNetworking/AFNetworking/AFJSONRequestOperation.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>A6B7302B83AB43B9B4686C33</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>AFImageRequestOperation.m</string>
+			<key>path</key>
+			<string>AFNetworking/AFNetworking/AFImageRequestOperation.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>A6D19818D0904B45A505FD30</key>
+		<dict>
+			<key>fileRef</key>
+			<string>002C4932992D4D9E9FC68275</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fobjc-arc</string>
+			</dict>
+		</dict>
+		<key>A9A084217AB347D2AAF67C02</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>AGPipeline.h</string>
+			<key>path</key>
+			<string>AeroGear/AeroGear-iOS/AeroGear-iOS/pipeline/AGPipeline.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>AA2451A73E5348DD9B1BB91F</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>AFXMLRequestOperation.m</string>
+			<key>path</key>
+			<string>AFNetworking/AFNetworking/AFXMLRequestOperation.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>AA69DF3C447E414BB080561D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>AGRestAdapter.h</string>
+			<key>path</key>
+			<string>AeroGear/AeroGear-iOS/AeroGear-iOS/pipeline/AGRestAdapter.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>ACC3A3FC1A5D4B8999FA2AD2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>95D2A0E1FE294EBAB5C18CAD</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>AE1EF2D6737C45B19C757903</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B85A150073E04D08886D3763</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>AE607DECD91648E584B6F92A</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -2396,43 +1687,164 @@
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>F112998FF2A4452C920F6798</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>AFImageRequestOperation.h</string>
-			<key>path</key>
-			<string>AFNetworking/AFNetworking/AFImageRequestOperation.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>F2C45955BB3A4C26908E7B3C</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>AFJSONUtilities.h</string>
-			<key>path</key>
-			<string>AFNetworking/AFNetworking/AFJSONUtilities.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>F7317120F39E4B53AE13FB5B</key>
+		<key>AF2709255FD44AB5ADFCD6E4</key>
 		<dict>
 			<key>fileRef</key>
-			<string>A6B3D9A5660947C4B52E826F</string>
+			<string>A9A084217AB347D2AAF67C02</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>B0C8C2AEAC4443109A1888E5</key>
+		<dict>
+			<key>fileRef</key>
+			<string>8498E2416ACF438E867AEAFB</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>B2515AA965A340B69339F9E4</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>AGBaseAdapter.h</string>
+			<key>path</key>
+			<string>AeroGear/AeroGear-iOS/AeroGear-iOS/utils/AGBaseAdapter.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>B4BF1A86A5BA4EA6A061C040</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>HRColorUtil.h</string>
+			<key>path</key>
+			<string>Color-Picker-for-iOS/ColorPicker/HRColorUtil.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>B5799AAF4D7D4FBEBFA7D885</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C0F10A00057143F8B126A5A7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>B5CE52AE1F484E0AABF18AAF</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9E7D5D026EB44F76A40E14C8</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>B67A40A24B1541E1A7ACD7E7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6B3444FA7F16437EB3F94541</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>B85A150073E04D08886D3763</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>PullRefreshTableViewController.m</string>
+			<key>path</key>
+			<string>PullToRefresh/Classes/PullRefreshTableViewController.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>B8FC0ADB3D08405299CE98B1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E4C079B2E2F343168434A701</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>F7351B34DAD944D59ACDD58F</key>
+		<key>B94FA382702547C5B5FD7571</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>AFNetworkActivityIndicatorManager.m</string>
+			<key>path</key>
+			<string>AFNetworking/AFNetworking/AFNetworkActivityIndicatorManager.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>BB23CBCC2D774E5EA004275E</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>F6B3B54777CE4CAC93ECD5D0</string>
+				<string>9D12FF2A35F343C49C8E7F70</string>
+				<string>9E7D5D026EB44F76A40E14C8</string>
+				<string>8498E2416ACF438E867AEAFB</string>
+				<string>E281002D6F2E43B1AF9CA31F</string>
+				<string>CF0C681B5D514FCF887CFC49</string>
+				<string>B4BF1A86A5BA4EA6A061C040</string>
+				<string>F41E0DD983334A71A6C64FBF</string>
+				<string>F93C0A7DC19D437A96766C2A</string>
+				<string>002C4932992D4D9E9FC68275</string>
+				<string>5AAEE3E1A0934FDB8CA3D3A5</string>
+				<string>AE607DECD91648E584B6F92A</string>
+				<string>5600A29A653A43BAAB22091A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Color-Picker-for-iOS</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BB437DFA1F4C4558A37E7536</key>
 		<dict>
 			<key>fileRef</key>
-			<string>16072F02BB3348AEBE0B05BB</string>
+			<string>98AD31045F2C4E898FA235D9</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2441,10 +1853,10 @@
 				<string>-fobjc-arc</string>
 			</dict>
 		</dict>
-		<key>F77129A7D76F45329891EA45</key>
+		<key>BC0CAE42509244D8BF28D95B</key>
 		<dict>
 			<key>fileRef</key>
-			<string>0615519C6D7A481493AC602D</string>
+			<string>C4CF009F347C4A5B974E3992</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2455,10 +1867,98 @@
 				</array>
 			</dict>
 		</dict>
-		<key>FC262FC23A7741B793AEAC74</key>
+		<key>BCDEAB5E7ABF4DE1AF9315AB</key>
 		<dict>
 			<key>fileRef</key>
-			<string>E1DAAC93736C46ABB084FDF0</string>
+			<string>5AAEE3E1A0934FDB8CA3D3A5</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fobjc-arc</string>
+			</dict>
+		</dict>
+		<key>BE00B12751574D47AFAF4B89</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>AGHttpClient.m</string>
+			<key>path</key>
+			<string>AeroGear/AeroGear-iOS/AeroGear-iOS/core/AGHttpClient.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>BEBDE7F2FB6148898E2E285B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>EE2C83577C4546E3926BAB9F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fobjc-arc</string>
+			</dict>
+		</dict>
+		<key>BFAC259DE0A84CA38BEA548D</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>595BC63EF1E34F779148ED8F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>C029ED802CEF42B58BB53FAD</key>
+		<dict>
+			<key>fileRef</key>
+			<string>4A77CCCEE0604673A3CD4DD0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fobjc-arc</string>
+			</dict>
+		</dict>
+		<key>C04589171C7941799F9DE3E9</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>AGBaseAdapter.m</string>
+			<key>path</key>
+			<string>AeroGear/AeroGear-iOS/AeroGear-iOS/utils/AGBaseAdapter.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>C0F10A00057143F8B126A5A7</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>SVProgressHUD.h</string>
+			<key>path</key>
+			<string>SVProgressHUD/SVProgressHUD/SVProgressHUD.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>C15F405B95134FC1B64BC7CF</key>
+		<dict>
+			<key>fileRef</key>
+			<string>15EFD3F8118C4E01B2DD54BB</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2469,10 +1969,36 @@
 				</array>
 			</dict>
 		</dict>
-		<key>FCF406E133B5414392E289C1</key>
+		<key>C1C4D2CD26EF4469A9ABCF4D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>AGAuthenticationModuleAdapter.h</string>
+			<key>path</key>
+			<string>AeroGear/AeroGear-iOS/AeroGear-iOS/security/AGAuthenticationModuleAdapter.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>C4CF009F347C4A5B974E3992</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>AGRestAuthentication.h</string>
+			<key>path</key>
+			<string>AeroGear/AeroGear-iOS/AeroGear-iOS/security/AGRestAuthentication.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>CB6D6D8FDC434AB69DCB662F</key>
 		<dict>
 			<key>fileRef</key>
-			<string>142F407F3FFD45BBAE8FA655</string>
+			<string>CB7993D920C848D690168334</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -2482,9 +2008,483 @@
 					<string>Public</string>
 				</array>
 			</dict>
+		</dict>
+		<key>CB7993D920C848D690168334</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>AGConfig.h</string>
+			<key>path</key>
+			<string>AeroGear/AeroGear-iOS/AeroGear-iOS/config/AGConfig.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>CF0C681B5D514FCF887CFC49</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>HRColorPickerViewController.h</string>
+			<key>path</key>
+			<string>Color-Picker-for-iOS/ColorPicker/HRColorPickerViewController.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>CF5C1503402B443CAE1C2AB6</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>AGAuthenticator.m</string>
+			<key>path</key>
+			<string>AeroGear/AeroGear-iOS/AeroGear-iOS/security/AGAuthenticator.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>D49BAB6EA99C47B98CC342CD</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>B8FC0ADB3D08405299CE98B1</string>
+				<string>2D11A1909D1E49F4A48ADA05</string>
+				<string>93BED013EBAC42FD8243241E</string>
+				<string>687E336C42BC4965B11D5947</string>
+				<string>12D808F61A4C46289F489A5A</string>
+				<string>3EA00373C7C04CE5A24075AC</string>
+				<string>6490CC2D266845A49A8D0C17</string>
+				<string>FCEE730072844C9F816206C8</string>
+				<string>FF15B04C95D444F6A7CDD0D2</string>
+				<string>5E722435503B43EBB243A5A0</string>
+				<string>3CF20B821A224B6B92B9F084</string>
+				<string>BEBDE7F2FB6148898E2E285B</string>
+				<string>C029ED802CEF42B58BB53FAD</string>
+				<string>BB437DFA1F4C4558A37E7536</string>
+				<string>602DA33A561042BDAEBC1969</string>
+				<string>222E82E851834F439E64CA26</string>
+				<string>5A477EA076ED4053A9FBB87E</string>
+				<string>7C16ECA0F5FA432697758419</string>
+				<string>2091D9924F3E40AB977F7E19</string>
+				<string>7AD51E79C54E4B419B1DA739</string>
+				<string>982F2ADDB12F42B2A40C2764</string>
+				<string>7DA48D4871E74614A503310E</string>
+				<string>092F81520BC74F72B927C758</string>
+				<string>52F7FEABF13340B38026E9B5</string>
+				<string>A6D19818D0904B45A505FD30</string>
+				<string>BCDEAB5E7ABF4DE1AF9315AB</string>
+				<string>F00A402BDD2D4C2D862C495B</string>
+				<string>1EA1FE3FDBCD4875A4814F3D</string>
+				<string>AE1EF2D6737C45B19C757903</string>
+				<string>6311A5F5B08C4BA7A107FA03</string>
+				<string>36776FBF4196402E8EB07DEE</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>D6CA2F2235104AF8BE94B537</key>
+		<dict>
+			<key>fileRef</key>
+			<string>59B30746F65C4F2C8339A1B5</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>DABDE4B55E924783A1A8CF9E</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>8304B65E52AA4F4AABA028EC</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DE073096749E43AD9DDC5BAA</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>AFURLConnectionOperation.m</string>
+			<key>path</key>
+			<string>AFNetworking/AFNetworking/AFURLConnectionOperation.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>E281002D6F2E43B1AF9CA31F</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>HRColorPickerView.h</string>
+			<key>path</key>
+			<string>Color-Picker-for-iOS/ColorPicker/HRColorPickerView.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>E385346361D64915A5FCB079</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B2515AA965A340B69339F9E4</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>E44D98EE082D431D95988552</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9387F79D29BE4DC596E0D0A6</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>E4C079B2E2F343168434A701</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>AFHTTPClient.m</string>
+			<key>path</key>
+			<string>AFNetworking/AFNetworking/AFHTTPClient.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>E70EACBF2D184029986627AE</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>EF5361E3683B45AEAD82C82D</string>
+				<string>06491255F7A54328A2DB0BC5</string>
+				<string>BB23CBCC2D774E5EA004275E</string>
+				<string>102A88E7B5BC440E81659457</string>
+				<string>92E4B439FC934FA99D8B6B1B</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E7AE92418AEC4E73A6732364</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>AGPipeline.m</string>
+			<key>path</key>
+			<string>AeroGear/AeroGear-iOS/AeroGear-iOS/pipeline/AGPipeline.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>E876A1BEACF14857A267A837</key>
+		<dict>
+			<key>fileRef</key>
+			<string>084D76995B2A4304A4EBE38E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>E8BA28FDD0A446E6978C6EA0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C1C4D2CD26EF4469A9ABCF4D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>EE2C83577C4546E3926BAB9F</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>AGBaseStorage.m</string>
+			<key>path</key>
+			<string>AeroGear/AeroGear-iOS/AeroGear-iOS/datamanager/AGBaseStorage.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>EF1A200EEC114F3C9864D93F</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict/>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>EF5361E3683B45AEAD82C82D</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>15EFD3F8118C4E01B2DD54BB</string>
+				<string>9F9368E5A91745B5BA281EB9</string>
+				<string>436825818EE547149C52E0A9</string>
+				<string>A660FF69E84549138925D3F5</string>
+				<string>55A251DFC532426C944C8E72</string>
+				<string>549C44F887CB46D98399A5FD</string>
+				<string>2A37BA728FE54436A704388B</string>
+				<string>9387F79D29BE4DC596E0D0A6</string>
+				<string>907F2A4CF1EB42B090D7D7EE</string>
+				<string>8CF41C0CF4F54F39B265287D</string>
+				<string>6B3444FA7F16437EB3F94541</string>
+				<string>E4C079B2E2F343168434A701</string>
+				<string>1B7731F36BEB44FAA35F50A3</string>
+				<string>A6B7302B83AB43B9B4686C33</string>
+				<string>0381792C1F364AA29819FDBA</string>
+				<string>623FC6A78D5449C9AD2433E4</string>
+				<string>B94FA382702547C5B5FD7571</string>
+				<string>54A3F82E33644732BDDB7A02</string>
+				<string>DE073096749E43AD9DDC5BAA</string>
+				<string>AA2451A73E5348DD9B1BB91F</string>
+				<string>98685E41FC97439880CC286D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>AFNetworking</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EF89E06C56F54C679269D836</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>AGAuthConfig.h</string>
+			<key>path</key>
+			<string>AeroGear/AeroGear-iOS/AeroGear-iOS/security/AGAuthConfig.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>F00A402BDD2D4C2D862C495B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>AE607DECD91648E584B6F92A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-fobjc-arc</string>
+			</dict>
+		</dict>
+		<key>F41E0DD983334A71A6C64FBF</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>HRBrightnessCursor.m</string>
+			<key>path</key>
+			<string>Color-Picker-for-iOS/ColorPicker/HRBrightnessCursor.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>F650D188D7C1421C9F968A90</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>AGStoreConfiguration.h</string>
+			<key>path</key>
+			<string>AeroGear/AeroGear-iOS/AeroGear-iOS/datamanager/AGStoreConfiguration.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>F6B3B54777CE4CAC93ECD5D0</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>HRBrightnessCursor.h</string>
+			<key>path</key>
+			<string>Color-Picker-for-iOS/ColorPicker/HRBrightnessCursor.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>F824F2B4FF524AFBB4630FC3</key>
+		<dict>
+			<key>fileRef</key>
+			<string>CF0C681B5D514FCF887CFC49</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>F8D0D609E06642EDAC658949</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>264B38C2DD774483AD93D3FB</string>
+			<key>buildPhases</key>
+			<array>
+				<string>D49BAB6EA99C47B98CC342CD</string>
+				<string>69DAE9953C58407FAB7920C3</string>
+				<string>BFAC259DE0A84CA38BEA548D</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>productName</key>
+			<string>Pods</string>
+			<key>productReference</key>
+			<string>2B63ED41F5184745B6580F0D</string>
+			<key>productType</key>
+			<string>com.apple.product-type.library.static</string>
+		</dict>
+		<key>F9314B23B42F454D9A45339F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F650D188D7C1421C9F968A90</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>F93C0A7DC19D437A96766C2A</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>HRCgUtil.m</string>
+			<key>path</key>
+			<string>Color-Picker-for-iOS/ColorPicker/HRCgUtil.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>FCEE730072844C9F816206C8</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DE073096749E43AD9DDC5BAA</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>FCF5D867464D48DA83476F17</key>
+		<dict>
+			<key>fileRef</key>
+			<string>AA69DF3C447E414BB080561D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>FD81F70741B54F2B8A060F1A</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>AGAdapter.h</string>
+			<key>path</key>
+			<string>AeroGear/AeroGear-iOS/AeroGear-iOS/utils/AGAdapter.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>FF0D4763E19C4A858635B903</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9F9368E5A91745B5BA281EB9</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>FF15B04C95D444F6A7CDD0D2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>AA2451A73E5348DD9B1BB91F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
 		</dict>
 	</dict>
 	<key>rootObject</key>
-	<string>494790371BDA415B84F0E80C</string>
+	<string>4C3099556E344F6A8E4BE801</string>
 </dict>
 </plist>

@@ -30,6 +30,7 @@
 -(NSString*) type;
 -(NSURL*) baseURL;
 -(NSString*) endpoint;
+-(NSString*) recordId;
 -(id<AGAuthenticationModule>) authModule;
 
 @end

@@ -18,40 +18,68 @@
 
 #import "AGRestAdapter.h"
 #import "AGAuthenticationModuleAdapter.h"
+
 #import "AGHttpClient.h"
 
 @implementation AGRestAdapter {
     AGHttpClient* _restClient;
     id<AGAuthenticationModuleAdapter> _authModule;
+    
+    NSString* _recordId;
 }
+
+// =====================================================
+// ================ public API (AGPipe) ================
+// =====================================================
 
 @synthesize type = _type;
 @synthesize url = _url;
 
-- (id)init {
+// ==============================================
+// ======== 'factory' and 'init' section ========
+// ==============================================
+
++(id) pipeWithConfig:(id<AGPipeConfig>) pipeConfig {
+    return [[self alloc] initWithConfig:pipeConfig];
+}
+
+-(id) initWithConfig:(id<AGPipeConfig>) pipeConfig {
     self = [super init];
     if (self) {
-        // base inits:
         _type = @"REST";
-    }
-    return self;
-}
 
--(id) initForURL:(NSURL*) url authModule:(id<AGAuthenticationModule>) authModule{
-    self = [self init];
-    if (self) {
-        _url = url.absoluteString;
-        _restClient = [AGHttpClient clientFor:url];
-        _restClient.parameterEncoding = AFJSONParameterEncoding;
+        // set all the things:
+        AGPipeConfiguration* config = (AGPipeConfiguration*) pipeConfig;
+     
+        NSURL* baseURL = [config baseURL];
+        NSString* endpoint = [config endpoint];
+        // append the endpoint/name and use it as the final URL
+        NSURL* finalURL = [self appendEndpoint:endpoint toURL:baseURL];
         
-        _authModule = (id<AGAuthenticationModuleAdapter>) authModule;
+        _url = finalURL.absoluteString;
+        _recordId = [config recordId];
+        _authModule = (id<AGAuthenticationModuleAdapter>) [config authModule];
+        
+        _restClient = [AGHttpClient clientFor:finalURL];
+        _restClient.parameterEncoding = AFJSONParameterEncoding;
     }
+    
     return self;
 }
 
-+(id) pipeForURL:(NSURL*) url authModule:(id<AGAuthenticationModule>) authModule{
-    return [[self alloc] initForURL:url authModule:authModule];
+// private helper to append the endpoint
+-(NSURL*) appendEndpoint:(NSString*)endpoint toURL:(NSURL*)baseURL {
+    if (endpoint == nil) {
+        endpoint = @"";
+    }
+    
+    // append the endpoint name and use it as the final URL
+    return [baseURL URLByAppendingPathComponent:endpoint];
 }
+
+// =====================================================
+// ======== public API (AGPipe) ========
+// =====================================================
 
 // read all, via HTTP GET
 -(void) read:(void (^)(id responseObject))success
@@ -60,9 +88,8 @@
     // try to add auth.token:
     [self applyAuthToken];
     
-
     // TODO: better Endpoints....
-    [_restClient getPath:@"" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [_restClient getPath:_url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         
         if (success) {
             //TODO: NSLog(@"Invoking successblock....");
@@ -111,15 +138,24 @@
     };
     
     
-    if ([object objectForKey:@"id"]) {
+    if ([object objectForKey:_recordId]) {
         //TODO: NSLog(@"HTTP PUT to update the given object");
-        NSString* updateIdPath = [object objectForKey:@"id"];
-        [_restClient putPath:updateIdPath parameters:object success:successCallback failure:failureCallback];
+        
+        id key = [object objectForKey:_recordId];
+        
+        NSString* updateId;
+        if ([key isKindOfClass:[NSString class]]) {
+            updateId = key;
+        } else {
+            updateId = [key stringValue];
+        }
+        
+        [_restClient putPath:[self appendObjectPath:updateId] parameters:object success:successCallback failure:failureCallback];
         return;
     }
     else {
         //TODO: NSLog(@"HTTP POST to create the given object");
-        [_restClient postPath:@"" parameters:object success:successCallback failure:failureCallback];
+        [_restClient postPath:_url parameters:object success:successCallback failure:failureCallback];
         return;
     }
 }
@@ -138,7 +174,7 @@
         deleteKey = [key stringValue];
     }
 
-    [_restClient deletePath:deleteKey parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [_restClient deletePath:[self appendObjectPath:deleteKey] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         
         if (success) {
             //TODO: NSLog(@"Invoking successblock....");
@@ -151,7 +187,11 @@
             failure(error);
         }
     } ];
+}
 
+// appends the path for delete/updates to the URL
+-(NSString*) appendObjectPath:(NSString*)path {
+    return [NSString stringWithFormat:@"%@/%@", _url, path];
 }
 
 // helper method:

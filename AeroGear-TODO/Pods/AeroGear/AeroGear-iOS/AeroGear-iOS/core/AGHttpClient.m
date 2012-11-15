@@ -27,15 +27,6 @@
 
 - (id)initWithBaseURL:(NSURL *)url {
 	
-	// TODO: remove below trailing slash section, once we are using AFNetworking 1.0
-	// since we are still supporting iOS 4, we can't use AFNetworking 1.0,
-	// however we need this fix to get the library working correctly...
-	
-    // Ensure terminal slash for baseURL path, so that NSURL +URLWithString:relativeToURL: works as expected
-    if ([[url path] length] > 0 && ![[url absoluteString] hasSuffix:@"/"]) {
-        url = [url URLByAppendingPathComponent:@""];
-    }
-    
     self = [super initWithBaseURL:url];
     if (!self) {
         return nil;

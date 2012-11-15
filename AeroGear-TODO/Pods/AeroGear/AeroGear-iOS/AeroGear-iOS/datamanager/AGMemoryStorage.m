@@ -21,19 +21,36 @@
 @implementation AGMemoryStorage {
     // ivars
     NSMutableArray* _array;
+    NSString* _recordId;
 }
 
 @synthesize type = _type;
 
-- (id)init {
+// ==============================================
+// ======== 'factory' and 'init' section ========
+// ==============================================
+
++(id) storeWithConfig:(id<AGStoreConfig>) storeConfig {
+    return [[self alloc] initWithConfig:storeConfig];
+}
+
+-(id) initWithConfig:(id<AGStoreConfig>) storeConfig {
     self = [super init];
     if (self) {
         // base inits:
         _type = @"MEMORY";
         _array = [NSMutableArray array];
+
+        AGStoreConfiguration *config = (AGStoreConfiguration*) storeConfig;
+        _recordId = [config recordId];
     }
+    
     return self;
 }
+
+// =====================================================
+// ======== public API (AGStore) ========
+// =====================================================
 
 -(void) readAll:(void (^)(NSArray* objects))success
         failure:(void (^)(NSError *error))failure {
@@ -65,7 +82,7 @@
     @try {
         for (id record in _array) {
             // check the 'id':
-            if ([record objectForKey:@"id"] == recordId) {
+            if ([[record objectForKey:_recordId] isEqual:recordId]) {
                 // replace/update it:
                 retVal = record;
                 break;
@@ -135,7 +152,7 @@
         BOOL _objFound = NO;
         for (id record in _array) {
             // check the 'id':
-            if ([record objectForKey:@"id"] == [data objectForKey:@"id"]) {
+            if ([[record objectForKey:_recordId] isEqual:[data objectForKey:_recordId]]) {
                 // replace/update it:
                 NSUInteger index = [_array indexOfObject:record];
                 [_array removeObjectAtIndex:index];
@@ -195,7 +212,7 @@
     @try {
         for (id record in _array) {
             // check the 'id':
-            if ([record objectForKey:@"id"] == recordId) {
+            if ([[record objectForKey:_recordId] isEqual:recordId]) {
                 // replace/update it:
                 objectToDelete = record;
                 NSUInteger index = [_array indexOfObject:record];

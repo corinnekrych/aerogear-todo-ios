@@ -27,9 +27,9 @@
     if (self) {
         _config = [NSMutableDictionary dictionary];
         
-        
         // default values:
         [_config setValue:@"REST" forKey:@"type"];
+        [_config setValue:@"id" forKey:@"recordId"];
     }
     return self;
 }
@@ -51,6 +51,9 @@
     [_config setValue:authModule forKey:@"authModule"];
 }
 
+-(void) recordId:(NSString *)recordId {
+    [_config setValue:recordId forKey:@"recordId"];
+}
 
 // getters...
 -(NSString*) name {
@@ -74,6 +77,10 @@
 }
 -(id<AGAuthenticationModule>) authModule {
     return [_config valueForKey:@"authModule"];
+}
+
+-(NSString*)recordId {
+    return [_config valueForKey:@"recordId"];
 }
 
 @end

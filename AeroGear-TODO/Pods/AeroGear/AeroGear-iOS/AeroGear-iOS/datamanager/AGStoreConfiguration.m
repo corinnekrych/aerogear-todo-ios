@@ -30,6 +30,7 @@
         
         // default values:
         [_config setValue:@"MEMORY" forKey:@"type"];
+        [_config setValue:@"id" forKey:@"recordId"];        
     }
     return self;
 }
@@ -42,6 +43,10 @@
     [_config setValue:type forKey:@"type"];
 }
 
+-(void) recordId:(NSString*) recordId {
+    [_config setValue:recordId forKey:@"recordId"];
+}
+
 
 // getters...
 -(NSString*) name {
@@ -50,7 +55,8 @@
 -(NSString*) type {
     return [_config valueForKey:@"type"];
 }
-
-
+-(NSString*) recordId {
+    return [_config valueForKey:@"recordId"];
+}
 
 @end

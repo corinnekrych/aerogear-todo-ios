@@ -24,4 +24,12 @@
  */
 @protocol AGStoreConfig <AGConfig>
 
+/**
+ * Applies the recordId to the configuration.
+ *
+ * @param recordId The name of the field used to uniquely identify a "record" in the data
+ */
+-(void) recordId:(NSString*)recordId;
+
+
 @end

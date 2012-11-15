@@ -1,7 +1,14 @@
 
+SPEC CHECKSUMS: 
+  PullToRefresh: 6cc6f9dc1289564b261a2ed1358eae952d91759b
+  SVProgressHUD: 51042a14e3a716efdbdd73cbb2181fb23ee94389
+  AeroGear: 61c0c46e3078708fca6ecb3931fc34b00e872c3d
+  AFNetworking: b21c1252d437fd322e7db1caa93b163d76a362cb
+  Color-Picker-for-iOS: 7859a5b63273f630fa5206eaa5a16e5a00782ed7
+
 PODS: 
 - AFNetworking (1.0RC1)
-- AeroGear (1.0.0.M1.20121113): 
+- AeroGear (1.0.0.M1.20121115): 
   - AFNetworking (= 1.0RC1)
 - Color-Picker-for-iOS (0.1.1)
 - PullToRefresh (0.0.1)
@@ -10,14 +17,7 @@ PODS:
 COCOAPODS: 0.15.2
 
 DEPENDENCIES: 
-- AeroGear (= 1.0.0.M1.20121113)
+- AeroGear (= 1.0.0.M1.20121115)
 - Color-Picker-for-iOS (= 0.1.1)
 - PullToRefresh (= 0.0.1)
 - SVProgressHUD (= 0.8)
-
-SPEC CHECKSUMS: 
-  Color-Picker-for-iOS: 7859a5b63273f630fa5206eaa5a16e5a00782ed7
-  AFNetworking: b21c1252d437fd322e7db1caa93b163d76a362cb
-  SVProgressHUD: 51042a14e3a716efdbdd73cbb2181fb23ee94389
-  AeroGear: 317465ec1b66ef4e1ad2872e2cf643839cceb7a6
-  PullToRefresh: 6cc6f9dc1289564b261a2ed1358eae952d91759b

@@ -41,6 +41,13 @@
 -(void) endpoint:(NSString*) endpoint;
 
 /**
+ * Applies the recordId to the configuration.
+ *
+ * @param recordId The name of the field used to uniquely identify a "record" in the data
+ */
+-(void) recordId:(NSString*)recordId;
+
+/**
  * Applies the AGAuthenticationModule object to the configuration.
  *
  * @param authModule The AGAuthenticationModule of the actual AGPipe object.

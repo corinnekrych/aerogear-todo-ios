@@ -59,9 +59,7 @@
     return [[self alloc] init:baseURL];
 }
 
-
 -(id<AGPipe>) pipe:(void (^)(id<AGPipeConfig> config)) config {
-
     AGPipeConfiguration* pipeConfig = [[AGPipeConfiguration alloc] init];
 
     // applying the defaults:
@@ -71,41 +69,16 @@
         config(pipeConfig);
     }
     
-    NSString* name  = [pipeConfig name];
-    NSString* type = [pipeConfig type];
-    NSURL* baseURL = [pipeConfig baseURL];
-    NSString* endpoint = [pipeConfig endpoint];
-    id<AGAuthenticationModule> authModule = [pipeConfig authModule];
-    
-    // append the endpoint/name and use it as the final URL
-    NSURL* finalURL = [self appendEndpoint:endpoint toURL:baseURL];
-    return [self add:name url:finalURL type:type authModule:authModule];
-}
-
-// a private add, since we really don't have a 'baseURL' on the final URL...
--(id<AGPipe>) add:(NSString*) name url:(NSURL*)url type:(NSString*)type authModule:(id<AGAuthenticationModule>) authModule {
     // TODO check ALL supported types...
-    if (! [AGRestAdapter accepts:type]) {
+    if (! [[pipeConfig type] isEqualToString:@"REST"]) {
         return nil;
     }
+
+    id<AGPipe> pipe = [AGRestAdapter pipeWithConfig:pipeConfig];
+    [_pipes setValue:pipe forKey:[pipeConfig name]];
     
-    
-    id<AGPipe> pipe = [AGRestAdapter pipeForURL:url authModule:authModule];
-    [_pipes setValue:pipe forKey:name];
     return pipe;
-    
 }
-
-// private helper to append the endpoint
--(NSURL*) appendEndpoint:(NSString*)endpoint toURL:(NSURL*)baseURL {
-    if (endpoint == nil) {
-        endpoint = @"";
-    }
-
-    // append the endpoint name and use it as the final URL
-    return [baseURL URLByAppendingPathComponent:endpoint];
-}
-
 
 -(id<AGPipe>) remove:(NSString*) name {
     id<AGPipe> pipe = [self get:name];

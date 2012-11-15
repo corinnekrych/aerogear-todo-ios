@@ -27,5 +27,6 @@
 // private getters...
 -(NSString*) name;
 -(NSString*) type;
+-(NSString*) recordId;
 
 @end

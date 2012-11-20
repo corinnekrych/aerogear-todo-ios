@@ -42,10 +42,15 @@ static AGToDoAPIService *__sharedInstance;
                              password:(NSString *)paswd
                               success:(void (^)())success
                               failure:(void (^)(NSError *error))failure {
+    
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
 
-    __sharedInstance = [[AGToDoAPIService alloc] initWithBaseURL:[NSURL URLWithString:baseURL]
-                                                        username:user password:paswd 
-                                                         success:success failure:failure];
+        __sharedInstance = [[AGToDoAPIService alloc]
+                               initWithBaseURL:[NSURL URLWithString:baseURL]
+                               username:user password:paswd
+                               success:success failure:failure];
+    });
 }
 
 - (id)initWithBaseURL:(NSURL *)projectsURL

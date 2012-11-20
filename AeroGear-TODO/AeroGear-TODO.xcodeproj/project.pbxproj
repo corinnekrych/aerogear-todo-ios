@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3D069C7EE3134BD8B5D02902 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8029C177F0C4C9486B0A095 /* libPods.a */; };
+		5777CE1B165B8EFC005B029C /* AGUIColorConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5777CE1A165B8EFC005B029C /* AGUIColorConverter.m */; };
 		57F2280115F0C3C5005DAA3C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57F2280015F0C3C5005DAA3C /* UIKit.framework */; };
 		57F2280315F0C3C5005DAA3C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57F2280215F0C3C5005DAA3C /* Foundation.framework */; };
 		57F2280515F0C3C5005DAA3C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57F2280415F0C3C5005DAA3C /* CoreGraphics.framework */; };
@@ -67,6 +68,8 @@
 
 /* Begin PBXFileReference section */
 		3C1939FDBF8A4E8E8174BED8 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		5777CE19165B8EFC005B029C /* AGUIColorConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AGUIColorConverter.h; path = Utilities/AGUIColorConverter.h; sourceTree = "<group>"; };
+		5777CE1A165B8EFC005B029C /* AGUIColorConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AGUIColorConverter.m; path = Utilities/AGUIColorConverter.m; sourceTree = "<group>"; };
 		57F227FC15F0C3C5005DAA3C /* AeroGear-TODO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AeroGear-TODO.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		57F2280015F0C3C5005DAA3C /* UIKit.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		57F2280215F0C3C5005DAA3C /* Foundation.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -349,6 +352,8 @@
 			isa = PBXGroup;
 			children = (
 				6F9F0DFB161E180100F145B5 /* UIAlertViewExtentsions */,
+				5777CE19165B8EFC005B029C /* AGUIColorConverter.h */,
+				5777CE1A165B8EFC005B029C /* AGUIColorConverter.m */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -535,6 +540,7 @@
 				6F0BCA631652370300A563F9 /* AGRegisterUserViewController.m in Sources */,
 				6F0BCA661652372900A563F9 /* AGRoleListViewController.m in Sources */,
 				6F0BCA691652374A00A563F9 /* LabelEditCell.m in Sources */,
+				5777CE1B165B8EFC005B029C /* AGUIColorConverter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

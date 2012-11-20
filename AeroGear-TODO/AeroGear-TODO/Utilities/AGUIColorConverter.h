@@ -18,15 +18,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface AGTag : NSObject
+@interface AGUIColorConverter : NSObject
 
-@property(strong, nonatomic) NSNumber *recId;
-@property(copy, nonatomic) NSString *title;
-@property(copy, nonatomic) NSString *style;
-
-// convert from JSON
-- (id)initWithDictionary:(NSDictionary *)dictionary;
-// convert to JSON
-- (NSDictionary *)dictionary;
++ (UIColor *)getAsObject:(NSString*) style;
++ (NSString*)getAsString:(UIColor *)color;
 
 @end

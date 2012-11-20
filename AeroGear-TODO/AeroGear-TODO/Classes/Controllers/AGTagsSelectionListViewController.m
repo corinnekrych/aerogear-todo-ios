@@ -23,6 +23,8 @@
 #import "AGTag.h"
 #import "AGToDoAPIService.h"
 
+#import "AGUIColorConverter.h"
+
 #import "UIActionSheet+BlockExtensions.h"
 #import "SVProgressHUD.h"
 
@@ -205,7 +207,7 @@
 
         if (tag != nil) {
             metaController.name = tag.title;
-            metaController.color = tag.color;
+            metaController.color = [AGUIColorConverter getAsObject:tag.style];
             
             _currentEditedIndexPath = indexPath;            
         }
@@ -254,7 +256,7 @@
     }
 
     tag.title = name;
-    tag.color = color;
+    tag.style = [AGUIColorConverter getAsString:color];
     
     // save or update Tag on server
     [[AGToDoAPIService sharedInstance] postTag:tag success:^{

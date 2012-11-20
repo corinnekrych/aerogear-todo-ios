@@ -23,7 +23,6 @@
 @synthesize recId;
 @synthesize title;
 @synthesize style;
-@synthesize color;
 
 - (id)initWithDictionary:(NSDictionary *)dictionary {
     if (self = [super init]) {
@@ -45,30 +44,6 @@
     [dict setObject:self.style forKey:@"style"];
     
     return dict;
-}
-
-- (UIColor *)color {
-    if ([self.style isKindOfClass:[NSNull class]])
-        return [UIColor whiteColor];
-    
-    NSArray *tokens = [self.style componentsSeparatedByString:@"-"];
-    
-    CGFloat r = [[tokens objectAtIndex:1] floatValue] / 255.0;
-    CGFloat g = [[tokens objectAtIndex:2] floatValue] / 255.0;
-    CGFloat b = [[tokens objectAtIndex:3] floatValue] / 255.0;
-    
-    return [UIColor colorWithRed:r green:g blue:b alpha:100];
-}
-
-- (void)setColor:(UIColor *)col{
-    if (col == [UIColor whiteColor]) { //TODO: see why this happens
-        self.style = @"project-255-255-255";
-        return;
-    }
-
-    const CGFloat *components = CGColorGetComponents(col.CGColor);
-    // update style from color
-    self.style = [NSString stringWithFormat:@"project-%.0f-%.0f-%.0f", components[0]*255.0, components[1]*255.0, components[2]*255.0];    
 }
 
 - (NSString *)description {

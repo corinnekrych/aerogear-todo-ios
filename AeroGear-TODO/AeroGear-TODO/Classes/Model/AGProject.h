@@ -24,8 +24,6 @@
 @property(copy, nonatomic) NSString *title;
 @property(copy, nonatomic) NSString *style;
 
-@property(strong, nonatomic) UIColor *color;
-
 // convert from JSON
 - (id)initWithDictionary:(NSDictionary *)dictionary;
 // convert to JSON

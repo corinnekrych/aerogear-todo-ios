@@ -21,8 +21,9 @@
 
 #import "AGTask.h"
 #import "AGProject.h"
-
 #import "AGToDoAPIService.h"
+
+#import "AGUIColorConverter.h"
 
 #import "UIActionSheet+BlockExtensions.h"
 #import "SVProgressHUD.h"
@@ -220,7 +221,7 @@
 
         if (proj != nil) {
             metaController.name = proj.title;
-            metaController.color = proj.color;
+            metaController.color = [AGUIColorConverter getAsObject:proj.style];
             
             _currentEditedIndexPath = indexPath;
         }
@@ -279,7 +280,7 @@
     }
 
     proj.title = name;
-    proj.color = color;
+    proj.style = [AGUIColorConverter getAsString:color];
     
     // save or update Project on server
     [[AGToDoAPIService sharedInstance] postProject:proj success:^{

@@ -17,8 +17,9 @@
  */
 
 #import <Foundation/Foundation.h>
+#import "Mantle.h"
 
-@interface AGTask : NSObject <NSCopying>
+@interface AGTask : MTLModel
 
 @property(strong, nonatomic) NSNumber *recId;
 @property(copy, nonatomic) NSString *title;
@@ -28,10 +29,6 @@
 @property(strong, nonatomic) NSMutableArray *tags;
 @property(strong, nonatomic) NSNumber *projID;
 
-// convert from JSON
-- (id)initWithDictionary:(NSDictionary *)dictionary;
-// convert to JSON
-- (NSDictionary *)dictionary;
-
 - (void)copyFrom:(AGTask *)task;
+
 @end

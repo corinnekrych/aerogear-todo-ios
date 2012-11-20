@@ -117,7 +117,7 @@ static AGToDoAPIService *__sharedInstance;
         NSMutableArray *tasks = [NSMutableArray array];
         
         for (id taskDict in responseObject) {
-            AGTask *task = [[AGTask alloc] initWithDictionary:taskDict];
+            AGTask *task = [[AGTask alloc] initWithExternalRepresentation:taskDict];
             
             [tasks addObject:task];
         }
@@ -134,7 +134,7 @@ static AGToDoAPIService *__sharedInstance;
          success:(void (^)())success
          failure:(void (^)(NSError *error))failure {
     
-    [_tasksPipe save:[task dictionary] success:^(id responseObject) {
+    [_tasksPipe save:[task externalRepresentation] success:^(id responseObject) {
         if (task.recId == nil) { // new task
             // if it is a new task, set the id
             task.recId = [responseObject objectForKey:@"id"];
@@ -163,7 +163,7 @@ static AGToDoAPIService *__sharedInstance;
          success:(void (^)())success
          failure:(void (^)(NSError *error))failure {
     
-    [_tagsPipe save:[tag dictionary] success:^(id responseObject) {
+    [_tagsPipe save:[tag externalRepresentation] success:^(id responseObject) {
         if (tag.recId == nil) { // new tag
             NSNumber *tagId = [responseObject objectForKey:@"id"];
             
@@ -202,7 +202,7 @@ static AGToDoAPIService *__sharedInstance;
             success:(void (^)())success
             failure:(void (^)(NSError *error))failure {
 
-    [_projectsPipe save:[proj dictionary] success:^(id responseObject) {
+    [_projectsPipe save:[proj externalRepresentation] success:^(id responseObject) {
         if (proj.recId == nil) { // new tag
             NSNumber *projId = [responseObject objectForKey:@"id"];
             
@@ -243,7 +243,7 @@ static AGToDoAPIService *__sharedInstance;
         self.tags = [[NSMutableDictionary alloc] init];
         
         for (id tagDict in responseObject) {
-            AGTag *tag = [[AGTag alloc] initWithDictionary:tagDict];
+            AGTag *tag = [[AGTag alloc] initWithExternalRepresentation:tagDict];
             
             [self.tags setObject:tag forKey:[tagDict objectForKey:@"id"]];
         }
@@ -263,7 +263,7 @@ static AGToDoAPIService *__sharedInstance;
         self.projects = [[NSMutableDictionary alloc] init];
         
         for (id projDict in responseObject) {
-            AGProject *proj = [[AGProject alloc] initWithDictionary:projDict];
+            AGProject *proj = [[AGProject alloc] initWithExternalRepresentation:projDict];
             
             [self.projects setObject:proj forKey:[projDict objectForKey:@"id"]];
         }

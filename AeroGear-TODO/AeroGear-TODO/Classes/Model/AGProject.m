@@ -24,26 +24,11 @@
 @synthesize title;
 @synthesize style;
 
-- (id)initWithDictionary:(NSDictionary *)dictionary {
-    if (self = [super init]) {
-        self.recId = [dictionary objectForKey:@"id"];
-        self.title = [dictionary objectForKey:@"title"];
-        self.style = [dictionary objectForKey:@"style"];
-    }
-    
-    return (self);
-}
-
--(NSDictionary *)dictionary {
-    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
-    
-    if (self.recId != nil)
-        [dict setObject:[self.recId stringValue] forKey:@"id"];
-    
-    [dict setObject:self.title forKey:@"title"];
-    [dict setObject:self.style forKey:@"style"];
-    
-    return dict;
+// could be done is a "base class"...
++ (NSDictionary *)externalRepresentationKeyPathsByPropertyKey {
+    return [super.externalRepresentationKeyPathsByPropertyKey mtl_dictionaryByAddingEntriesFromDictionary:@{
+            @"recId": @"id"
+            }];
 }
 
 - (NSString *)description {

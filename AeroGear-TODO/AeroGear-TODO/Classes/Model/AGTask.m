@@ -20,12 +20,21 @@
 
 @implementation AGTask
 
-@synthesize recId = _recId;
-@synthesize title = _title;
-@synthesize descr= _descr;
-@synthesize dueDate = _dueDate;
-@synthesize tags = _tags;
+@synthesize recId;
+@synthesize title;
+@synthesize descr;
+@synthesize dueDate;
+@synthesize tags;
 @synthesize projID;
+
++ (NSDictionary *)externalRepresentationKeyPathsByPropertyKey {
+    return [super.externalRepresentationKeyPathsByPropertyKey mtl_dictionaryByAddingEntriesFromDictionary:@{
+        @"recId": @"id",
+        @"descr": @"description",
+        @"dueDate": @"date",
+        @"projID": @"project"
+    }];
+}
 
 - (id)init {
     if (self = [super init]) {
@@ -35,44 +44,6 @@
     return (self);
 }
 
-- (id)initWithDictionary:(NSDictionary *)dictionary {
-    if (self = [super init]) {
-        self.recId = [dictionary objectForKey:@"id"];
-        self.title = [dictionary objectForKey:@"title"];
-        self.descr = [dictionary objectForKey:@"description"];
-        self.dueDate = [dictionary objectForKey:@"date"];
-        
-        if ([dictionary objectForKey:@"tags"] != nil)
-            self.tags = [dictionary objectForKey:@"tags"];
-        
-        if ([dictionary objectForKey:@"project"] != nil)
-            self.projID = [dictionary objectForKey:@"project"];
-    }
-    
-    return (self);
-}
-
--(NSDictionary *)dictionary {
-    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
-    
-    if (self.recId != nil)
-        [dict setObject:[self.recId stringValue] forKey:@"id"];
-
-    [dict setObject:self.title forKey:@"title"];
-    [dict setObject:self.dueDate forKey:@"date"];
-
-    if (self.descr != nil)
-        [dict setObject:self.descr forKey:@"description"];        
-        
-    if (self.tags != nil)
-        [dict setObject:self.tags forKey:@"tags"];    
-    
-    if (self.projID != nil)
-        [dict setObject:self.projID forKey:@"project"];        
-        
-    return dict;
-}
-
 - (void)copyFrom:(AGTask *)task {
     self.recId = task.recId;
     self.title = task.title;
@@ -80,30 +51,6 @@
     self.dueDate = task.dueDate;
     self.tags = task.tags;
     self.projID = task.projID;
-}
-
-- (id)copyWithZone:(NSZone *)zone {
-    AGTask *task;
-    
-    task = [[[self class] allocWithZone:zone] init];
-    
-    task.recId = self.recId;
-    task.title = self.title;
-    task.descr = self.descr;
-    task.dueDate = self.dueDate;
-    task.tags = [NSMutableArray arrayWithArray:self.tags];
-    task.projID = self.projID;
-    
-    return task;
-}
-
-- (BOOL)isEqual: (id)other {
-    if (![other isKindOfClass:[AGTask class]])
-        return NO;
-    
-    AGTask *otherTask = (AGTask *) other;
-    
-    return ([self.recId isEqualToNumber:otherTask.recId]);
 }
 
 - (NSString *)description {

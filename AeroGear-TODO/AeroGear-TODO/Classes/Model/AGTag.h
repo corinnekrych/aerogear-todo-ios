@@ -17,16 +17,12 @@
  */
 
 #import <Foundation/Foundation.h>
+#import "Mantle.h"
 
-@interface AGTag : NSObject
+@interface AGTag : MTLModel
 
 @property(strong, nonatomic) NSNumber *recId;
 @property(copy, nonatomic) NSString *title;
 @property(copy, nonatomic) NSString *style;
-
-// convert from JSON
-- (id)initWithDictionary:(NSDictionary *)dictionary;
-// convert to JSON
-- (NSDictionary *)dictionary;
 
 @end

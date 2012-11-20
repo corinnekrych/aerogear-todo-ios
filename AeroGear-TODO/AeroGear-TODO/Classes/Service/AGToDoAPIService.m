@@ -117,7 +117,7 @@ static AGToDoAPIService *__sharedInstance;
         NSMutableArray *tasks = [NSMutableArray array];
         
         for (id taskDict in responseObject) {
-            AGTask *task = [[AGTask alloc] initWithExternalRepresentation:taskDict];
+            AGTask *task = [AGTask modelWithExternalRepresentation:taskDict];
             
             [tasks addObject:task];
         }
@@ -243,7 +243,7 @@ static AGToDoAPIService *__sharedInstance;
         self.tags = [[NSMutableDictionary alloc] init];
         
         for (id tagDict in responseObject) {
-            AGTag *tag = [[AGTag alloc] initWithExternalRepresentation:tagDict];
+            AGTag *tag = [AGTag modelWithExternalRepresentation:tagDict];
             
             [self.tags setObject:tag forKey:[tagDict objectForKey:@"id"]];
         }
@@ -263,7 +263,7 @@ static AGToDoAPIService *__sharedInstance;
         self.projects = [[NSMutableDictionary alloc] init];
         
         for (id projDict in responseObject) {
-            AGProject *proj = [[AGProject alloc] initWithExternalRepresentation:projDict];
+            AGProject *proj = [AGProject modelWithExternalRepresentation:projDict];
             
             [self.projects setObject:proj forKey:[projDict objectForKey:@"id"]];
         }

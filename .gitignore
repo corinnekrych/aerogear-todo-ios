@@ -12,7 +12,6 @@ build/*
 !default.perspectivev3
 *.xcworkspace
 !default.xcworkspace
-!AeroGear-TODO/AeroGear-TODO.xcworkspace
 xcuserdata
 profile
 *.moved-aside
@@ -20,8 +19,8 @@ DerivedData
 
 
 # CocoaPods
-##Podfile.lock
-##Pods/
+Podfile.lock
+Pods/
 
 #Docset/AppleDoc
 */Docset/*

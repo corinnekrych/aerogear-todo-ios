@@ -1,8 +1,9 @@
 xcodeproj 'AeroGear-TODO.xcodeproj'
 
-platform :ios
+platform :ios, '5.0'
 
 pod 'AeroGear', '1.0.0.M1.20121115'
 pod 'PullToRefresh', '0.0.1'
 pod 'SVProgressHUD', '0.8'
 pod 'Color-Picker-for-iOS', '0.1.1' 
+pod 'Mantle', '0.2.1'

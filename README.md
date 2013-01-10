@@ -7,7 +7,7 @@ for Projects/Tags/Tasks using you phone.
 
 You can watch a screencast demonstrating the app "in action" [here](https://vimeo.com/50829021)
 
-If you are new to AeroGear, please have a look at the [Getting Started Guide with XCode and iOS](http://aerogear.org/guides/docs/GetStartedwithAeroGearandXcode/)
+If you are new to AeroGear, please have a look at the [Getting Started Guide with XCode and iOS](http://aerogear.org/docs/guides/GetStartedwithAeroGearandXcode/)
 
 ## Running the app:
 

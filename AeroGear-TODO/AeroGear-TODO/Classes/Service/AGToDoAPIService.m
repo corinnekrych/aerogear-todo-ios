@@ -58,31 +58,31 @@ static AGToDoAPIService *__sharedInstance;
         AGAuthenticator* authenticator = [AGAuthenticator authenticator];
         
         _restAuthModule = [authenticator auth:^(id<AGAuthConfig> config) {
-            [config name:@"restAuthMod"];
-            [config baseURL:projectsURL];
+            [config setName:@"restAuthMod"];
+            [config setBaseURL:projectsURL];
         }];
         
         [_restAuthModule login:user password:passwd success:^(id object) {
 
-            AGPipeline* pipeline = [AGPipeline pipeline:projectsURL];
+            AGPipeline* pipeline = [AGPipeline pipelineWithBaseURL:projectsURL];
             
             // setup pipes
             _tasksPipe = [pipeline pipe:^(id<AGPipeConfig> config) {
-                [config name:@"tasks"];
-                [config authModule:_restAuthModule];
-                [config type:@"REST"];
+                [config setName:@"tasks"];
+                [config setAuthModule:_restAuthModule];
+                [config setType:@"REST"];
             }];
             
             _tagsPipe = [pipeline pipe:^(id<AGPipeConfig> config) {
-                [config name:@"tags"];
-                [config authModule:_restAuthModule];
-                [config type:@"REST"];
+                [config setName:@"tags"];
+                [config setAuthModule:_restAuthModule];
+                [config setType:@"REST"];
             }];
             
             _projectsPipe = [pipeline pipe:^(id<AGPipeConfig> config) {
-                [config name:@"projects"];
-                [config authModule:_restAuthModule];
-                [config type:@"REST"];
+                [config setName:@"projects"];
+                [config setAuthModule:_restAuthModule];
+                [config setType:@"REST"];
             }];
 
             // initialize tags and projects
@@ -150,7 +150,7 @@ static AGToDoAPIService *__sharedInstance;
            success:(void (^)())success
            failure:(void (^)(NSError *error))failure {
     
-    [_tasksPipe remove:task.recId success:^(id responseObject) {
+    [_tasksPipe remove:[task dictionary] success:^(id responseObject) {
         success(success);
         
     } failure:^(NSError *error) {
@@ -185,7 +185,7 @@ static AGToDoAPIService *__sharedInstance;
           success:(void (^)())success
           failure:(void (^)(NSError *error))failure {
     
-    [_tagsPipe remove:tag.recId success:^(id responseObject) {
+    [_tagsPipe remove:[tag dictionary] success:^(id responseObject) {
 
         // update our "cache"
         [self.tags removeObjectForKey:tag.recId];
@@ -223,7 +223,7 @@ static AGToDoAPIService *__sharedInstance;
               success:(void (^)())success
               failure:(void (^)(NSError *error))failure {
  
-    [_projectsPipe remove:proj.recId success:^(id responseObject) {
+    [_projectsPipe remove:[proj dictionary] success:^(id responseObject) {
         
         // update our "cache"
         [self.projects removeObjectForKey:proj.recId];
@@ -285,8 +285,8 @@ static AGToDoAPIService *__sharedInstance;
  
     AGAuthenticator* authenticator = [AGAuthenticator authenticator];
     id<AGAuthenticationModule> restAuthModule = [authenticator auth:^(id<AGAuthConfig> config) {
-        [config name:@"restAuthMod"];
-        [config baseURL:[NSURL URLWithString:TodoServiceBaseURLString]];
+        [config setName:@"restAuthMod"];
+        [config setBaseURL:[NSURL URLWithString:TodoServiceBaseURLString]];
     }];
 
     [restAuthModule enroll:userInfo success:success failure:failure];

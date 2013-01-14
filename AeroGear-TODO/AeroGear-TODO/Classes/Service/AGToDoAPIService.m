@@ -287,6 +287,7 @@ static AGToDoAPIService *__sharedInstance;
     id<AGAuthenticationModule> restAuthModule = [authenticator auth:^(id<AGAuthConfig> config) {
         [config setName:@"restAuthMod"];
         [config setBaseURL:[NSURL URLWithString:TodoServiceBaseURLString]];
+        [config setEnrollEndpoint:@"auth/register"];
     }];
 
     [restAuthModule enroll:userInfo success:success failure:failure];

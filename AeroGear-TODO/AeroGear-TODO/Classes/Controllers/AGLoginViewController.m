@@ -189,12 +189,7 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
     NSString *username = [defaults objectForKey:@"username"];
-    if (username == nil)
-        username = @"john"; // set default username
-    
     NSString *password = [defaults objectForKey:@"password"];
-    if (password == nil)
-        password = @"123"; // set default password
     
     _username.text = username;
     _password.text = password;

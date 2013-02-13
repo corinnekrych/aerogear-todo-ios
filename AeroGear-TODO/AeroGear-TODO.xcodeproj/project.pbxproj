@@ -53,6 +53,8 @@
 		6F42B63A162847E100967BBD /* aerogear_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F42B639162847E100967BBD /* aerogear_logo.png */; };
 		6F6BC19016344FE500E089D5 /* SwitchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F6BC18E16344FE400E089D5 /* SwitchCell.m */; };
 		6F6BC19616345A4D00E089D5 /* LabelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F6BC19516345A4D00E089D5 /* LabelCell.m */; };
+		6F709F6916CB91E800DC4F3D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F709F6816CB91E800DC4F3D /* Default-568h@2x.png */; };
+		6F709F6B16CB933A00DC4F3D /* logout.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F709F6A16CB933A00DC4F3D /* logout.png */; };
 		6FDF903016340F2A0059B693 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FDF902F16340F2A0059B693 /* settings.png */; };
 /* End PBXBuildFile section */
 
@@ -140,6 +142,8 @@
 		6F6BC18F16344FE400E089D5 /* SwitchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SwitchCell.h; path = Classes/TableCells/SwitchCell.h; sourceTree = "<group>"; };
 		6F6BC19416345A4D00E089D5 /* LabelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LabelCell.h; path = Classes/TableCells/LabelCell.h; sourceTree = "<group>"; };
 		6F6BC19516345A4D00E089D5 /* LabelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LabelCell.m; path = Classes/TableCells/LabelCell.m; sourceTree = "<group>"; };
+		6F709F6816CB91E800DC4F3D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		6F709F6A16CB933A00DC4F3D /* logout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logout.png; sourceTree = "<group>"; };
 		6FDF902F16340F2A0059B693 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
 		B8029C177F0C4C9486B0A095 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -182,6 +186,7 @@
 		57F227F115F0C3C5005DAA3C = {
 			isa = PBXGroup;
 			children = (
+				6F709F6816CB91E800DC4F3D /* Default-568h@2x.png */,
 				57F2280615F0C3C5005DAA3C /* AeroGear-TODO */,
 				57F2282415F0C3C5005DAA3C /* AeroGear-TODOTests */,
 				57F227FF15F0C3C5005DAA3C /* Frameworks */,
@@ -275,6 +280,7 @@
 				6FDF902F16340F2A0059B693 /* settings.png */,
 				6F42B639162847E100967BBD /* aerogear_logo.png */,
 				6F15C25516280B08007413BD /* projects.png */,
+				6F709F6A16CB933A00DC4F3D /* logout.png */,
 				6F15C25616280B08007413BD /* tags.png */,
 			);
 			name = images;
@@ -429,7 +435,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = AG;
-				LastUpgradeCheck = 0440;
+				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = JBoss;
 			};
 			buildConfigurationList = 57F227F615F0C3C5005DAA3C /* Build configuration list for PBXProject "AeroGear-TODO" */;
@@ -469,6 +475,8 @@
 				6F3ECD3416281AFE00065148 /* ios-144.png in Resources */,
 				6F42B63A162847E100967BBD /* aerogear_logo.png in Resources */,
 				6FDF903016340F2A0059B693 /* settings.png in Resources */,
+				6F709F6916CB91E800DC4F3D /* Default-568h@2x.png in Resources */,
+				6F709F6B16CB933A00DC4F3D /* logout.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -589,7 +597,11 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -605,6 +617,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -616,7 +629,11 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -626,6 +643,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};

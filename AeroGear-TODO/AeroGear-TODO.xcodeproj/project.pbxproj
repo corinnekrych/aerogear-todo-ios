@@ -53,8 +53,8 @@
 		6F42B63A162847E100967BBD /* aerogear_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F42B639162847E100967BBD /* aerogear_logo.png */; };
 		6F6BC19016344FE500E089D5 /* SwitchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F6BC18E16344FE400E089D5 /* SwitchCell.m */; };
 		6F6BC19616345A4D00E089D5 /* LabelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F6BC19516345A4D00E089D5 /* LabelCell.m */; };
-		6F709F6916CB91E800DC4F3D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F709F6816CB91E800DC4F3D /* Default-568h@2x.png */; };
 		6F709F6B16CB933A00DC4F3D /* logout.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F709F6A16CB933A00DC4F3D /* logout.png */; };
+		6F709F6D16CBA65D00DC4F3D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F709F6C16CBA65D00DC4F3D /* Default-568h@2x.png */; };
 		6FDF903016340F2A0059B693 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FDF902F16340F2A0059B693 /* settings.png */; };
 /* End PBXBuildFile section */
 
@@ -142,8 +142,8 @@
 		6F6BC18F16344FE400E089D5 /* SwitchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SwitchCell.h; path = Classes/TableCells/SwitchCell.h; sourceTree = "<group>"; };
 		6F6BC19416345A4D00E089D5 /* LabelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LabelCell.h; path = Classes/TableCells/LabelCell.h; sourceTree = "<group>"; };
 		6F6BC19516345A4D00E089D5 /* LabelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LabelCell.m; path = Classes/TableCells/LabelCell.m; sourceTree = "<group>"; };
-		6F709F6816CB91E800DC4F3D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		6F709F6A16CB933A00DC4F3D /* logout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logout.png; sourceTree = "<group>"; };
+		6F709F6C16CBA65D00DC4F3D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		6FDF902F16340F2A0059B693 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
 		B8029C177F0C4C9486B0A095 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -186,7 +186,6 @@
 		57F227F115F0C3C5005DAA3C = {
 			isa = PBXGroup;
 			children = (
-				6F709F6816CB91E800DC4F3D /* Default-568h@2x.png */,
 				57F2280615F0C3C5005DAA3C /* AeroGear-TODO */,
 				57F2282415F0C3C5005DAA3C /* AeroGear-TODOTests */,
 				57F227FF15F0C3C5005DAA3C /* Frameworks */,
@@ -295,6 +294,7 @@
 				6F15C25C16280B13007413BD /* Default-Portrait~ipad.png */,
 				6F15C25D16280B13007413BD /* Default.png */,
 				6F15C25E16280B13007413BD /* Default@2x.png */,
+				6F709F6C16CBA65D00DC4F3D /* Default-568h@2x.png */,
 			);
 			name = splash;
 			path = Resources/splash;
@@ -475,8 +475,8 @@
 				6F3ECD3416281AFE00065148 /* ios-144.png in Resources */,
 				6F42B63A162847E100967BBD /* aerogear_logo.png in Resources */,
 				6FDF903016340F2A0059B693 /* settings.png in Resources */,
-				6F709F6916CB91E800DC4F3D /* Default-568h@2x.png in Resources */,
 				6F709F6B16CB933A00DC4F3D /* logout.png in Resources */,
+				6F709F6D16CBA65D00DC4F3D /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

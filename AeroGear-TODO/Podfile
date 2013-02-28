@@ -2,7 +2,7 @@ xcodeproj 'AeroGear-TODO.xcodeproj'
 
 platform :ios
 
-pod 'AeroGear', '1.0.0.M3'
+pod 'AeroGear', '1.0.0.CR1'
 
 pod 'PullToRefresh', '0.0.1'
 pod 'SVProgressHUD', '0.8'

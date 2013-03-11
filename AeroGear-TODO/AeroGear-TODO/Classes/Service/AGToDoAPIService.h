@@ -72,6 +72,8 @@
 - (void) logout:(void (^)())success
         failure:(void (^)(NSError *error))failure;
 
+- (void) cancelAllOperations;
+    
 + (void)enrollUser:(NSDictionary *)userInfo
            success:(void (^)())success
            failure:(void (^)(NSError *error))failure;

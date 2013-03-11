@@ -279,6 +279,12 @@ static AGToDoAPIService *__sharedInstance;
     [_restAuthModule logout:success failure:failure];
 }
 
+- (void) cancelAllOperations {
+    [_tasksPipe cancel];
+    [_tagsPipe cancel];
+    [_projectsPipe cancel];
+}
+
 + (void)enrollUser:(NSDictionary *)userInfo
            success:(void (^)())success
            failure:(void (^)(NSError *error))failure {

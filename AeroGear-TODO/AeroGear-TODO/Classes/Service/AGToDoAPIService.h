@@ -17,7 +17,7 @@
 
 #import <Foundation/Foundation.h>
 
-#define TodoServiceBaseURLString @"https://todoauth-aerogear.rhcloud.com/todo-server/"
+#define TodoServiceBaseURLString @"https://todo-aerogear.rhcloud.com/todo-server/"
 
 @class AGTask;
 @class AGTag;

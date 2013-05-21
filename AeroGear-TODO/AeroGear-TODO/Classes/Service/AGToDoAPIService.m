@@ -288,14 +288,21 @@ static AGToDoAPIService *__sharedInstance;
 + (void)enrollUser:(NSDictionary *)userInfo
            success:(void (^)())success
            failure:(void (^)(NSError *error))failure {
- 
+    
     AGAuthenticator* authenticator = [AGAuthenticator authenticator];
     id<AGAuthenticationModule> restAuthModule = [authenticator auth:^(id<AGAuthConfig> config) {
         [config setName:@"restAuthMod"];
         [config setBaseURL:[NSURL URLWithString:TodoServiceBaseURLString]];
-        [config setEnrollEndpoint:@"auth/register"];
     }];
-
-    [restAuthModule enroll:userInfo success:success failure:failure];
+    
+    [restAuthModule enroll:userInfo success:^(id object) {
+        [restAuthModule logout:^{
+            success();
+        } failure:^(NSError *error) {
+            failure(error);
+        }];
+    } failure:^(NSError *error) {
+        failure(error);
+    }];
 }
 @end

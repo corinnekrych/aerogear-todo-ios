@@ -2,8 +2,8 @@ iOS TODO application
 --------------------
 
 This application demonstrates the functionality offered by [AeroGear](http://aerogear.org) library for iOS.
-It connects to the [TODO server application](https://todoauth-aerogear.rhcloud.com) running in Openshift, and it will allow you to perform CRUD operations
-for Projects/Tags/Tasks using you phone. 
+It connects to the [TODO server application](https://todo-aerogear.rhcloud.com) running in Openshift, and it will allow you to perform CRUD operations
+for Projects/Tags/Tasks using you phone.
 
 You can watch a screencast demonstrating the app "in action" [here](https://vimeo.com/50829021)
 

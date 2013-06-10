@@ -131,7 +131,6 @@
     
     [AGToDoAPIService initSharedInstanceWithBaseURL:TodoServiceBaseURLString username:_username.text password:_password.text success:^{
         [SVProgressHUD dismiss];
-        
         AGTasksViewController *tasksController = [[AGTasksViewController alloc] initWithStyle:UITableViewStylePlain];
         UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:tasksController];
         navController.toolbarHidden = NO;

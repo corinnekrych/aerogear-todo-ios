@@ -16,10 +16,11 @@
  */
 
 #import <UIKit/UIKit.h>
-
+#import "ARGenericTableViewController.h"
 #import "AGTaskViewController.h"
 #import "PullRefreshTableViewController.h"
-
-@interface AGTasksViewController : PullRefreshTableViewController <AGTaskViewControllerDelegate>
+ 
+@interface AGTasksViewController : ARGenericTableViewController <AGTaskViewControllerDelegate>
+@property(strong, nonatomic) PullRefreshTableViewController *pullRefreshTableViewController;
 
 @end

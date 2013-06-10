@@ -55,6 +55,8 @@
     _allTasks = nil;
 }
 
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -101,8 +103,10 @@
     
     // retrieve Tasks
     [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeGradient];
-    [self refresh];
+       
+    [self refresh];    
 }
+
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
@@ -119,28 +123,6 @@
 
 #pragma mark - Table Data Source Methods
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [_tasks count];
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *CellTaskIdentifier = @"CellTaskIdentifier";
-    
-    NSUInteger row = [indexPath row];
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: CellTaskIdentifier];
-    
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellTaskIdentifier];
-    }
-    
-    AGTask *task = [_tasks objectAtIndex:row];
-    
-    cell.textLabel.text = task.title;
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    
-    return cell;
-}
 
 #pragma mark - Table Delegate Methods
 
@@ -156,51 +138,6 @@
     
 	[self.navigationController pushViewController:taskController animated:YES];    
 }
-
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSUInteger row = [indexPath row];
-    
-    AGTask *task = [_allTasks objectAtIndex:row];
-    
-	if (editingStyle == UITableViewCellEditingStyleDelete) {
-        UIActionSheet *yesno = [[UIActionSheet alloc]
-                                initWithTitle:@"Are you sure you want to delete it?"
-                                completionBlock:^(NSUInteger buttonIndex, UIActionSheet *actionSheet) {
-                                    if (buttonIndex == 0) { // Yes proceed
-                                        
-                                        [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeGradient];
-
-                                        [[AGToDoAPIService sharedInstance] removeTask:task success:^{
-                                            [SVProgressHUD showSuccessWithStatus:@"Successfully deleted!"];
-                                            
-                                            [_allTasks removeObject:task];
-                                            [_tasks removeObject:task];
-                                            
-                                            NSArray *paths = [NSArray arrayWithObject: [NSIndexPath indexPathForRow:row inSection:0]];
-                                            [[self tableView] deleteRowsAtIndexPaths:paths withRowAnimation:UITableViewRowAnimationTop];                                    
-
-                                        } failure:^(NSError *error) {
-                                            [SVProgressHUD dismiss];        
-                                            
-                                            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!"
-                                                                                            message:[error localizedDescription]
-                                                                                           delegate:nil 
-                                                                                  cancelButtonTitle:@"Bummer"
-                                                                                  otherButtonTitles:nil];
-                                            [alert show];
-                                            
-                                        }];
-                                    }
-                                }
-                                
-                                cancelButtonTitle:@"Cancel"
-                                destructiveButtonTitle: @"Yes"
-                                otherButtonTitles:nil];
-        
-        [yesno showInView:self.navigationController.toolbar];
-   	}
-}
-
 
 #pragma mark - Action Methods
 - (IBAction)addTask {
@@ -294,8 +231,12 @@
         }
 
         [self.navigationController popViewControllerAnimated:YES];
-        
-        [self.tableView reloadData];
+        //(ARCellData *)cellData = [[ARCellData alloc] init];
+        //cellData.tx
+        //[self.tableViewData insertCellData:cellData atIndexPath:(NSIndexPath *)indexPath]
+        //[self tableViewDataDidChange:self.tableViewData];
+        //[self.tableViewData se];
+        //[self.tableView reloadData];
 
     } failure:^(NSError *error) {
         [SVProgressHUD dismiss];        
@@ -313,17 +254,22 @@
 
 - (void)refresh {
     [[AGToDoAPIService sharedInstance] fetchTasks:^(NSMutableArray *tasks) {
-        [SVProgressHUD dismiss];                
+        [SVProgressHUD dismiss];
+        
         _allTasks = tasks;
 
-        [self stopLoading];
+        [self.pullRefreshTableViewController stopLoading];
         
         [self handleFilter];
 
+        ARTableViewData *tableViewData = [[ARTableViewData alloc] initWithSectionDataArray:@[[self sampleSectionData]]];
+        self.tableViewData = tableViewData;
+        
+        
     } failure:^(NSError *error) {
         [SVProgressHUD dismiss];
         
-        [self stopLoading];        
+        [self.pullRefreshTableViewController stopLoading];
         
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!"
                                                         message:[error localizedDescription]
@@ -335,6 +281,91 @@
     }];
 }
 
+- (ARSectionData *)sampleSectionData {
+    // configure the section
+    ARSectionData *sectionData = [[ARSectionData alloc] init];
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:NSStringFromClass([UITableViewCell class])];
+    
+    // configure the cell
+    for (AGTask *task in _tasks) {
+        ARCellData *cellData = [[ARCellData alloc] initWithIdentifier:NSStringFromClass([UITableViewCell class])];
+        [cellData setEditable:TRUE];
+        [cellData setCellDeleteBlock:^(UITableView *tableView, NSIndexPath *indexPath) {
+            NSUInteger row = [indexPath row];
+            
+            AGTask *task = [_allTasks objectAtIndex:row];
+            
+            //if (editingStyle == UITableViewCellEditingStyleDelete) {
+                UIActionSheet *yesno = [[UIActionSheet alloc]
+                                        initWithTitle:@"Are you sure you want to delete it?"
+                                        completionBlock:^(NSUInteger buttonIndex, UIActionSheet *actionSheet) {
+                                            if (buttonIndex == 0) { // Yes proceed
+                                                
+                                                [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeGradient];
+                                                
+                                                [[AGToDoAPIService sharedInstance] removeTask:task success:^{
+                                                    [SVProgressHUD showSuccessWithStatus:@"Successfully deleted!"];
+                                                    
+                                                    [_allTasks removeObject:task];
+                                                    [_tasks removeObject:task];
+                                                    
+                                                    NSArray *paths = [NSArray arrayWithObject: [NSIndexPath indexPathForRow:row inSection:0]];
+                                                    
+                                                } failure:^(NSError *error) {
+                                                    [SVProgressHUD dismiss];
+                                                    
+                                                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Oops!"
+                                                                                                    message:[error localizedDescription]
+                                                                                                   delegate:nil
+                                                                                          cancelButtonTitle:@"Bummer"
+                                                                                          otherButtonTitles:nil];
+                                                    [alert show];
+                                                    
+                                                }];
+                                            }
+                                        }
+                                        
+                                        cancelButtonTitle:@"Cancel"
+                                        destructiveButtonTitle: @"Yes"
+                                        otherButtonTitles:nil];
+                
+                [yesno showInView:self.navigationController.toolbar];
+           //}
+           
+        }];
+        
+        [cellData setCellConfigurationBlock:^(UITableViewCell *cell) {
+            // called in cellForRowAtIndexpath
+            cell.textLabel.text = task.title;
+//
+//            NSUInteger row = [self.tableView indexPathForCell:cell].row;
+//            
+//            // called in cellForRowAtIndexPath
+//            cell.textLabel.text = ((AGTask*)_tasks[row]).;
+        }];
+        
+        [cellData setCellSelectionBlock:^(UITableView *tableView, NSIndexPath *indexPath) {
+            AGTaskViewController *taskController = [[AGTaskViewController alloc] initWithStyle:UITableViewStyleGrouped];
+            taskController.task = task;
+            
+            UIViewAnimationTransition trans = UIViewAnimationTransitionFlipFromRight;
+            [UIView beginAnimations: nil context: nil];
+            [UIView setAnimationDuration:0.4];
+            [UIView setAnimationTransition: trans forView: [self.view window] cache: NO];
+            
+            [self.navigationController pushViewController:taskController animated:NO];
+            
+            [UIView commitAnimations];
+            
+        }];
+        
+
+        
+        [sectionData addCellData:cellData];
+    }
+    
+    return sectionData;
+}
 # pragma mark - Filter
 
 - (void)handleFilter {

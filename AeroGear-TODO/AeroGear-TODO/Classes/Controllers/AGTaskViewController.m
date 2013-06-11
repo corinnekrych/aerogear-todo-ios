@@ -15,6 +15,7 @@
  * limitations under the License.
  */
 
+
 #import "AGTaskViewController.h"
 #import "AGProjectsSelectionListViewController.h"
 #import "AGTagsSelectionListViewController.h"
@@ -29,32 +30,6 @@
 #import "EditCell.h"
 #import "TextViewCell.h"
 #import "DateSelectionCell.h"
-
-// Table Sections
-enum AGTableSections {
-    AGTableSectionTitle = 0,
-    AGTableSectionDescr,
-    AGTableSectionDueProjTag,
-    AGTableNumSections
-};
-
-// Table Rows
-enum AGTitleRows {
-    AGTableSecTitleRowTitle = 0,
-    AGTableSecTitleNumRows,
-};
-
-enum AGDescrRows {
-    AGTableSecDescrRowDescr = 0,
-    AGTableSecDescrNumRows,
-};
-
-enum AGDueProjTagRows {
-    AGTableSecDueProjTagRowDue = 0,
-    AGTableSecDueProjTagRowProj,
-    AGTableSecDueProjTagRowTag,
-    AGTableSecDueProjTagNumRows    
-};
 
 @implementation AGTaskViewController {
     id _textFieldBeingEdited;
@@ -95,6 +70,19 @@ enum AGDueProjTagRows {
     
     } else // edit Task (make a copy so the changes are not immediately applied to the original Task object)
         _tempTask = [self.task copy];
+    
+    
+    //ARTableViewData *tableViewData = [[ARTableViewData alloc] initWithSectionDataArray:@[[self sectionTitle]]];
+    ARTableViewData *tableViewData = [[ARTableViewData alloc] init];
+    
+    // add the section to the tableView
+    [tableViewData addSectionData:[self sectionTitle]];
+    [tableViewData addSectionData:[self sectionDescription]];
+    [tableViewData addSectionData:[self sectionDueDateProjectTag]];
+    
+    // setting the tableViewData property will automaticaly reload the tableView
+    self.tableViewData = tableViewData;
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -105,169 +93,100 @@ enum AGDueProjTagRows {
     return YES;
 }
 
-#pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return AGTableNumSections;
-}
-
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    switch (section) {
-        case AGTableSectionTitle:
-            return @"Title";
-        case AGTableSectionDescr:
-            return @"Description";
-        default:
-            return nil;
-    }
-}
-
-- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-	// in case of "Desciption" height is bigger to accomodate large text
-    if(indexPath.section == AGTableSectionDescr) return 110.0;
-
-	return 44.0;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    switch (section) {
-        case AGTableSectionTitle:
-            return AGTableSecTitleNumRows;
-        case AGTableSectionDescr:
-            return AGTableSecDescrNumRows;
-        case AGTableSectionDueProjTag:
-            return AGTableSecDueProjTagNumRows;
-        default:
-            return 0;
-    }    
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSUInteger section = [indexPath section];
-    NSUInteger row = [indexPath row];
+- (ARSectionData *)sectionTitle {
+    NSString *name = NSStringFromClass([EditCell class]);
+    ARSectionData *sectionData = [[ARSectionData alloc] init];
+    [self.tableView registerClass:[EditCell class] forCellReuseIdentifier:name];
     
-    UITableViewCell *cell;
-
-    switch (section) {
-        case AGTableSectionTitle:
-        {
-            EditCell *titleCell = [[EditCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
-            titleCell.txtField.delegate = self;
-            titleCell.txtField.text = _tempTask.title;
-            
-            cell = titleCell;
-            break;
-        }
-        case AGTableSectionDescr:
-        {
-            TextViewCell *descrCell = [[TextViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
-            descrCell.txtView.delegate = self;
-            
-            if (![_tempTask.descr isKindOfClass:[NSNull class]])
-                descrCell.txtView.text = _tempTask.descr;
-            
-            cell = descrCell;
-            break;            
-        }
-        case AGTableSectionDueProjTag:
-        {
-            switch (row) {
-                case AGTableSecDueProjTagRowDue:
-                {
-                    DateSelectionCell *dateCell = [[DateSelectionCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:nil];
-                    dateCell.textLabel.text = @"Due Date";
-                    dateCell.detailTextLabel.text = _tempTask.dueDate;
-                    
-                    NSDateFormatter *inputFormat = [[NSDateFormatter alloc] init];
-                    [inputFormat setDateFormat:@"yyyy-MM-dd"];
-                    NSDate *inputDate = [inputFormat dateFromString: _tempTask.dueDate];
-
-                    dateCell.dateValue = inputDate;
-                    dateCell.delegate = self;
-                    
-                    cell = dateCell;                    
-                    break;
-                }
-                case AGTableSecDueProjTagRowProj:
-                {
-                    UITableViewCell *selCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:nil];
-                    selCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-
-                    selCell.textLabel.text = @"Project";
-
-                    AGProject *project = [[AGToDoAPIService sharedInstance].projects objectForKey:_tempTask.projID];
-                    selCell.detailTextLabel.text = project.title;
-
-                    cell = selCell;                    
-                    break;
-                }
-                case AGTableSecDueProjTagRowTag:
-                {
-                    UITableViewCell *selCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:nil];
-                    selCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-
-                    selCell.textLabel.text = @"Tags";
-
-                    NSMutableArray *tagDescrs = [[NSMutableArray alloc] init];
-                    for (NSNumber *id in _tempTask.tags) {
-                        AGTag *tag = [[AGToDoAPIService sharedInstance].tags objectForKey:id];
-                        
-                        if (tag != nil) // TODO: why this?
-                            [tagDescrs addObject:tag.title];
-                    }
-                    
-                    selCell.detailTextLabel.text = [tagDescrs componentsJoinedByString:@", "];               
-
-                    cell = selCell;                    
-                    break;
-                }
-            }   
-
-            break;
-        }
-    }
+    ARCellData *cellData = [[ARCellData alloc] initWithIdentifier:name];
+    [cellData setCellConfigurationBlock:^(EditCell *cell) {
+        cell.txtField.text = self.task.title;
+    }];
     
-    return cell;
+    [sectionData addCellData:cellData];
+    return sectionData;
 }
 
-#pragma mark - Table view delegate
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSUInteger section = [indexPath section];
-    NSUInteger row = [indexPath row];
-
-    switch (section) {
-        case AGTableSectionDueProjTag:
-            switch (row) {
-                case AGTableSecDueProjTagRowProj:
-                {
-                    AGProjectsSelectionListViewController *projListController = [[AGProjectsSelectionListViewController alloc] initWithStyle:UITableViewStyleGrouped];
-                    projListController.isEditMode = YES;
-                    projListController.task = _tempTask;
-                    
-                    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:projListController];
-                    
-                    [self presentModalViewController:navController animated:YES];
-                    
-                    break;
-                }
-                case AGTableSecDueProjTagRowTag:
-                {
-                    AGTagsSelectionListViewController *tagsListController = [[AGTagsSelectionListViewController alloc] initWithStyle:UITableViewStyleGrouped];
-                    tagsListController.isEditMode = YES;
-                    tagsListController.task = _tempTask;
-
-                    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:tagsListController];
-                    
-                    [self presentModalViewController:navController animated:YES];
-                    
-                    break;
-                }
-            }
-            break;
-    }
+- (ARSectionData *)sectionDescription {
+    ARSectionData *sectionData = [[ARSectionData alloc] init];
+    [self.tableView registerClass:[TextViewCell class] forCellReuseIdentifier:NSStringFromClass([TextViewCell class])];
+    ARCellData *cellData = [[ARCellData alloc] initWithIdentifier:NSStringFromClass([TextViewCell class])];
+    [cellData setCellConfigurationBlock:^(TextViewCell *cell) {
+        cell.txtView.delegate = self;
+        if (![_tempTask.descr isKindOfClass:[NSNull class]])
+            cell.txtView.text = _tempTask.descr;
+        
+    }];
+    [sectionData addCellData:cellData];
+    return sectionData;
 }
- 
+
+- (ARSectionData *)sectionDueDateProjectTag {
+    ARSectionData *sectionData = [[ARSectionData alloc] init];
+    [sectionData addCellData:[self cellDueDate]];
+    [sectionData addCellData:[self cellProject]];
+    [sectionData addCellData:[self cellTag]];
+    return sectionData;
+}
+
+- (ARCellData *)cellProject {
+    [self.tableView registerClass:[TextViewCell class] forCellReuseIdentifier:NSStringFromClass([TextViewCell class])];
+    ARCellData *cellData = [[ARCellData alloc] initWithIdentifier:NSStringFromClass([TextViewCell class])];
+    [cellData setCellConfigurationBlock:^(TextViewCell *cell) {
+        cell.textLabel.text = @"Project";
+        
+        AGProject *project = [[AGToDoAPIService sharedInstance].projects objectForKey:_tempTask.projID];
+        cell.textLabel.text = project.title;
+
+    }];
+    return cellData;
+}
+
+- (ARCellData *)cellTag {
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:NSStringFromClass([UITableViewCell class])];
+    ARCellData *cellData = [[ARCellData alloc] initWithIdentifier:NSStringFromClass([UITableViewCell class])];
+    [cellData setCellConfigurationBlock:^(UITableViewCell *cell) {
+        cell.textLabel.text = @"Tags";
+        
+                            NSMutableArray *tagDescrs = [[NSMutableArray alloc] init];
+                            for (NSNumber *id in _tempTask.tags) {
+                                AGTag *tag = [[AGToDoAPIService sharedInstance].tags objectForKey:id];
+        
+                                if (tag != nil) 
+                                    [tagDescrs addObject:tag.title];
+                            }
+        
+                           cell.textLabel.text= [tagDescrs componentsJoinedByString:@", "];
+    }];
+
+
+    return cellData;
+}
+
+- (ARCellData *)cellDueDate {
+    [self.tableView registerClass:[DateSelectionCell class] forCellReuseIdentifier:NSStringFromClass([DateSelectionCell class])];
+    ARCellData *cellData = [[ARCellData alloc] initWithIdentifier:NSStringFromClass([DateSelectionCell class])];
+    [cellData setCellConfigurationBlock:^(DateSelectionCell *cell) {
+        cell.textLabel.text = @"Due Date";
+        cell.detailTextLabel.text = _tempTask.dueDate;
+        
+        NSDateFormatter *inputFormat = [[NSDateFormatter alloc] init];
+        [inputFormat setDateFormat:@"yyyy-MM-dd"];
+        NSDate *inputDate = [inputFormat dateFromString: _tempTask.dueDate];
+        
+        cell.dateValue = inputDate;
+        cell.delegate = self;
+    }];
+    [cellData setEditable:TRUE];
+    [cellData setCellSelectionBlock:^(UITableView *tableView, NSIndexPath *indexPath) {
+        _textFieldBeingEdited = [tableView cellForRowAtIndexPath:indexPath];
+
+        
+    }];
+    return cellData;
+}
+
 #pragma mark - UITextFieldDelegate methods
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
@@ -276,13 +195,13 @@ enum AGDueProjTagRows {
 
 - (void)textFieldDidEndEditing:(UITextField *)textField {
     _tempTask.title = textField.text;
-          
+    
     [textField resignFirstResponder];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
-
+    
     return YES;
 }
 
@@ -323,14 +242,13 @@ enum AGDueProjTagRows {
     if (_textFieldBeingEdited != nil) {
         if ([_textFieldBeingEdited isKindOfClass:[UITextField class]])
             _tempTask.title = ((UITextField *)_textFieldBeingEdited).text;
-        else
-            _tempTask.descr = ((UITextView *)_textFieldBeingEdited).text;
+        else if (![_textFieldBeingEdited isKindOfClass:[DateSelectionCell class]]) {
+           _tempTask.descr = ((UITextView *)_textFieldBeingEdited).text; 
+        } 
         
-        
-        [_textFieldBeingEdited resignFirstResponder];        
+        [_textFieldBeingEdited resignFirstResponder];
     }
-
+    
     [delegate taskViewControllerDelegateDidFinish:self task:_tempTask];
 }
-
 @end

@@ -18,12 +18,13 @@
 #import <UIKit/UIKit.h>
 
 #import "DateSelectionCell.h"
+#import "ARGenericTableViewController.h"
 
 @protocol AGTaskViewControllerDelegate;
 
 @class AGTask;
 
-@interface AGTaskViewController : UITableViewController <UITextFieldDelegate, UITextViewDelegate, DateSelectionCellDelegate>
+@interface AGTaskViewController : ARGenericTableViewController  <UITextFieldDelegate, UITextViewDelegate, DateSelectionCellDelegate>
 
 @property(strong, nonatomic) AGTask *task;
 

@@ -97,11 +97,12 @@
 - (ARSectionData *)sectionTitle {
     NSString *name = NSStringFromClass([EditCell class]);
     ARSectionData *sectionData = [[ARSectionData alloc] init];
-    [self.tableView registerClass:[EditCell class] forCellReuseIdentifier:name];
+    [self registerClass:[EditCell class] forCellReuseIdentifier:name];
     
     ARCellData *cellData = [[ARCellData alloc] initWithIdentifier:name];
     [cellData setCellConfigurationBlock:^(EditCell *cell) {
-        cell.txtField.text = self.task.title;
+        cell.txtField.delegate = self;
+        cell.txtField.text = _tempTask.title;
     }];
     
     [sectionData addCellData:cellData];
@@ -110,7 +111,7 @@
 
 - (ARSectionData *)sectionDescription {
     ARSectionData *sectionData = [[ARSectionData alloc] init];
-    [self.tableView registerClass:[TextViewCell class] forCellReuseIdentifier:NSStringFromClass([TextViewCell class])];
+    [self registerClass:[TextViewCell class] forCellReuseIdentifier:NSStringFromClass([TextViewCell class])];
     ARCellData *cellData = [[ARCellData alloc] initWithIdentifier:NSStringFromClass([TextViewCell class])];
     [cellData setCellConfigurationBlock:^(TextViewCell *cell) {
         cell.txtView.delegate = self;
@@ -131,23 +132,36 @@
 }
 
 - (ARCellData *)cellProject {
-    [self.tableView registerClass:[TextViewCell class] forCellReuseIdentifier:NSStringFromClass([TextViewCell class])];
-    ARCellData *cellData = [[ARCellData alloc] initWithIdentifier:NSStringFromClass([TextViewCell class])];
-    [cellData setCellConfigurationBlock:^(TextViewCell *cell) {
-        cell.textLabel.text = @"Project";
+    [self registerClass:[UITableViewCell class] forCellReuseIdentifier:NSStringFromClass([UITableViewCell class])];
+    ARCellData *cellData = [[ARCellData alloc] initWithIdentifier:NSStringFromClass([UITableViewCell class])];
+    [cellData setCellConfigurationBlock:^(UITableViewCell *cell) {
+        cell.textLabel.text = @"Project:";
         
         AGProject *project = [[AGToDoAPIService sharedInstance].projects objectForKey:_tempTask.projID];
-        cell.textLabel.text = project.title;
+        if (project != nil) {
+            cell.textLabel.text = [NSString stringWithFormat:@"Project: %@", project.title];
+        }
 
     }];
+    
+    [cellData setCellSelectionBlock:^(UITableView *tableView, NSIndexPath *indexPath) {
+        AGProjectsSelectionListViewController *projListController = [[AGProjectsSelectionListViewController alloc] initWithStyle:UITableViewStyleGrouped];
+        projListController.isEditMode = YES;
+        projListController.task = _tempTask;
+        
+        UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:projListController];
+        
+        [self presentModalViewController:navController animated:YES];
+    }];
+    
     return cellData;
 }
 
 - (ARCellData *)cellTag {
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:NSStringFromClass([UITableViewCell class])];
+    [self registerClass:[UITableViewCell class] forCellReuseIdentifier:NSStringFromClass([UITableViewCell class])];
     ARCellData *cellData = [[ARCellData alloc] initWithIdentifier:NSStringFromClass([UITableViewCell class])];
     [cellData setCellConfigurationBlock:^(UITableViewCell *cell) {
-        cell.textLabel.text = @"Tags";
+        cell.textLabel.text = @"Tags:";
         
                             NSMutableArray *tagDescrs = [[NSMutableArray alloc] init];
                             for (NSNumber *id in _tempTask.tags) {
@@ -156,8 +170,22 @@
                                 if (tag != nil) 
                                     [tagDescrs addObject:tag.title];
                             }
+                            NSString *tagString = [tagDescrs componentsJoinedByString:@", "];
+                           
+        if (![tagString isKindOfClass:[NSNull class]]) {
+            cell.textLabel.text= [NSString stringWithFormat:@"Tags: %@", tagString];
+        }
         
-                           cell.textLabel.text= [tagDescrs componentsJoinedByString:@", "];
+    }];
+    
+    [cellData setCellSelectionBlock:^(UITableView *tableView, NSIndexPath *indexPath) {
+        AGTagsSelectionListViewController *tagsListController = [[AGTagsSelectionListViewController alloc] initWithStyle:UITableViewStyleGrouped];
+        tagsListController.isEditMode = YES;
+        tagsListController.task = _tempTask;
+        
+        UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:tagsListController];
+        
+        [self presentModalViewController:navController animated:YES];
     }];
 
 
@@ -165,7 +193,7 @@
 }
 
 - (ARCellData *)cellDueDate {
-    [self.tableView registerClass:[DateSelectionCell class] forCellReuseIdentifier:NSStringFromClass([DateSelectionCell class])];
+    [self registerClass:[DateSelectionCell class] forCellReuseIdentifier:NSStringFromClass([DateSelectionCell class])];
     ARCellData *cellData = [[ARCellData alloc] initWithIdentifier:NSStringFromClass([DateSelectionCell class])];
     [cellData setCellConfigurationBlock:^(DateSelectionCell *cell) {
         cell.textLabel.text = @"Due Date";

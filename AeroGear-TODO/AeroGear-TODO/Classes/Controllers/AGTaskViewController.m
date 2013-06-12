@@ -71,8 +71,6 @@
     } else // edit Task (make a copy so the changes are not immediately applied to the original Task object)
         _tempTask = [self.task copy];
     
-    
-    //ARTableViewData *tableViewData = [[ARTableViewData alloc] initWithSectionDataArray:@[[self sectionTitle]]];
     ARTableViewData *tableViewData = [[ARTableViewData alloc] init];
     
     // add the section to the tableView

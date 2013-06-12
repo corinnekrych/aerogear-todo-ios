@@ -94,12 +94,20 @@
 }
 
 
+- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+	// in case of "Desciption" height is bigger to accomodate large text
+    if(indexPath.section == 1) return 110.0;
+    
+	return 44.0;
+}
+
 - (ARSectionData *)sectionTitle {
     NSString *name = NSStringFromClass([EditCell class]);
     ARSectionData *sectionData = [[ARSectionData alloc] init];
     [self registerClass:[EditCell class] forCellReuseIdentifier:name];
     
     ARCellData *cellData = [[ARCellData alloc] initWithIdentifier:name];
+    sectionData.headerTitle = @"Title";
     [cellData setCellConfigurationBlock:^(EditCell *cell) {
         cell.txtField.delegate = self;
         cell.txtField.text = _tempTask.title;
@@ -113,6 +121,8 @@
     ARSectionData *sectionData = [[ARSectionData alloc] init];
     [self registerClass:[TextViewCell class] forCellReuseIdentifier:NSStringFromClass([TextViewCell class])];
     ARCellData *cellData = [[ARCellData alloc] initWithIdentifier:NSStringFromClass([TextViewCell class])];
+    sectionData.headerTitle = @"Description";
+
     [cellData setCellConfigurationBlock:^(TextViewCell *cell) {
         cell.txtView.delegate = self;
         if (![_tempTask.descr isKindOfClass:[NSNull class]])
